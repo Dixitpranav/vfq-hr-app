@@ -1,0 +1,136 @@
+/* VFQ HR sign-in pages (login, forgot password, email link, reset password).
+   Only restyles Frappe's standard login page, so login logic, SSO and password reset keep
+   working through Frappe / ERPNext upgrades. Loaded on website pages via web_include_css and
+   scoped to the sign-in paths below. Title, tagline, note, logo and colour come from
+   Company > Portal Branding (vfq_hr/branding.py + js/vfq_hr_login.js); nothing is hard-coded. */
+
+body[data-path="login"],
+body[data-path="update-password"] {
+	--vfq-red: var(--vfq-brand, #e60000);
+	--vfq-red-dark: color-mix(in srgb, var(--vfq-red) 78%, #000000);
+	--vfq-red-light: color-mix(in srgb, var(--vfq-red) 75%, #ffffff);
+	--vfq-ink: #1a1a1a;
+	background: radial-gradient(circle at 20% 15%, var(--vfq-red-light) 0%, var(--vfq-red) 45%, var(--vfq-red-dark) 100%) fixed !important;
+	min-height: 100vh;
+}
+
+/* No website navbar/footer chrome on the sign-in page. */
+body[data-path="login"] .navbar,
+body[data-path="login"] .web-footer,
+body[data-path="login"] footer,
+body[data-path="update-password"] .web-footer,
+body[data-path="update-password"] footer {
+	display: none !important;
+}
+
+body[data-path="login"] main,
+body[data-path="login"] .page_content,
+body[data-path="login"] .page-content-wrapper,
+body[data-path="login"] .container,
+body[data-path="update-password"] main,
+body[data-path="update-password"] .page_content {
+	background: transparent !important;
+}
+
+/* Brand line above the card (text set from Company > Portal Branding). */
+body .vfq-brand-head {
+	text-align: center;
+	color: #ffffff;
+	margin: 6vh auto 18px;
+}
+body .vfq-brand-title {
+	font-weight: 700;
+	font-size: 22px;
+	letter-spacing: 0.3px;
+}
+body .vfq-brand-tagline {
+	font-size: 14px;
+	opacity: 0.9;
+	margin-top: 4px;
+}
+
+/* The card: white, rounded, soft shadow. */
+body[data-path="login"] .page-card,
+body[data-path="update-password"] .page-card {
+	background: #ffffff !important;
+	border: none !important;
+	border-radius: 18px !important;
+	box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28) !important;
+	padding: 36px 34px !important;
+	max-width: 420px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Logo (Company > Portal Logo, else the VFQ HR icon). */
+body[data-path="login"] .page-card .app-logo,
+body[data-path="update-password"] .page-card .app-logo {
+	max-height: 48px !important;
+	width: auto !important;
+	border-radius: 12px;
+}
+
+body[data-path="login"] .page-card h4,
+body[data-path="update-password"] .page-card h4 {
+	color: var(--vfq-ink) !important;
+}
+body[data-path="login"] .page-card-subtitle,
+body[data-path="login"] .page-card label {
+	color: #4a4a4a !important;
+}
+
+body[data-path="login"] .page-card .form-control,
+body[data-path="update-password"] .page-card .form-control {
+	background: #ffffff !important;
+	border: 1px solid #d4d4d4 !important;
+	border-radius: 10px !important;
+	color: var(--vfq-ink) !important;
+	min-height: 40px;
+}
+body[data-path="login"] .page-card .form-control:focus,
+body[data-path="update-password"] .page-card .form-control:focus {
+	border-color: var(--vfq-red) !important;
+	box-shadow: 0 0 0 3px rgba(230, 0, 0, 0.15) !important;
+}
+
+/* Primary button in the brand colour with white text. */
+body[data-path="login"] .page-card .es-button[data-variant="solid"],
+body[data-path="login"] .page-card .btn-primary,
+body[data-path="update-password"] .page-card .btn-primary,
+body[data-path="update-password"] .page-card .es-button[data-variant="solid"] {
+	background: var(--vfq-red) !important;
+	border-color: var(--vfq-red) !important;
+	color: #ffffff !important;
+	border-radius: 10px !important;
+	min-height: 42px;
+	font-weight: 600;
+}
+body[data-path="login"] .page-card .es-button[data-variant="solid"]:hover,
+body[data-path="login"] .page-card .btn-primary:hover,
+body[data-path="update-password"] .page-card .btn-primary:hover {
+	background: var(--vfq-red-dark) !important;
+	border-color: var(--vfq-red-dark) !important;
+}
+
+/* Secondary options (email link, SSO) as outlined buttons. */
+body[data-path="login"] .page-card .btn-login-option {
+	background: #ffffff !important;
+	border: 1px solid var(--vfq-red) !important;
+	color: var(--vfq-red) !important;
+	border-radius: 10px !important;
+	font-weight: 600;
+}
+
+body[data-path="login"] .page-card a,
+body[data-path="update-password"] .page-card a {
+	color: var(--vfq-red) !important;
+}
+
+/* Note under the card (Company > Sign-in Page Note). */
+body .vfq-brand-note {
+	text-align: center;
+	color: rgba(255, 255, 255, 0.92);
+	font-size: 13px;
+	margin: 18px auto 0;
+	white-space: pre-line;
+}

@@ -42,6 +42,9 @@ def _load(fname):
 
 
 def after_install():
+	from vfq_hr.branding import ensure_branding_fields
+
+	ensure_branding_fields()
 	result = seed_masters()
 	apply_hr_settings()
 	ensure_default_app()
@@ -52,6 +55,10 @@ def after_install():
 
 
 def after_migrate():
+	from vfq_hr.branding import clear_branding_cache, ensure_branding_fields
+
+	ensure_branding_fields()
+	clear_branding_cache()
 	ensure_default_app()
 	ensure_coi_setup()
 	ensure_workspaces()
@@ -198,7 +205,7 @@ def _default_skill():
 def create_departments(company):
 	"""Create the flow's department structure for a company.
 
-	bench --site <site> execute vfq_hr.install.create_departments --kwargs '{"company": "Vodafone Qatar"}'
+	bench --site <site> execute vfq_hr.install.create_departments --kwargs '{"company": "<Company name>"}'
 	"""
 	abbr = frappe.db.get_value("Company", company, "abbr")
 	if not abbr:
@@ -255,8 +262,6 @@ def ensure_coi_setup():
 	if not frappe.get_meta("HR Settings").has_field("custom_coi_form_template"):
 		return
 	values = {}
-	if not frappe.db.get_single_value("HR Settings", "custom_official_email_domain_keyword"):
-		values["custom_official_email_domain_keyword"] = "vodafone"
 	if not frappe.db.get_single_value("HR Settings", "custom_coi_email_template"):
 		values["custom_coi_email_template"] = COI_TEMPLATE
 	if not frappe.db.get_single_value("HR Settings", "custom_coi_folder"):

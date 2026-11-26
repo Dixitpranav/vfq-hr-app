@@ -36,6 +36,7 @@ def boot_session(bootinfo):
 		_trim_v15_apps_data(bootinfo)
 		bootinfo.vfq_hr_only = 1
 		bootinfo.vfq_hr_route = _vfq_route()
+		bootinfo.vfq_hr_workspaces = frappe.get_all("Workspace", filters={"module": "VFQ HR"}, pluck="name")
 	except Exception:
 		# Navigation trimming must never break the desk: fall back to the standard boot.
 		frappe.log_error(title="VFQ HR boot_session")

@@ -6736,8 +6736,8 @@
   "insert_after": "custom_vfq_onboarding_section",
   "is_system_generated": 0,
   "module": null,
-  "default": "vodafone",
-  "description": "An employee can only be made Active when their Official Email domain contains this text, e.g. vodafone.qa, vodafone.com, vodafone.in."
+  "default": null,
+  "description": "An employee can only be made Active when their Official Email domain contains this text (e.g. your company's mail domain). Leave empty to accept any valid email."
  },
  {
   "doctype": "Custom Field",

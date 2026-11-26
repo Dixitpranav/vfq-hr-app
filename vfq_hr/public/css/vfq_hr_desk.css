@@ -1,0 +1,33 @@
+/* VFQ HR: apps desktop in the brand colour (Company > Portal Branding > Brand Colour). */
+body.desktop-page,
+body.desktop-page .main-section,
+body.desktop-page header,
+body.desktop-page #page-desktop,
+body.desktop-page #page-desktop .page-body,
+body.desktop-page #page-desktop .layout-main-section {
+	background-color: var(--vfq-brand, #e60000) !important;
+}
+
+body.desktop-page .desktop-icon .icon-title,
+body.desktop-page .desktop-icon .icon-subtitle,
+body.desktop-page .desktop-icon a {
+	color: #ffffff !important;
+	font-weight: 600;
+}
+
+/* App tiles keep their colours: a white ring separates a red logo from the red background. */
+body.desktop-page .desktop-icon .icon-container {
+	background: #ffffff;
+	box-shadow: 0 0 0 3px #ffffff, 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Keep the search box and top-bar icons readable on red. */
+body.desktop-page header input,
+body.desktop-page header .search-bar,
+body.desktop-page header button[class*="search"] {
+	background-color: #ffffff !important;
+	color: #333333 !important;
+}
+body.desktop-page header .nav-link {
+	color: #ffffff;
+}

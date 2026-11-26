@@ -14,16 +14,16 @@ frappe.ui.form.on("Employee", {
     }
     if (pending && !isAdmin) frm.set_df_property("status", "read_only", 1);
 
-    frm.set_df_property("company_email", "description", "Official VFQ email ID (domain must contain \"vodafone\", e.g. .qa, .com, .in). Required before Activate; on activation the system user is created and linked, and the COI form is emailed here.");
+    frm.set_df_property("company_email", "description", "Official VFQ email ID (its domain must contain the text set in HR Settings > Official Email Domain Must Contain). Required before Activate; on activation the system user is created and linked, and the COI form is emailed here.");
 
     if (pending && !frm.is_new()) {
       frm.dashboard.set_headline_alert(frm.doc.company_email
         ? __("Awaiting activation: HR Ops to verify the details, complete missing personal fields and click <b>Activate</b>. Activation emails the COI form to the employee.")
-        : __("Awaiting activation: the <b>Official Email (VFQ)</b> must be filled in (domain containing \"vodafone\") before the employee can be activated."), "orange");
+        : __("Awaiting activation: the <b>Official Email (VFQ)</b> must be filled in (domain as set in HR Settings) before the employee can be activated."), "orange");
       if (isOps || isHRM) {
         frm.add_custom_button(__("Activate"), () => {
           if (frm.is_dirty()) { frappe.msgprint(__("Please save your changes first.")); return; }
-          if (!frm.doc.company_email) { frappe.msgprint({ title: __("Official email required"), indicator: "orange", message: __("Enter the <b>Official Email (VFQ)</b> first (domain must contain \"vodafone\") and save.") }); frm.scroll_to_field("company_email"); return; }
+          if (!frm.doc.company_email) { frappe.msgprint({ title: __("Official email required"), indicator: "orange", message: __("Enter the <b>Official Email (VFQ)</b> first (domain as set in HR Settings) and save.") }); frm.scroll_to_field("company_email"); return; }
           frappe.confirm(__("Activate {0}? The system user will be created for {1} and the COI form emailed to it.", [frm.doc.employee_name, frm.doc.company_email]), () => {
             frappe.call({ method: "activate_employee", args: { employee: frm.doc.name }, freeze: true, freeze_message: __("Activating…") })
               .then(r => { const m = r.message || {}; frappe.show_alert({ message: m.coi_status === "Sent" ? __("Employee activated. COI form emailed to {0}.", [frm.doc.company_email]) : __("Employee activated. COI email not sent: {0}", [m.coi_note || ""]), indicator: m.coi_status === "Sent" ? "green" : "orange" }, 10); frm.reload_doc(); });

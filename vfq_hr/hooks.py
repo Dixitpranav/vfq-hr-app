@@ -27,7 +27,18 @@ after_install = "vfq_hr.install.after_install"
 after_migrate = "vfq_hr.install.after_migrate"
 
 # Users without System Manager see only the VFQ HR app (apps screen, dock and landing page).
-boot_session = "vfq_hr.boot.boot_session"
+boot_session = ["vfq_hr.boot.boot_session", "vfq_hr.branding.boot_branding"]
+
+# Sign-in page branding (title, tagline, note, logo, colour) from Company > Portal Branding.
+update_website_context = ["vfq_hr.branding.update_website_context"]
+
+# Desk-wide: send non-System-Managers from the apps desktop into their VFQ HR workspace,
+# and the brand-coloured desktop (Company > Portal Branding).
+app_include_js = ["/assets/vfq_hr/js/vfq_hr_desk.js"]
+app_include_css = ["/assets/vfq_hr/css/vfq_hr_desk.css"]
+
+# Branded sign-in page for every user (scoped to the login / reset-password pages).
+web_include_css = ["/assets/vfq_hr/css/vfq_hr_login.css"]
 
 # Business logic: the site's Server Scripts, run from the app (no server_script_enabled needed).
 doc_events = {
@@ -1293,3 +1304,7 @@ fixtures = [
   ]
  }
 ]
+
+# Branding changes on the Company apply immediately.
+doc_events.setdefault("Company", {})
+doc_events["Company"]["on_update"] = "vfq_hr.branding.clear_branding_cache"
