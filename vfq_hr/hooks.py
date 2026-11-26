@@ -255,6 +255,7 @@ fixtures = [
      "HR Ops",
      "HR Ops - VFQ Email",
      "Head of OD & Total Rewards",
+     "IT Support",
      "Job Opening Vendor",
      "Line Manager",
      "Recruitment Specialist",

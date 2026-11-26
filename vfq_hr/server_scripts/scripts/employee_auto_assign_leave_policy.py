@@ -1,5 +1,5 @@
 # Server Script: Employee - Auto Assign Leave Policy
-# Type: DocType Event | DocType: Employee | Event: After Insert
+# Type: DocType Event | DocType: Employee | Event: After Save
 # Runs with the same variables as a Frappe Server Script (see vfq_hr/runner.py).
 
 # Wrapped in one function so the helper functions can call each other

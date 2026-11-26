@@ -104,6 +104,19 @@
   "doctype": "Role"
  },
  {
+  "name": "IT Support",
+  "docstatus": 0,
+  "idx": 0,
+  "role_name": "IT Support",
+  "home_page": null,
+  "restrict_to_domain": null,
+  "disabled": 0,
+  "is_custom": 0,
+  "desk_access": 1,
+  "two_factor_auth": 0,
+  "doctype": "Role"
+ },
+ {
   "name": "Functional Head",
   "docstatus": 0,
   "idx": 0,

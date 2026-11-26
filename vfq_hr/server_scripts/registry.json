@@ -470,8 +470,8 @@
   "type": "DocType Event",
   "header_lines": 4,
   "doctype": "Employee",
-  "event": "After Insert",
-  "method": "after_insert"
+  "event": "After Save",
+  "method": "on_update"
  },
  {
   "name": "Job Opening - Lock After Shared With Vendor",

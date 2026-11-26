@@ -106,6 +106,7 @@ def seed_masters(company=None):
 				val = rec.get(df.fieldname)
 				if val and not df.reqd and df.options != doctype and not frappe.db.exists(df.options, val):
 					rec[df.fieldname] = None
+			frappe.db.savepoint("vfq_seed")
 			try:
 				doc = frappe.get_doc(rec)
 				docstatus = rec.get("docstatus") or 0
@@ -115,7 +116,7 @@ def seed_masters(company=None):
 					doc.submit()
 				ok += 1
 			except Exception:
-				frappe.db.rollback()
+				frappe.db.rollback(save_point="vfq_seed")
 				failed += 1
 				frappe.log_error(title=f"VFQ HR seed failed: {doctype} {name}")
 		summary[doctype] = {"inserted": ok, "existing": skipped, "failed": failed}
@@ -140,6 +141,7 @@ def seed_functions(records, company):
 		if not base or not company or function_name_for(base, company):
 			skipped += 1
 			continue
+		frappe.db.savepoint("vfq_seed")
 		try:
 			frappe.get_doc({
 				"doctype": "Function",
@@ -151,7 +153,7 @@ def seed_functions(records, company):
 			}).insert(ignore_permissions=True)
 			ok += 1
 		except Exception:
-			frappe.db.rollback()
+			frappe.db.rollback(save_point="vfq_seed")
 			failed += 1
 			frappe.log_error(title=f"VFQ HR seed failed: Function {base}")
 	return {"inserted": ok, "existing": skipped, "failed": failed}
@@ -165,6 +167,7 @@ def seed_rounds_as_types(records):
 		if not title or frappe.db.exists("Interview Type", title):
 			skipped += 1
 			continue
+		frappe.db.savepoint("vfq_seed")
 		try:
 			skills = [{"skill": r.get("skill")} for r in (rec.get("expected_skill_set") or []) if r.get("skill")]
 			for row in skills:
@@ -180,7 +183,7 @@ def seed_rounds_as_types(records):
 			}).insert(ignore_permissions=True)
 			ok += 1
 		except Exception:
-			frappe.db.rollback()
+			frappe.db.rollback(save_point="vfq_seed")
 			failed += 1
 			frappe.log_error(title=f"VFQ HR seed failed: Interview Type {title}")
 	return {"inserted": ok, "existing": skipped, "failed": failed}
@@ -258,7 +261,8 @@ def ensure_coi_setup():
 		values["custom_coi_email_template"] = COI_TEMPLATE
 	if not frappe.db.get_single_value("HR Settings", "custom_coi_folder"):
 		values["custom_coi_folder"] = "Home/COI"
-	if not frappe.db.get_single_value("HR Settings", "custom_coi_form_template"):
+	current_form = frappe.db.get_single_value("HR Settings", "custom_coi_form_template")
+	if not current_form or not frappe.db.exists("File", {"file_url": current_form}):
 		path = os.path.join(SEED_DIR, "coi_form_blank.docx")
 		if os.path.exists(path):
 			with open(path, "rb") as f:

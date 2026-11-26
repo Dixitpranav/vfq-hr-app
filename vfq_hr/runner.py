@@ -109,8 +109,16 @@ def _flags():
 
 def _exec(code, _locals, restrict_commit_rollback=False):
 	g = _safe_globals(restrict_commit_rollback)
+	# One namespace (unlike Frappe's Server Script sandbox): top-level helper functions in a
+	# script can call each other and see the script's variables. Code written for the sandbox
+	# behaves the same; code that hit "name ... is not defined" there now works.
+	keys = set(g)
+	g.update(_locals)
 	with _flags():
-		exec(code, g, _locals)
+		exec(code, g)
+	for k, v in g.items():
+		if k not in keys or k in _locals:
+			_locals[k] = v
 	return _locals
 
 
