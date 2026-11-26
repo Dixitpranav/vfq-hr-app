@@ -83,6 +83,12 @@ def _safe_globals(restrict_commit_rollback=False):
 	from frappe.utils.safe_exec import get_safe_globals
 
 	g = get_safe_globals()
+	# Version-neutral helpers available to every VFQ HR script (see vfq_hr/compat.py).
+	from vfq_hr import compat
+
+	g["vfq_budget_header"] = compat.budget_header
+	g["vfq_budget_accounts"] = compat.budget_accounts
+	g["vfq_budget_covers_year"] = compat.budget_covers_year
 	if restrict_commit_rollback:
 		try:
 			for key in ("commit", "rollback", "add_index"):

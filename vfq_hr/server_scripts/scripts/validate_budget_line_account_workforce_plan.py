@@ -3,9 +3,7 @@
 # Runs with the same variables as a Frappe Server Script (see vfq_hr/runner.py).
 
 if doc.budget_line:
-    budget = frappe.db.get_value(
-        "Budget", doc.budget_line, ["company", "cost_center", "fiscal_year", "docstatus"], as_dict=True
-    )
+    budget = vfq_budget_header(doc.budget_line)
     if budget:
         if budget.docstatus != 1:
             frappe.throw(
@@ -17,16 +15,11 @@ if doc.budget_line:
                 "Budget Line \"" + doc.budget_line + "\" belongs to Cost Center \"" + budget.cost_center +
                 "\", not this plan's Cost Center \"" + doc.cost_center + "\". Pick the Budget for the correct Cost Center."
             )
-        if doc.fiscal_year and budget.fiscal_year and str(budget.fiscal_year) != str(doc.fiscal_year):
+        if doc.fiscal_year and not vfq_budget_covers_year(doc.budget_line, doc.fiscal_year):
             frappe.throw(
-                "Budget Line \"" + doc.budget_line + "\" is for Fiscal Year \"" + str(budget.fiscal_year) +
-                "\", not this plan's Fiscal Year \"" + str(doc.fiscal_year) + "\"."
+                "Budget Line \"" + doc.budget_line + "\" does not cover this plan's Fiscal Year \"" + str(doc.fiscal_year) + "\"."
             )
-        accounts = frappe.get_all(
-            "Budget Account",
-            filters={"parent": doc.budget_line, "parenttype": "Budget"},
-            fields=["account"]
-        )
+        accounts = vfq_budget_accounts(doc.budget_line)
         if not accounts:
             frappe.msgprint(
                 "Budget \"" + doc.budget_line + "\" has no accounts configured. Actual spend will never be checked against this plan until an account is added to that Budget.",

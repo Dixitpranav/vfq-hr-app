@@ -98,8 +98,14 @@ def seed_masters(company=None):
 			if name and frappe.db.exists(doctype, name):
 				skipped += 1
 				continue
-			if company and frappe.get_meta(doctype).has_field("company") and not rec.get("company"):
+			meta = frappe.get_meta(doctype)
+			if company and meta.has_field("company"):
 				rec["company"] = company
+			# Optional links to records this site doesn't have (e.g. a test vendor) are left blank.
+			for df in meta.get_link_fields():
+				val = rec.get(df.fieldname)
+				if val and not df.reqd and df.options != doctype and not frappe.db.exists(df.options, val):
+					rec[df.fieldname] = None
 			try:
 				doc = frappe.get_doc(rec)
 				docstatus = rec.get("docstatus") or 0

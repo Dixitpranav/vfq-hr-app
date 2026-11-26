@@ -152,10 +152,10 @@ function set_budget_line_query(frm) {
             return {filters: {name: ['in', []]}};
         }
         return {
+            query: 'vfq_hr.compat.budget_line_query',
             filters: {
                 cost_center: frm.doc.cost_center,
-                fiscal_year: frm.doc.fiscal_year,
-                docstatus: 1
+                fiscal_year: frm.doc.fiscal_year
             }
         };
     });

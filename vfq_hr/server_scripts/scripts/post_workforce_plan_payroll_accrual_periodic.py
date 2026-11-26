@@ -25,11 +25,7 @@ for p in plans:
         skipped.append({"plan": p.name, "reason": "could not resolve company from cost_center '%s'" % p.cost_center})
         continue
 
-    budget_accounts = frappe.get_all(
-        "Budget Account",
-        filters={"parent": p.budget_line, "parenttype": "Budget"},
-        fields=["account"]
-    )
+    budget_accounts = vfq_budget_accounts(p.budget_line)
     if not budget_accounts:
         skipped.append({"plan": p.name, "reason": "Budget '%s' has no accounts configured" % p.budget_line})
         continue
