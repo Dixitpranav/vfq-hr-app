@@ -44,12 +44,14 @@ def _load(fname):
 def after_install():
 	result = seed_masters()
 	apply_hr_settings()
+	ensure_coi_setup()
 	apply_workspace_visibility()
 	frappe.db.commit()
 	print("VFQ HR installed. Seed summary:", json.dumps(result))
 
 
 def after_migrate():
+	ensure_coi_setup()
 	ensure_workspaces()
 	apply_workspace_visibility()
 	frappe.clear_cache()
@@ -115,6 +117,58 @@ def create_departments(company):
 		created += 1
 	frappe.db.commit()
 	return {"created": created}
+
+
+# --------------------------------------------------------------- COI setup
+COI_TEMPLATE = "Employee COI Declaration"
+COI_FORM_NAME = "VFQ COI Declaration Form (blank).docx"
+
+
+def _ensure_folder(name, parent="Home"):
+	path = f"{parent}/{name}"
+	if not frappe.db.exists("File", path):
+		frappe.get_doc({"doctype": "File", "file_name": name, "is_folder": 1, "folder": parent}).insert(ignore_permissions=True)
+	return path
+
+
+def ensure_coi_setup():
+	"""Insert-only: folders, COI email template, blank COI form and HR Settings defaults.
+
+	Never overwrites what HR has edited, so upgrades keep their changes.
+	"""
+	_ensure_folder("COI")
+	templates_folder = _ensure_folder("COI Templates")
+
+	if not frappe.db.exists("Email Template", COI_TEMPLATE):
+		rec = _load("email_template_coi.json")
+		if rec:
+			frappe.get_doc(rec).insert(ignore_permissions=True)
+
+	if not frappe.get_meta("HR Settings").has_field("custom_coi_form_template"):
+		return
+	values = {}
+	if not frappe.db.get_single_value("HR Settings", "custom_official_email_domain_keyword"):
+		values["custom_official_email_domain_keyword"] = "vodafone"
+	if not frappe.db.get_single_value("HR Settings", "custom_coi_email_template"):
+		values["custom_coi_email_template"] = COI_TEMPLATE
+	if not frappe.db.get_single_value("HR Settings", "custom_coi_folder"):
+		values["custom_coi_folder"] = "Home/COI"
+	if not frappe.db.get_single_value("HR Settings", "custom_coi_form_template"):
+		path = os.path.join(SEED_DIR, "coi_form_blank.docx")
+		if os.path.exists(path):
+			with open(path, "rb") as f:
+				content = f.read()
+			fdoc = frappe.get_doc({
+				"doctype": "File",
+				"file_name": COI_FORM_NAME,
+				"folder": templates_folder,
+				"is_private": 1,
+				"content": content,
+			})
+			fdoc.insert(ignore_permissions=True)
+			values["custom_coi_form_template"] = fdoc.file_url
+	for key, value in values.items():
+		frappe.db.set_single_value("HR Settings", key, value)
 
 
 # ------------------------------------------------------------- HR Settings

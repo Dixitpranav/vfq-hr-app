@@ -1,10 +1,12 @@
 [
  {
-  "name": "Self Service Scope - Employee",
-  "file": "self_service_scope_employee.py",
-  "type": "Permission Query",
+  "name": "Employee - Notify HR Ops to Activate",
+  "file": "employee_notify_hr_ops_to_activate.py",
+  "type": "DocType Event",
   "header_lines": 4,
-  "doctype": "Employee"
+  "doctype": "Employee",
+  "event": "After Insert",
+  "method": "after_insert"
  },
  {
   "name": "Employee - Activate",
@@ -15,13 +17,46 @@
   "allow_guest": 0
  },
  {
-  "name": "Employee - Notify HR Ops to Activate",
-  "file": "employee_notify_hr_ops_to_activate.py",
+  "name": "File - Capture Signed COI Reply",
+  "file": "file_capture_signed_coi_reply.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "File",
+  "event": "After Insert",
+  "method": "after_insert"
+ },
+ {
+  "name": "Employee - Send COI Form",
+  "file": "employee_send_coi_form.py",
+  "type": "API",
+  "header_lines": 4,
+  "api_method": "send_coi_form",
+  "allow_guest": 0
+ },
+ {
+  "name": "Employee - Send COI on Activation",
+  "file": "employee_send_coi_on_activation.py",
   "type": "DocType Event",
   "header_lines": 4,
   "doctype": "Employee",
-  "event": "After Insert",
-  "method": "after_insert"
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Employee - Official Email Required for Active",
+  "file": "employee_official_email_required_for_active.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Self Service Scope - Employee",
+  "file": "self_service_scope_employee.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Employee"
  },
  {
   "name": "Employee - HR Ops Guard and VFQ User Mapping",

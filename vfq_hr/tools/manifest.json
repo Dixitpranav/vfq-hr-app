@@ -2008,6 +2008,84 @@
    "fieldname": "custom_activated_by",
    "fieldtype": "Link",
    "options": "User"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_coi_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_coi_status",
+   "fieldtype": "Select",
+   "options": "\nNot Sent\nSent\nSending Failed\nReceived"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_coi_trigger_date",
+   "fieldtype": "Date",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_coi_sent_to",
+   "fieldtype": "Data",
+   "options": "Email"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_coi_column",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_coi_received_on",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_coi_form",
+   "fieldtype": "Attach",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_coi_note",
+   "fieldtype": "Small Text",
+   "options": null
+  },
+  {
+   "dt": "HR Settings",
+   "fieldname": "custom_vfq_onboarding_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "HR Settings",
+   "fieldname": "custom_official_email_domain_keyword",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "HR Settings",
+   "fieldname": "custom_coi_email_template",
+   "fieldtype": "Link",
+   "options": "Email Template"
+  },
+  {
+   "dt": "HR Settings",
+   "fieldname": "custom_coi_form_template",
+   "fieldtype": "Attach",
+   "options": null
+  },
+  {
+   "dt": "HR Settings",
+   "fieldname": "custom_coi_folder",
+   "fieldtype": "Data",
+   "options": null
   }
  ],
  "property_setters": [
@@ -3906,6 +3984,12 @@
    "field_name": "review_year",
    "property": "options",
    "value": "\n2025\n2026\n2027\n2028\n2029\n2030"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "company_email",
+   "property": "label",
+   "value": "Official Email (VFQ)"
   }
  ],
  "custom_docperm": [
@@ -8814,6 +8898,7 @@
   "get_review_access",
   "request_workforce_plan_send_back",
   "save_cxo_send_back_reason",
+  "send_coi_form",
   "submit_portal_resignation",
   "sync_self_service_user_permissions"
  ],

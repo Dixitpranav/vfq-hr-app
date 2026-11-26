@@ -49,6 +49,9 @@ doc_events = {
   "on_update": "vfq_hr.runner.run_doc_event",
   "validate": "vfq_hr.runner.run_doc_event"
  },
+ "File": {
+  "after_insert": "vfq_hr.runner.run_doc_event"
+ },
  "Job Applicant": {
   "before_insert": "vfq_hr.runner.run_doc_event",
   "before_validate": "vfq_hr.runner.run_doc_event",
@@ -124,6 +127,7 @@ permission_query_conditions = {
 # Keep the short API names the forms already call (e.g. frappe.call("activate_employee")).
 override_whitelisted_methods = {
  "activate_employee": "vfq_hr.api.activate_employee",
+ "send_coi_form": "vfq_hr.api.send_coi_form",
  "bulk_create_performance_reviews": "vfq_hr.api.bulk_create_performance_reviews",
  "get_review_access": "vfq_hr.api.get_review_access",
  "get_my_resignation_defaults": "vfq_hr.api.get_my_resignation_defaults",
@@ -340,6 +344,14 @@ fixtures = [
      "Employee-custom_agreed_salary",
      "Employee-custom_budget_line",
      "Employee-custom_budget_plan",
+     "Employee-custom_coi_column",
+     "Employee-custom_coi_form",
+     "Employee-custom_coi_note",
+     "Employee-custom_coi_received_on",
+     "Employee-custom_coi_section",
+     "Employee-custom_coi_sent_to",
+     "Employee-custom_coi_status",
+     "Employee-custom_coi_trigger_date",
      "Employee-custom_compa_ratio",
      "Employee-custom_confirmation_status",
      "Employee-custom_cost_center",
@@ -376,6 +388,11 @@ fixtures = [
      "Employee-custom_work_country",
      "Employment Type-custom_type_code",
      "HR Settings-custom_allow_budget_overconsumption",
+     "HR Settings-custom_coi_email_template",
+     "HR Settings-custom_coi_folder",
+     "HR Settings-custom_coi_form_template",
+     "HR Settings-custom_official_email_domain_keyword",
+     "HR Settings-custom_vfq_onboarding_section",
      "Job Applicant-custom_ageing_days",
      "Job Applicant-custom_agreed_salary",
      "Job Applicant-custom_background_verification_charges",
@@ -706,6 +723,7 @@ fixtures = [
      "Employee-bio-hidden",
      "Employee-branch-hidden",
      "Employee-company_email-hidden",
+     "Employee-company_email-label",
      "Employee-contact_details-label",
      "Employee-contract_end_date-hidden",
      "Employee-ctc-permlevel",

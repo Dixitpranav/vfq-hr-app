@@ -11,6 +11,11 @@ def activate_employee(*args, **kwargs):
 
 
 @frappe.whitelist()
+def send_coi_form(*args, **kwargs):
+	return run_api('Employee - Send COI Form')
+
+
+@frappe.whitelist()
 def bulk_create_performance_reviews(*args, **kwargs):
 	return run_api('Bulk Create Performance Reviews')
 

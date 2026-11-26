@@ -1,5 +1,20 @@
 # VFQ HR build report
 
+## 16.0.1 (26 Nov 2026): COI onboarding
+
+- Official Email (VFQ) is mandatory to make any employee Active; its domain must contain the keyword in
+  HR Settings (default "vodafone": .qa, .com, .in all allowed). Company Email is labelled "Official Email (VFQ)".
+- The "Create VFQ email ID" request goes to the HR Ops - VFQ Email group when the employee record is created.
+- On activation the COI form is emailed to the employee's official email (template "Employee COI Declaration",
+  blank form attached). HR Ops get a Send / Resend COI Form button and a bell alert if sending fails.
+- The signed copy returned by reply is filed on the employee and in File Manager "Home/COI" as
+  `<Full Name>_<Employee ID>_COI_<trigger date>`; COI Status becomes Received.
+- HR Ops email + bell on every new employee "To be activated", with a link and name, emails, vendor and dates.
+- Folders, the COI email template, the blank COI form and HR Settings defaults are created on install and
+  after every migrate only if missing, so HR's edits are never overwritten.
+- Needs an Email Account with outgoing (send) and incoming (receive replies) enabled on the target site.
+
+
 Generated from `testingappversion15.frappe.cloud` (Frappe 15.124 / ERPNext 15.124 / HRMS 15.64) on 25 Nov 2026,
 checked against Frappe v16 / ERPNext v16 / HRMS v16 source (version-16 branches).
 

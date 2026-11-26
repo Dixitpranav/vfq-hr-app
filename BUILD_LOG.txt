@@ -4,7 +4,7 @@ EXCLUDED doctype (band): HR Sub Band
 EXCLUDED doctype (band): JR Band Variance Log
 DocTypes shipped: 27
 EXCLUDED server script (band): HR Salary Band Table - Validate
-Server scripts shipped: 150
+Server scripts shipped: 154
 Client scripts shipped: 39
   report HR - CXO Approval - Register: removed 1 band column(s)
   report HR - Job Applicant - Register: removed 2 band column(s)
@@ -22,8 +22,8 @@ Roles shipped: ['CAO', 'CEO / Final Approver', 'CFO', 'CHRO', 'CSCO', 'CTO', 'Em
   re-anchor Job Opening.custom_experience_required: after custom_sub_band -> custom_role_classification
   re-anchor Employee.custom_compa_ratio: after custom_band -> custom_sub_band
   re-anchor Employee.custom_compa_ratio: after custom_sub_band -> custom_pay_section
-Custom Fields shipped: 324 | band fields removed: ['Job Requisition Role.custom_band', 'Job Requisition Role.custom_sub_band', 'Job Requisition Role.custom_band_low', 'Job Requisition Role.custom_band_max', 'Job Requisition Role.custom_band_mid', 'Job Requisition Role.custom_outside_band', 'Job Requisition.custom_band_variance', 'Job Requisition.custom_band_variance_html', 'Job Requisition.custom_band_variance_log', 'Job Requisition.custom_band_variance_section', 'Job Opening.custom_sub_band', 'Job Opening.custom_band', 'Job Applicant.custom_sub_band', 'Job Applicant.custom_band', 'CXO Hiring Approval Applicant.custom_sub_band', 'Employee.custom_sub_band', 'Employee.custom_band']
-Property Setters shipped: 316
+Custom Fields shipped: 337 | band fields removed: ['Job Requisition Role.custom_band', 'Job Requisition Role.custom_sub_band', 'Job Requisition Role.custom_band_low', 'Job Requisition Role.custom_band_max', 'Job Requisition Role.custom_band_mid', 'Job Requisition Role.custom_outside_band', 'Job Requisition.custom_band_variance', 'Job Requisition.custom_band_variance_html', 'Job Requisition.custom_band_variance_log', 'Job Requisition.custom_band_variance_section', 'Job Opening.custom_sub_band', 'Job Opening.custom_band', 'Job Applicant.custom_sub_band', 'Job Applicant.custom_band', 'CXO Hiring Approval Applicant.custom_sub_band', 'Employee.custom_sub_band', 'Employee.custom_band']
+Property Setters shipped: 317
 Custom DocPerm rows shipped: 480 on 61 doctypes
 Workflows shipped: ['Leave Application - Single Approval', 'Leave Application - Single/Multi Layer Approval', 'Probation Extension Approval', 'Job Requisition Approval', 'Job Applicant Open to Onboarding Automation', 'CXO Hiring Approval Workflow', 'Workforce Plan Approval', 'Probation Review Workflow', 'Mid Year Review Workflow', 'Annual Performance Review Workflow', 'Employee Exit Approval']
 Notifications shipped: 86 (enabled: 4 )

@@ -5054,5 +5054,16 @@
   "value": "\n2025\n2026\n2027\n2028\n2029\n2030",
   "default_value": null,
   "doctype": "Property Setter"
+ },
+ {
+  "doctype": "Property Setter",
+  "name": "Employee-company_email-label",
+  "doctype_or_field": "DocField",
+  "doc_type": "Employee",
+  "field_name": "company_email",
+  "property": "label",
+  "value": "Official Email (VFQ)",
+  "property_type": "Data",
+  "is_system_generated": 0
  }
 ]

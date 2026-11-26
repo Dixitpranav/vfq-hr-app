@@ -2,6 +2,8 @@
 
 The VFQ HR process on Frappe HR: Workforce Plan → Job Requisition → Job Opening → Job Applicant → CXO Hiring Approval → Employee activation (HR Ops) → Probation → Mid-Year / Annual reviews → Employee Exit, plus leave approvals, self-service scopes, reports and dashboards.
 
+Onboarding includes HR Ops activation, a mandatory Official Email (VFQ) and the Conflict of Interest (COI) form by email.
+
 Install it after ERPNext and Frappe HR. It works on **v16 (primary, branch `version-16`)** and v15.
 
 ## Install

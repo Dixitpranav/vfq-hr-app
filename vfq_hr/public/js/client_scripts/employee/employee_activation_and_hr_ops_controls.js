@@ -14,22 +14,33 @@ frappe.ui.form.on("Employee", {
     }
     if (pending && !isAdmin) frm.set_df_property("status", "read_only", 1);
 
-    frm.set_df_property("company_email", "description", "Enter the VFQ email ID here once it is created. Saving an Active employee with this filled in creates the system user and links it automatically.");
+    frm.set_df_property("company_email", "description", "Official VFQ email ID (domain must contain \"vodafone\", e.g. .qa, .com, .in). Required before Activate; on activation the system user is created and linked, and the COI form is emailed here.");
 
     if (pending && !frm.is_new()) {
-      frm.dashboard.set_headline_alert(__("Awaiting activation: HR Ops to verify the details, complete missing personal fields and click <b>Activate</b>."), "orange");
+      frm.dashboard.set_headline_alert(frm.doc.company_email
+        ? __("Awaiting activation: HR Ops to verify the details, complete missing personal fields and click <b>Activate</b>. Activation emails the COI form to the employee.")
+        : __("Awaiting activation: the <b>Official Email (VFQ)</b> must be filled in (domain containing \"vodafone\") before the employee can be activated."), "orange");
       if (isOps || isHRM) {
         frm.add_custom_button(__("Activate"), () => {
           if (frm.is_dirty()) { frappe.msgprint(__("Please save your changes first.")); return; }
-          frappe.confirm(__("Activate {0}? A VFQ email request will be sent to the HR Ops - VFQ Email team.", [frm.doc.employee_name]), () => {
+          if (!frm.doc.company_email) { frappe.msgprint({ title: __("Official email required"), indicator: "orange", message: __("Enter the <b>Official Email (VFQ)</b> first (domain must contain \"vodafone\") and save.") }); frm.scroll_to_field("company_email"); return; }
+          frappe.confirm(__("Activate {0}? The system user will be created for {1} and the COI form emailed to it.", [frm.doc.employee_name, frm.doc.company_email]), () => {
             frappe.call({ method: "activate_employee", args: { employee: frm.doc.name }, freeze: true, freeze_message: __("Activating…") })
-              .then(r => { frappe.show_alert({ message: __("Employee activated. VFQ email request sent to {0} user(s).", [(r.message || {}).notified || 0]), indicator: "green" }); frm.reload_doc(); });
+              .then(r => { const m = r.message || {}; frappe.show_alert({ message: m.coi_status === "Sent" ? __("Employee activated. COI form emailed to {0}.", [frm.doc.company_email]) : __("Employee activated. COI email not sent: {0}", [m.coi_note || ""]), indicator: m.coi_status === "Sent" ? "green" : "orange" }, 10); frm.reload_doc(); });
           });
         }).addClass("btn-primary");
       }
     }
-    if (frm.doc.status === "Active" && !frm.doc.user_id && !frm.doc.company_email && (isOps || isHRM)) {
-      frm.dashboard.set_headline_alert(__("Active. Next: enter the VFQ email ID in <b>Company Email</b> and save to create and link the system user."), "blue");
+    if (frm.doc.status === "Active" && !frm.is_new() && (isOps || isHRM)) {
+      const coi = frm.doc.custom_coi_status;
+      if (coi === "Sent") frm.dashboard.set_headline_alert(__("COI form sent to {0} on {1}. Waiting for the signed copy by reply.", [frm.doc.custom_coi_sent_to, frappe.datetime.str_to_user(frm.doc.custom_coi_trigger_date)]), "blue");
+      if (coi === "Sending Failed") frm.dashboard.set_headline_alert(__("COI email not sent: {0}", [frm.doc.custom_coi_note || ""]), "red");
+      if (coi !== "Received") {
+        frm.add_custom_button(coi === "Sent" || coi === "Sending Failed" ? __("Resend COI Form") : __("Send COI Form"), () => {
+          frappe.call({ method: "send_coi_form", args: { employee: frm.doc.name }, freeze: true })
+            .then(r => { const m = r.message || {}; frappe.show_alert({ message: m.note || m.status, indicator: m.status === "Sent" ? "green" : "orange" }, 10); frm.reload_doc(); });
+        }, __("COI"));
+      }
     }
   }
 });
