@@ -1,0 +1,23 @@
+[
+ {
+  "name": "Round 1 - Non Tech",
+  "docstatus": 0,
+  "idx": 0,
+  "description": null,
+  "doctype": "Interview Type"
+ },
+ {
+  "name": "Round 2 - Technical",
+  "docstatus": 0,
+  "idx": 0,
+  "description": null,
+  "doctype": "Interview Type"
+ },
+ {
+  "name": "Round 3 - HR",
+  "docstatus": 0,
+  "idx": 0,
+  "description": null,
+  "doctype": "Interview Type"
+ }
+]

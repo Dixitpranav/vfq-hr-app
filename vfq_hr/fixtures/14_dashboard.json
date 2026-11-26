@@ -1,0 +1,122 @@
+[
+ {
+  "name": "Hiring Flow Dashboard",
+  "docstatus": 0,
+  "idx": 0,
+  "dashboard_name": "Hiring Flow Dashboard",
+  "is_default": 0,
+  "is_standard": 0,
+  "module": "HR",
+  "chart_options": null,
+  "doctype": "Dashboard",
+  "charts": [
+   {
+    "name": "1gvq9qcnvg",
+    "docstatus": 0,
+    "idx": 1,
+    "chart": "Workforce Plan Budget Utilisation",
+    "width": "Full",
+    "parent": "Hiring Flow Dashboard",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "doctype": "Dashboard Chart Link"
+   },
+   {
+    "name": "4g651jgrqn",
+    "docstatus": 0,
+    "idx": 2,
+    "chart": "Recruitment Funnel",
+    "width": "Half",
+    "parent": "Hiring Flow Dashboard",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "doctype": "Dashboard Chart Link"
+   },
+   {
+    "name": "4g65kn6abi",
+    "docstatus": 0,
+    "idx": 3,
+    "chart": "Hiring by Source",
+    "width": "Half",
+    "parent": "Hiring Flow Dashboard",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "doctype": "Dashboard Chart Link"
+   },
+   {
+    "name": "4g652f7jm4",
+    "docstatus": 0,
+    "idx": 4,
+    "chart": "Workforce Plan Approval - Avg Days by Stage",
+    "width": "Half",
+    "parent": "Hiring Flow Dashboard",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "doctype": "Dashboard Chart Link"
+   },
+   {
+    "name": "4g65ol8o6s",
+    "docstatus": 0,
+    "idx": 5,
+    "chart": "CXO Approval - Avg Days by Stage",
+    "width": "Half",
+    "parent": "Hiring Flow Dashboard",
+    "parentfield": "charts",
+    "parenttype": "Dashboard",
+    "doctype": "Dashboard Chart Link"
+   }
+  ],
+  "cards": [
+   {
+    "name": "4g65eb0a27",
+    "docstatus": 0,
+    "idx": 1,
+    "card": "Workforce Plans Pending Approval",
+    "parent": "Hiring Flow Dashboard",
+    "parentfield": "cards",
+    "parenttype": "Dashboard",
+    "doctype": "Number Card Link"
+   },
+   {
+    "name": "4g65jr8cpu",
+    "docstatus": 0,
+    "idx": 2,
+    "card": "Open Job Openings",
+    "parent": "Hiring Flow Dashboard",
+    "parentfield": "cards",
+    "parenttype": "Dashboard",
+    "doctype": "Number Card Link"
+   },
+   {
+    "name": "4g658p7m4t",
+    "docstatus": 0,
+    "idx": 3,
+    "card": "Applicants In Process",
+    "parent": "Hiring Flow Dashboard",
+    "parentfield": "cards",
+    "parenttype": "Dashboard",
+    "doctype": "Number Card Link"
+   },
+   {
+    "name": "4g65ogaqhk",
+    "docstatus": 0,
+    "idx": 4,
+    "card": "CXO Approvals Pending",
+    "parent": "Hiring Flow Dashboard",
+    "parentfield": "cards",
+    "parenttype": "Dashboard",
+    "doctype": "Number Card Link"
+   },
+   {
+    "name": "4g657rd2nq",
+    "docstatus": 0,
+    "idx": 5,
+    "card": "Awaiting Joining",
+    "parent": "Hiring Flow Dashboard",
+    "parentfield": "cards",
+    "parenttype": "Dashboard",
+    "doctype": "Number Card Link"
+   }
+  ]
+ }
+]

@@ -1,0 +1,2 @@
+// Filters for HR - Onboarding - Onboarded Employees
+frappe.query_reports["HR - Onboarding - Onboarded Employees"] = {filters: [{"fieldname":"company","label":"Company","fieldtype":"Link","options":"Company"},{"fieldname":"department","label":"Department","fieldtype":"Link","options":"Department"},{"fieldname":"function","label":"Function","fieldtype":"Link","options":"Function"},{"fieldname":"from_date","label":"From Date","fieldtype":"Date"},{"fieldname":"to_date","label":"To Date","fieldtype":"Date"}]};

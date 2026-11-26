@@ -1,0 +1,2 @@
+// Filters for HR - CXO Approval - Exceptional Salary Cases
+frappe.query_reports["HR - CXO Approval - Exceptional Salary Cases"] = {filters: [{"fieldname":"company","label":"Company","fieldtype":"Link","options":"Company"},{"fieldname":"from_date","label":"From Date","fieldtype":"Date"},{"fieldname":"to_date","label":"To Date","fieldtype":"Date"},{"fieldname":"state","label":"Status","fieldtype":"Select","options":"\nDraft\nPending Head of OD Approval\nPending CHRO Approval\nPending CAO Approval\nPending CEO Approval\nApproved to onboard\nRejected"}]};

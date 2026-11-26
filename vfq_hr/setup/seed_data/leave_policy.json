@@ -1,0 +1,1012 @@
+[
+ {
+  "name": "HR-LPOL-2026-00001",
+  "docstatus": 1,
+  "idx": 1,
+  "title": "Zensar Leave Policy",
+  "amended_from": null,
+  "doctype": "Leave Policy",
+  "leave_policy_details": [
+   {
+    "name": "3lc2bnc4ts",
+    "docstatus": 1,
+    "idx": 1,
+    "leave_type": "Casual Leave",
+    "annual_allocation": 10,
+    "parent": "HR-LPOL-2026-00001",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "3lc2fadkdv",
+    "docstatus": 1,
+    "idx": 2,
+    "leave_type": "Compensatory Off",
+    "annual_allocation": 2,
+    "parent": "HR-LPOL-2026-00001",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "3lc2f8gcdt",
+    "docstatus": 1,
+    "idx": 3,
+    "leave_type": "Privilege Leave",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00001",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "3lc2ak5v2r",
+    "docstatus": 1,
+    "idx": 4,
+    "leave_type": "Sick Leave",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00001",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   }
+  ]
+ },
+ {
+  "name": "HR-LPOL-2026-00002",
+  "docstatus": 1,
+  "idx": 0,
+  "title": "IND Vendor - General",
+  "amended_from": null,
+  "doctype": "Leave Policy",
+  "leave_policy_details": [
+   {
+    "name": "d0c557vu6q",
+    "docstatus": 1,
+    "idx": 1,
+    "leave_type": "Casual Leave",
+    "annual_allocation": 8,
+    "parent": "HR-LPOL-2026-00002",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "d0c5jnfp1o",
+    "docstatus": 1,
+    "idx": 2,
+    "leave_type": "Sick Leave",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00002",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "d0c59vl6dc",
+    "docstatus": 1,
+    "idx": 3,
+    "leave_type": "Privilege Leave",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00002",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "d0c5ptdrge",
+    "docstatus": 1,
+    "idx": 4,
+    "leave_type": "Compensatory Off",
+    "annual_allocation": 2,
+    "parent": "HR-LPOL-2026-00002",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "d0c57r3ioi",
+    "docstatus": 1,
+    "idx": 5,
+    "leave_type": "Marriage Leave",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00002",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   }
+  ]
+ },
+ {
+  "name": "HR-LPOL-2026-00003",
+  "docstatus": 1,
+  "idx": 0,
+  "title": "IND Vendor - Women",
+  "amended_from": null,
+  "doctype": "Leave Policy",
+  "leave_policy_details": [
+   {
+    "name": "b0c63ht3r6",
+    "docstatus": 1,
+    "idx": 1,
+    "leave_type": "Casual Leave",
+    "annual_allocation": 8,
+    "parent": "HR-LPOL-2026-00003",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0c6bomd7i",
+    "docstatus": 1,
+    "idx": 2,
+    "leave_type": "Sick Leave",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00003",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0c6dhf997",
+    "docstatus": 1,
+    "idx": 3,
+    "leave_type": "Privilege Leave",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00003",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0c69gj0iu",
+    "docstatus": 1,
+    "idx": 4,
+    "leave_type": "Compensatory Off",
+    "annual_allocation": 2,
+    "parent": "HR-LPOL-2026-00003",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0c6h4dr6d",
+    "docstatus": 1,
+    "idx": 5,
+    "leave_type": "Marriage Leave",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00003",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0c6t0ikea",
+    "docstatus": 1,
+    "idx": 6,
+    "leave_type": "Maternity Leave - India",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00003",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0c6r1tdoq",
+    "docstatus": 1,
+    "idx": 7,
+    "leave_type": "Menstrual Leave",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00003",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0c6g45fe3",
+    "docstatus": 1,
+    "idx": 8,
+    "leave_type": "Miscarriage Leave",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00003",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   }
+  ]
+ },
+ {
+  "name": "HR-LPOL-2026-00004",
+  "docstatus": 1,
+  "idx": 1,
+  "title": "IND Vendor - Men",
+  "amended_from": null,
+  "doctype": "Leave Policy",
+  "leave_policy_details": [
+   {
+    "name": "20c744o98c",
+    "docstatus": 1,
+    "idx": 1,
+    "leave_type": "Casual Leave",
+    "annual_allocation": 8,
+    "parent": "HR-LPOL-2026-00004",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "20c7gqljq0",
+    "docstatus": 1,
+    "idx": 2,
+    "leave_type": "Sick Leave",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00004",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "20c7bi9hc8",
+    "docstatus": 1,
+    "idx": 3,
+    "leave_type": "Privilege Leave",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00004",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "20c7470b6b",
+    "docstatus": 1,
+    "idx": 4,
+    "leave_type": "Compensatory Off",
+    "annual_allocation": 2,
+    "parent": "HR-LPOL-2026-00004",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "20c7bsga43",
+    "docstatus": 1,
+    "idx": 5,
+    "leave_type": "Marriage Leave",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00004",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "20c7o7njt2",
+    "docstatus": 1,
+    "idx": 6,
+    "leave_type": "Paternity Leave - India",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00004",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   }
+  ]
+ },
+ {
+  "name": "HR-LPOL-2026-00005",
+  "docstatus": 1,
+  "idx": 1,
+  "title": "EU Vendor - General",
+  "amended_from": null,
+  "doctype": "Leave Policy",
+  "leave_policy_details": [
+   {
+    "name": "10c8dbdn9m",
+    "docstatus": 1,
+    "idx": 1,
+    "leave_type": "Annual Leave - Europe",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00005",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "10c8ir3261",
+    "docstatus": 1,
+    "idx": 2,
+    "leave_type": "Sick Leave",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00005",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "10c8gk9edi",
+    "docstatus": 1,
+    "idx": 3,
+    "leave_type": "Care Leave - Europe",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00005",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "10c8b23dc8",
+    "docstatus": 1,
+    "idx": 4,
+    "leave_type": "Study Leave - Europe",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00005",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "10c8naql7j",
+    "docstatus": 1,
+    "idx": 5,
+    "leave_type": "Compensatory Off",
+    "annual_allocation": 2,
+    "parent": "HR-LPOL-2026-00005",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "10c80ome6u",
+    "docstatus": 1,
+    "idx": 6,
+    "leave_type": "Parental Leave - Europe",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00005",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   }
+  ]
+ },
+ {
+  "name": "HR-LPOL-2026-00006",
+  "docstatus": 1,
+  "idx": 0,
+  "title": "EU Vendor - Women",
+  "amended_from": null,
+  "doctype": "Leave Policy",
+  "leave_policy_details": [
+   {
+    "name": "30c94uqrvr",
+    "docstatus": 1,
+    "idx": 1,
+    "leave_type": "Annual Leave - Europe",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00006",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "30c9f6osdo",
+    "docstatus": 1,
+    "idx": 2,
+    "leave_type": "Sick Leave",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00006",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "30c918ip0q",
+    "docstatus": 1,
+    "idx": 3,
+    "leave_type": "Care Leave - Europe",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00006",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "30c91eefmq",
+    "docstatus": 1,
+    "idx": 4,
+    "leave_type": "Study Leave - Europe",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00006",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "30c9dl1akq",
+    "docstatus": 1,
+    "idx": 5,
+    "leave_type": "Compensatory Off",
+    "annual_allocation": 2,
+    "parent": "HR-LPOL-2026-00006",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "30c9i4c39m",
+    "docstatus": 1,
+    "idx": 6,
+    "leave_type": "Parental Leave - Europe",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00006",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "30c91ckp73",
+    "docstatus": 1,
+    "idx": 7,
+    "leave_type": "Maternity Leave - Europe",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00006",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "30c9l28tju",
+    "docstatus": 1,
+    "idx": 8,
+    "leave_type": "Menstrual Leave",
+    "annual_allocation": 4,
+    "parent": "HR-LPOL-2026-00006",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "30c9ga4n3o",
+    "docstatus": 1,
+    "idx": 9,
+    "leave_type": "Miscarriage Leave",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00006",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   }
+  ]
+ },
+ {
+  "name": "HR-LPOL-2026-00007",
+  "docstatus": 1,
+  "idx": 0,
+  "title": "EU Vendor - Men",
+  "amended_from": null,
+  "doctype": "Leave Policy",
+  "leave_policy_details": [
+   {
+    "name": "70cak74403",
+    "docstatus": 1,
+    "idx": 1,
+    "leave_type": "Annual Leave - Europe",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00007",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "70cap8ofhj",
+    "docstatus": 1,
+    "idx": 2,
+    "leave_type": "Sick Leave",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00007",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "70caegpc5j",
+    "docstatus": 1,
+    "idx": 3,
+    "leave_type": "Care Leave - Europe",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00007",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "70cakt6rgl",
+    "docstatus": 1,
+    "idx": 4,
+    "leave_type": "Study Leave - Europe",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00007",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "70cas8iqmb",
+    "docstatus": 1,
+    "idx": 5,
+    "leave_type": "Compensatory Off",
+    "annual_allocation": 2,
+    "parent": "HR-LPOL-2026-00007",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "70caedv22b",
+    "docstatus": 1,
+    "idx": 6,
+    "leave_type": "Parental Leave - Europe",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00007",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "70caje28il",
+    "docstatus": 1,
+    "idx": 7,
+    "leave_type": "Paternity Leave - Europe",
+    "annual_allocation": 7,
+    "parent": "HR-LPOL-2026-00007",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   }
+  ]
+ },
+ {
+  "name": "HR-LPOL-2026-00008",
+  "docstatus": 1,
+  "idx": 0,
+  "title": "EU Vendor - Contract",
+  "amended_from": null,
+  "doctype": "Leave Policy",
+  "leave_policy_details": [
+   {
+    "name": "50cadf7mhj",
+    "docstatus": 1,
+    "idx": 1,
+    "leave_type": "Annual Leave - Europe",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00008",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "50ca0ja3ga",
+    "docstatus": 1,
+    "idx": 2,
+    "leave_type": "Sick Leave",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00008",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "50car2oojt",
+    "docstatus": 1,
+    "idx": 3,
+    "leave_type": "Care Leave - Europe",
+    "annual_allocation": 3,
+    "parent": "HR-LPOL-2026-00008",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   }
+  ]
+ },
+ {
+  "name": "HR-LPOL-2026-00009",
+  "docstatus": 1,
+  "idx": 0,
+  "title": "EU Vendor - Intern",
+  "amended_from": null,
+  "doctype": "Leave Policy",
+  "leave_policy_details": [
+   {
+    "name": "40cb0gr8ks",
+    "docstatus": 1,
+    "idx": 1,
+    "leave_type": "Annual Leave - Europe",
+    "annual_allocation": 4,
+    "parent": "HR-LPOL-2026-00009",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "40cbrtm3vq",
+    "docstatus": 1,
+    "idx": 2,
+    "leave_type": "Sick Leave",
+    "annual_allocation": 3,
+    "parent": "HR-LPOL-2026-00009",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   }
+  ]
+ },
+ {
+  "name": "HR-LPOL-2026-00010",
+  "docstatus": 1,
+  "idx": 4,
+  "title": "QA General",
+  "amended_from": null,
+  "doctype": "Leave Policy",
+  "leave_policy_details": [
+   {
+    "name": "b0ccsh3mts",
+    "docstatus": 1,
+    "idx": 1,
+    "leave_type": "Annual Leave - Qatar",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00010",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0cc1ja390",
+    "docstatus": 1,
+    "idx": 2,
+    "leave_type": "Sick Leave Full Pay - Qatar",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00010",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0cc0ql6v1",
+    "docstatus": 1,
+    "idx": 3,
+    "leave_type": "Sick Leave Half Pay - Qatar",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00010",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0ccc5egpb",
+    "docstatus": 1,
+    "idx": 4,
+    "leave_type": "Sick Leave Unpaid - Qatar",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00010",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0ccuj67fm",
+    "docstatus": 1,
+    "idx": 5,
+    "leave_type": "Hajj Leave - Qatar",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00010",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0cc7uqnqs",
+    "docstatus": 1,
+    "idx": 6,
+    "leave_type": "Marriage Leave - Qatar",
+    "annual_allocation": 3,
+    "parent": "HR-LPOL-2026-00010",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0cc35mlk8",
+    "docstatus": 1,
+    "idx": 7,
+    "leave_type": "Bereavement Leave - Qatar",
+    "annual_allocation": 3,
+    "parent": "HR-LPOL-2026-00010",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "b0cc56umpi",
+    "docstatus": 1,
+    "idx": 8,
+    "leave_type": "Exam Leave - Qatar",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00010",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   }
+  ]
+ },
+ {
+  "name": "HR-LPOL-2026-00011",
+  "docstatus": 1,
+  "idx": 0,
+  "title": "QA Women",
+  "amended_from": null,
+  "doctype": "Leave Policy",
+  "leave_policy_details": [
+   {
+    "name": "e0cdja8ufp",
+    "docstatus": 1,
+    "idx": 1,
+    "leave_type": "Annual Leave - Qatar",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00011",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "e0cddcggb1",
+    "docstatus": 1,
+    "idx": 2,
+    "leave_type": "Sick Leave Full Pay - Qatar",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00011",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "e0cdhocrse",
+    "docstatus": 1,
+    "idx": 3,
+    "leave_type": "Sick Leave Half Pay - Qatar",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00011",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "e0cdr3478a",
+    "docstatus": 1,
+    "idx": 4,
+    "leave_type": "Sick Leave Unpaid - Qatar",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00011",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "e0cdbgoi51",
+    "docstatus": 1,
+    "idx": 5,
+    "leave_type": "Hajj Leave - Qatar",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00011",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "e0cdbt93im",
+    "docstatus": 1,
+    "idx": 6,
+    "leave_type": "Marriage Leave - Qatar",
+    "annual_allocation": 3,
+    "parent": "HR-LPOL-2026-00011",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "e0cdrft6ph",
+    "docstatus": 1,
+    "idx": 7,
+    "leave_type": "Bereavement Leave - Qatar",
+    "annual_allocation": 3,
+    "parent": "HR-LPOL-2026-00011",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "e0cdfjkhok",
+    "docstatus": 1,
+    "idx": 8,
+    "leave_type": "Exam Leave - Qatar",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00011",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "e0cdhf4ibr",
+    "docstatus": 1,
+    "idx": 9,
+    "leave_type": "Maternity Leave - Qatar",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00011",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "e0cd141ve9",
+    "docstatus": 1,
+    "idx": 10,
+    "leave_type": "Nursing Break - Qatar",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00011",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "e0cd37hspb",
+    "docstatus": 1,
+    "idx": 11,
+    "leave_type": "Menstrual Leave",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00011",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   }
+  ]
+ },
+ {
+  "name": "HR-LPOL-2026-00012",
+  "docstatus": 1,
+  "idx": 0,
+  "title": "QA Men",
+  "amended_from": null,
+  "doctype": "Leave Policy",
+  "leave_policy_details": [
+   {
+    "name": "a0cel54di9",
+    "docstatus": 1,
+    "idx": 1,
+    "leave_type": "Annual Leave - Qatar",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00012",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "a0cemb2944",
+    "docstatus": 1,
+    "idx": 2,
+    "leave_type": "Sick Leave Full Pay - Qatar",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00012",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "a0ce69lbim",
+    "docstatus": 1,
+    "idx": 3,
+    "leave_type": "Sick Leave Half Pay - Qatar",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00012",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "a0cenrv0be",
+    "docstatus": 1,
+    "idx": 4,
+    "leave_type": "Sick Leave Unpaid - Qatar",
+    "annual_allocation": 6,
+    "parent": "HR-LPOL-2026-00012",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "a0ce2225a1",
+    "docstatus": 1,
+    "idx": 5,
+    "leave_type": "Hajj Leave - Qatar",
+    "annual_allocation": 9,
+    "parent": "HR-LPOL-2026-00012",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "a0celi5qm6",
+    "docstatus": 1,
+    "idx": 6,
+    "leave_type": "Marriage Leave - Qatar",
+    "annual_allocation": 3,
+    "parent": "HR-LPOL-2026-00012",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "a0cedniqft",
+    "docstatus": 1,
+    "idx": 7,
+    "leave_type": "Bereavement Leave - Qatar",
+    "annual_allocation": 3,
+    "parent": "HR-LPOL-2026-00012",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "a0celrio31",
+    "docstatus": 1,
+    "idx": 8,
+    "leave_type": "Exam Leave - Qatar",
+    "annual_allocation": 5,
+    "parent": "HR-LPOL-2026-00012",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "a0ce99er0m",
+    "docstatus": 1,
+    "idx": 9,
+    "leave_type": "Paternity Leave - Qatar",
+    "annual_allocation": 3,
+    "parent": "HR-LPOL-2026-00012",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   }
+  ]
+ },
+ {
+  "name": "HR-LPOL-2026-00013",
+  "docstatus": 1,
+  "idx": 22,
+  "title": "Zensar Technologies - Standard (30 days)",
+  "amended_from": null,
+  "doctype": "Leave Policy",
+  "leave_policy_details": [
+   {
+    "name": "c2f5oo664j",
+    "docstatus": 1,
+    "idx": 1,
+    "leave_type": "Privilege Leave",
+    "annual_allocation": 18,
+    "parent": "HR-LPOL-2026-00013",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   },
+   {
+    "name": "c2f5en1n74",
+    "docstatus": 1,
+    "idx": 2,
+    "leave_type": "Flexi Leave",
+    "annual_allocation": 12,
+    "parent": "HR-LPOL-2026-00013",
+    "parentfield": "leave_policy_details",
+    "parenttype": "Leave Policy",
+    "doctype": "Leave Policy Detail"
+   }
+  ]
+ }
+]

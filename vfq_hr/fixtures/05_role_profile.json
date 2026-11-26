@@ -1,0 +1,90 @@
+[
+ {
+  "name": "HR",
+  "docstatus": 0,
+  "idx": 0,
+  "role_profile": "HR",
+  "doctype": "Role Profile",
+  "roles": [
+   {
+    "name": "o8lov3gsqc",
+    "docstatus": 0,
+    "idx": 1,
+    "role": "HR User",
+    "parent": "HR",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "doctype": "Has Role"
+   },
+   {
+    "name": "o8l10sfrhu",
+    "docstatus": 0,
+    "idx": 2,
+    "role": "HR Manager",
+    "parent": "HR",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "doctype": "Has Role"
+   },
+   {
+    "name": "o8lgj945op",
+    "docstatus": 0,
+    "idx": 3,
+    "role": "Leave Approver",
+    "parent": "HR",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "doctype": "Has Role"
+   },
+   {
+    "name": "o8l7hask02",
+    "docstatus": 0,
+    "idx": 4,
+    "role": "Expense Approver",
+    "parent": "HR",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "doctype": "Has Role"
+   }
+  ]
+ },
+ {
+  "name": "Vendor Manager",
+  "docstatus": 0,
+  "idx": 1,
+  "role_profile": "Vendor Manager",
+  "doctype": "Role Profile",
+  "roles": [
+   {
+    "name": "4dk3dfnetj",
+    "docstatus": 0,
+    "idx": 1,
+    "role": "Employee",
+    "parent": "Vendor Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "doctype": "Has Role"
+   },
+   {
+    "name": "4dk3osa9qf",
+    "docstatus": 0,
+    "idx": 2,
+    "role": "Leave Approver",
+    "parent": "Vendor Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "doctype": "Has Role"
+   },
+   {
+    "name": "eh7potp5u3",
+    "docstatus": 0,
+    "idx": 3,
+    "role": "HR User",
+    "parent": "Vendor Manager",
+    "parentfield": "roles",
+    "parenttype": "Role Profile",
+    "doctype": "Has Role"
+   }
+  ]
+ }
+]

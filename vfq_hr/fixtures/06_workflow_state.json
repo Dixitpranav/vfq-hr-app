@@ -1,0 +1,245 @@
+[
+ {
+  "name": "Approved",
+  "docstatus": 0,
+  "idx": 23,
+  "workflow_state_name": "Approved",
+  "icon": "ok-sign",
+  "style": "Success",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Rejected",
+  "docstatus": 0,
+  "idx": 9,
+  "workflow_state_name": "Rejected",
+  "icon": "remove",
+  "style": "Danger",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Open",
+  "docstatus": 0,
+  "idx": 4,
+  "workflow_state_name": "Open",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Pending HOD Approval",
+  "docstatus": 0,
+  "idx": 12,
+  "workflow_state_name": "Pending HOD Approval",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Pending HR Approval",
+  "docstatus": 0,
+  "idx": 10,
+  "workflow_state_name": "Pending HR Approval",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Interview Scheduled",
+  "docstatus": 0,
+  "idx": 6,
+  "workflow_state_name": "Interview Scheduled",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Shortlisted",
+  "docstatus": 0,
+  "idx": 4,
+  "workflow_state_name": "Shortlisted",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Onboarded",
+  "docstatus": 0,
+  "idx": 8,
+  "workflow_state_name": "Onboarded",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Draft",
+  "docstatus": 0,
+  "idx": 16,
+  "workflow_state_name": "Draft",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Pending Manager Approval",
+  "docstatus": 0,
+  "idx": 5,
+  "workflow_state_name": "Pending Manager Approval",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Manager Review",
+  "docstatus": 0,
+  "idx": 9,
+  "workflow_state_name": "Manager Review",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Employee Acknowledgement",
+  "docstatus": 0,
+  "idx": 4,
+  "workflow_state_name": "Employee Acknowledgement",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Completed",
+  "docstatus": 0,
+  "idx": 2,
+  "workflow_state_name": "Completed",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Employee Discussion",
+  "docstatus": 0,
+  "idx": 5,
+  "workflow_state_name": "Employee Discussion",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "HR Review",
+  "docstatus": 0,
+  "idx": 3,
+  "workflow_state_name": "HR Review",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Finalized",
+  "docstatus": 0,
+  "idx": 7,
+  "workflow_state_name": "Finalized",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Final Decision",
+  "docstatus": 0,
+  "idx": 1,
+  "workflow_state_name": "Final Decision",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Pending CEO Approval",
+  "docstatus": 0,
+  "idx": 6,
+  "workflow_state_name": "Pending CEO Approval",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Approved to onboard",
+  "docstatus": 0,
+  "idx": 3,
+  "workflow_state_name": "Approved to onboard",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Pending Functional Head Approval",
+  "docstatus": 0,
+  "idx": 5,
+  "workflow_state_name": "Pending Functional Head Approval",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Pending Head of OD and Total Rewards Approval",
+  "docstatus": 0,
+  "idx": 3,
+  "workflow_state_name": "Pending Head of OD and Total Rewards Approval",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Pending CAO Approval",
+  "docstatus": 0,
+  "idx": 9,
+  "workflow_state_name": "Pending CAO Approval",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Backed-Off",
+  "docstatus": 0,
+  "idx": 3,
+  "workflow_state_name": "Backed-Off",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Exit Closed",
+  "docstatus": 0,
+  "idx": 1,
+  "workflow_state_name": "Exit Closed",
+  "icon": "",
+  "style": "Success",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Pending HR Manager Approval",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_state_name": "Pending HR Manager Approval",
+  "icon": "",
+  "style": "",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Pending Head of OD Approval",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_state_name": "Pending Head of OD Approval",
+  "icon": "",
+  "style": "Warning",
+  "doctype": "Workflow State"
+ },
+ {
+  "name": "Pending CHRO Approval",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_state_name": "Pending CHRO Approval",
+  "icon": "",
+  "style": "Warning",
+  "doctype": "Workflow State"
+ }
+]

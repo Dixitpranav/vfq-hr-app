@@ -1,0 +1,1304 @@
+[
+ {
+  "name": "Self Service Scope - Employee",
+  "file": "self_service_scope_employee.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Employee"
+ },
+ {
+  "name": "Employee - Activate",
+  "file": "employee_activate.py",
+  "type": "API",
+  "header_lines": 4,
+  "api_method": "activate_employee",
+  "allow_guest": 0
+ },
+ {
+  "name": "Employee - Notify HR Ops to Activate",
+  "file": "employee_notify_hr_ops_to_activate.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee",
+  "event": "After Insert",
+  "method": "after_insert"
+ },
+ {
+  "name": "Employee - HR Ops Guard and VFQ User Mapping",
+  "file": "employee_hr_ops_guard_and_vfq_user_mapping.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Employee - Default To Be Activated",
+  "file": "employee_default_to_be_activated.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee",
+  "event": "Before Insert",
+  "method": "before_insert"
+ },
+ {
+  "name": "Job Requisition - Hide Confidential",
+  "file": "job_requisition_hide_confidential.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Job Requisition"
+ },
+ {
+  "name": "Annual Performance Review - HR Only Creation",
+  "file": "annual_performance_review_hr_only_creation.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Annual Performance Review",
+  "event": "Before Insert",
+  "method": "before_insert"
+ },
+ {
+  "name": "Mid-Year Review - HR Only Creation",
+  "file": "mid_year_review_hr_only_creation.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Mid-Year Review",
+  "event": "Before Insert",
+  "method": "before_insert"
+ },
+ {
+  "name": "Bulk Create Performance Reviews",
+  "file": "bulk_create_performance_reviews.py",
+  "type": "API",
+  "header_lines": 4,
+  "api_method": "bulk_create_performance_reviews",
+  "allow_guest": 0
+ },
+ {
+  "name": "Annual Performance Review - Require Completed Mid-Year",
+  "file": "annual_performance_review_require_completed_mid_year.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Annual Performance Review",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Annual Performance Review - Block When Exit Exists",
+  "file": "annual_performance_review_block_when_exit_exists.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Annual Performance Review",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Mid-Year Review - Block When Exit Exists",
+  "file": "mid_year_review_block_when_exit_exists.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Mid-Year Review",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Probation Review - Block When Exit Exists",
+  "file": "probation_review_block_when_exit_exists.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Probation Review",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Job Applicant - Joining Date Not Before Onboarding",
+  "file": "job_applicant_joining_date_not_before_onboarding.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Employee - Joining Date Not Before Onboarding",
+  "file": "employee_joining_date_not_before_onboarding.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "User - HR Only Changes",
+  "file": "user_hr_only_changes.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "User",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "DocShare - No Self Access to User Record",
+  "file": "docshare_no_self_access_to_user_record.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "DocShare",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Review Access - Relationship Lookup",
+  "file": "review_access_relationship_lookup.py",
+  "type": "API",
+  "header_lines": 4,
+  "api_method": "get_review_access",
+  "allow_guest": 0
+ },
+ {
+  "name": "Employee Exit - Field Ownership Guard",
+  "file": "employee_exit_field_ownership_guard.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee Exit",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Annual Performance Review - Field Ownership Guard",
+  "file": "annual_performance_review_field_ownership_guard.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Annual Performance Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Mid-Year Review - Field Ownership Guard",
+  "file": "mid_year_review_field_ownership_guard.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Mid-Year Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Probation Review - Field Ownership Guard",
+  "file": "probation_review_field_ownership_guard.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Probation Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Employee Exit - Portal Resignation Defaults",
+  "file": "employee_exit_portal_resignation_defaults.py",
+  "type": "API",
+  "header_lines": 4,
+  "api_method": "get_my_resignation_defaults",
+  "allow_guest": 0
+ },
+ {
+  "name": "Employee Exit - One Open Resignation per Employee",
+  "file": "employee_exit_one_open_resignation_per_employee.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee Exit",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Employee Exit - Lock After Submission for Employee",
+  "file": "employee_exit_lock_after_submission_for_employee.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee Exit",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Employee Exit - Notice Period and Sign-off",
+  "file": "employee_exit_notice_period_and_sign_off.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee Exit",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Employee - Auto Reporting Manager Role",
+  "file": "employee_auto_reporting_manager_role.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Employee Exit - Attach Signed Acknowledgement",
+  "file": "employee_exit_attach_signed_acknowledgement.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee Exit",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Submit Portal Resignation",
+  "file": "submit_portal_resignation.py",
+  "type": "API",
+  "header_lines": 4,
+  "api_method": "submit_portal_resignation",
+  "allow_guest": 0
+ },
+ {
+  "name": "Employee Exit - Portal Employee and Signed Letter",
+  "file": "employee_exit_portal_employee_and_signed_letter.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee Exit",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Employee Exit - Reason Chosen by Manager",
+  "file": "employee_exit_reason_chosen_by_manager.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee Exit",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Employee - Holiday List from Vendor",
+  "file": "employee_holiday_list_from_vendor.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee",
+  "event": "Before Insert",
+  "method": "before_insert"
+ },
+ {
+  "name": "Job Applicant - Require CTC Breakdown for Onboarding",
+  "file": "job_applicant_require_ctc_breakdown_for_onboarding.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Applicant - CTC Totals",
+  "file": "job_applicant_ctc_totals.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Sync Self Service User Permissions (API)",
+  "file": "sync_self_service_user_permissions_api.py",
+  "type": "API",
+  "header_lines": 4,
+  "api_method": "sync_self_service_user_permissions",
+  "allow_guest": 0
+ },
+ {
+  "name": "Employee - Grant Self Service Permissions",
+  "file": "employee_grant_self_service_permissions.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "CXO Hiring Approval - Approval Remarks Stage Lock",
+  "file": "cxo_hiring_approval_approval_remarks_stage_lock.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "CXO Hiring Approval",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "CXO Hiring Approval - Validate and Rollup v2",
+  "file": "cxo_hiring_approval_validate_and_rollup_v2.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "CXO Hiring Approval",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "CXO Hiring Approval - Save Send Back Reason",
+  "file": "cxo_hiring_approval_save_send_back_reason.py",
+  "type": "API",
+  "header_lines": 4,
+  "api_method": "save_cxo_send_back_reason",
+  "allow_guest": 0
+ },
+ {
+  "name": "CXO Hiring Approval - Require Joining Details",
+  "file": "cxo_hiring_approval_require_joining_details.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "CXO Hiring Approval",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "CXO Hiring Approval - Require Summary Comments at Approval",
+  "file": "cxo_hiring_approval_require_summary_comments_at_approval.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "CXO Hiring Approval",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "CXO Hiring Approval - Log Send Back Reason",
+  "file": "cxo_hiring_approval_log_send_back_reason.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "CXO Hiring Approval",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Auto create Job Opening for approved requisitions",
+  "file": "auto_create_job_opening_for_approved_requisitions.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Employee - Sync Position Title",
+  "file": "employee_sync_position_title.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Job Applicant - Sync Position Title",
+  "file": "job_applicant_sync_position_title.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Job Opening - Sync Position Title",
+  "file": "job_opening_sync_position_title.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Opening",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Job Requisition - Sync Position Title",
+  "file": "job_requisition_sync_position_title.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Workforce Plan - Sync Position Title",
+  "file": "workforce_plan_sync_position_title.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Workforce Plan",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Job Opening - Unique Web Route",
+  "file": "job_opening_unique_web_route.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Opening",
+  "event": "Before Insert",
+  "method": "before_insert"
+ },
+ {
+  "name": "Employee - Auto Assign Leave Policy",
+  "file": "employee_auto_assign_leave_policy.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee",
+  "event": "After Insert",
+  "method": "after_insert"
+ },
+ {
+  "name": "Job Opening - Lock After Shared With Vendor",
+  "file": "job_opening_lock_after_shared_with_vendor.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Opening",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Applicant - Recruitment Timeline and Logs",
+  "file": "job_applicant_recruitment_timeline_and_logs.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Sync Joining Date to Employee After Onboarding",
+  "file": "sync_joining_date_to_employee_after_onboarding.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Auto Create Employee when Applicant becomes Onboarded",
+  "file": "auto_create_employee_when_applicant_becomes_onboarded.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Job Applicant - Refresh Ageing Daily",
+  "file": "job_applicant_refresh_ageing_daily.py",
+  "type": "Scheduler Event",
+  "header_lines": 4,
+  "frequency": "Daily",
+  "cron_format": null
+ },
+ {
+  "name": "Job Opening - Close Expired Shared Openings",
+  "file": "job_opening_close_expired_shared_openings.py",
+  "type": "Scheduler Event",
+  "header_lines": 4,
+  "frequency": "Daily",
+  "cron_format": null
+ },
+ {
+  "name": "Job Opening - Role Sharing Date and Status",
+  "file": "job_opening_role_sharing_date_and_status.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Opening",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Requisition - Lock Role Positions After Approval",
+  "file": "job_requisition_lock_role_positions_after_approval.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Opening - One Opening Per Role and Locked Count",
+  "file": "job_opening_one_opening_per_role_and_locked_count.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Opening",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Workforce Plan - Monthly Budget Per Headcount",
+  "file": "workforce_plan_monthly_budget_per_headcount.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Workforce Plan",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Annual Performance Review - Require Probation Confirmation",
+  "file": "annual_performance_review_require_probation_confirmation.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Annual Performance Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Mid-Year Review - Require Probation Confirmation",
+  "file": "mid_year_review_require_probation_confirmation.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Mid-Year Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Block Direct Entry to Approved to Onboard",
+  "file": "block_direct_entry_to_approved_to_onboard.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Block Onboarding Without CXO Approval",
+  "file": "block_onboarding_without_cxo_approval.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Annual Performance Review - Set Notification Recipients",
+  "file": "annual_performance_review_set_notification_recipients.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Annual Performance Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Mid-Year Review - Set Notification Recipients",
+  "file": "mid_year_review_set_notification_recipients.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Mid-Year Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Probation Extension - Set Notification Recipients",
+  "file": "probation_extension_set_notification_recipients.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Probation Extension",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Probation Review - Set Notification Recipients",
+  "file": "probation_review_set_notification_recipients.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Probation Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Employee Exit - Set Notification Recipients",
+  "file": "employee_exit_set_notification_recipients.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee Exit",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Leave Application - Set Notification Recipients",
+  "file": "leave_application_set_notification_recipients.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Leave Application",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Applicant - Set CXO Approval Status",
+  "file": "job_applicant_set_cxo_approval_status.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "CXO Hiring Approval - Get Shortlisted Count",
+  "file": "cxo_hiring_approval_get_shortlisted_count.py",
+  "type": "API",
+  "header_lines": 4,
+  "api_method": "get_cxo_function_shortlist",
+  "allow_guest": 0
+ },
+ {
+  "name": "Job Applicant - Carry Position From Job Opening",
+  "file": "job_applicant_carry_position_from_job_opening.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Workforce Plan - Request Send Back",
+  "file": "workforce_plan_request_send_back.py",
+  "type": "API",
+  "header_lines": 4,
+  "api_method": "request_workforce_plan_send_back",
+  "allow_guest": 0
+ },
+ {
+  "name": "Workforce Plan - Approval Stage Lock",
+  "file": "workforce_plan_approval_stage_lock.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Workforce Plan",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Requisition - Restore Designation After Duplicate Check",
+  "file": "job_requisition_restore_designation_after_duplicate_check.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Sync Designation From First Role (Before Validate)",
+  "file": "sync_designation_from_first_role_before_validate.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Require HR Comments Before HR Review",
+  "file": "require_hr_comments_before_hr_review.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Probation Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "JR Role Rollup and USD-QAR Conversion",
+  "file": "jr_role_rollup_and_usd_qar_conversion.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Employee Exit - Reopen Position on Close",
+  "file": "employee_exit_reopen_position_on_close.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee Exit",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Job Requisition - Release Commitment on Cancellation",
+  "file": "job_requisition_release_commitment_on_cancellation.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Annual Performance Review - Required Fields by Stage",
+  "file": "annual_performance_review_required_fields_by_stage.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Annual Performance Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Mid-Year Review - Required Fields by Stage",
+  "file": "mid_year_review_required_fields_by_stage.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Mid-Year Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Requisition - Sync Role Code from Workforce Plan",
+  "file": "job_requisition_sync_role_code_from_workforce_plan.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Applicant - Scope Visibility by Vendor",
+  "file": "job_applicant_scope_visibility_by_vendor.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Job Applicant"
+ },
+ {
+  "name": "Compute Job Opening Closing SLA Days",
+  "file": "compute_job_opening_closing_sla_days.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Opening",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Consume budget Automatically after final approval on job requisition",
+  "file": "consume_budget_automatically_after_final_approval_on_job_requisition.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Block Approval When Budget Is Exceeded",
+  "file": "block_approval_when_budget_is_exceeded.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Set Budget Display Title",
+  "file": "set_budget_display_title.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Budget",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Validate Budget Line Account (Job Requisition)",
+  "file": "validate_budget_line_account_job_requisition.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Validate Budget Line Account (Workforce Plan)",
+  "file": "validate_budget_line_account_workforce_plan.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Workforce Plan",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Post Workforce Plan Payroll Accrual (Periodic)",
+  "file": "post_workforce_plan_payroll_accrual_periodic.py",
+  "type": "Scheduler Event",
+  "header_lines": 4,
+  "frequency": "Monthly",
+  "cron_format": null
+ },
+ {
+  "name": "Workforce Plan - Duplicate Position Check",
+  "file": "workforce_plan_duplicate_position_check.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Workforce Plan",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Workforce Plan - Generate Role Codes",
+  "file": "workforce_plan_generate_role_codes.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Workforce Plan",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Consume Budget Automatically",
+  "file": "consume_budget_automatically.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Workforce Plan - Set Remaining On Approval",
+  "file": "workforce_plan_set_remaining_on_approval.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Workforce Plan",
+  "event": "After Submit",
+  "method": "on_submit"
+ },
+ {
+  "name": "Show live remaining budget",
+  "file": "show_live_remaining_budget.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Workforce Plan",
+  "event": "After Save (Submitted Document)",
+  "method": "on_update_after_submit"
+ },
+ {
+  "name": "Compute Workforce Plan Summary Fields",
+  "file": "compute_workforce_plan_summary_fields.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Workforce Plan",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Workforce Plan - Initiator Only Editor",
+  "file": "workforce_plan_initiator_only_editor.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Workforce Plan",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "CXO Hiring Approval - Derive Company from Applicants",
+  "file": "cxo_hiring_approval_derive_company_from_applicants.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "CXO Hiring Approval",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Workforce Plan - Position Department Must Match Plan Department",
+  "file": "workforce_plan_position_department_must_match_plan_department.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Workforce Plan",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Self Service Scope - Expense Claim",
+  "file": "self_service_scope_expense_claim.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Expense Claim"
+ },
+ {
+  "name": "Self Service Scope - Leave Application",
+  "file": "self_service_scope_leave_application.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Leave Application"
+ },
+ {
+  "name": "Self Service Scope - Employee Advance",
+  "file": "self_service_scope_employee_advance.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Employee Advance"
+ },
+ {
+  "name": "Self Service Scope - Salary Slip",
+  "file": "self_service_scope_salary_slip.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Salary Slip"
+ },
+ {
+  "name": "Self Service Scope - Annual Performance Review",
+  "file": "self_service_scope_annual_performance_review.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Annual Performance Review"
+ },
+ {
+  "name": "Self Service Scope - Mid-Year Review",
+  "file": "self_service_scope_mid_year_review.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Mid-Year Review"
+ },
+ {
+  "name": "Self Service Scope - Probation Extension",
+  "file": "self_service_scope_probation_extension.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Probation Extension"
+ },
+ {
+  "name": "Self Service Scope - Probation Review",
+  "file": "self_service_scope_probation_review.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Probation Review"
+ },
+ {
+  "name": "Self Service Scope - Leave Allocation",
+  "file": "self_service_scope_leave_allocation.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Leave Allocation"
+ },
+ {
+  "name": "Self Service Scope - Attendance Request",
+  "file": "self_service_scope_attendance_request.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Attendance Request"
+ },
+ {
+  "name": "Self Service Scope - Attendance",
+  "file": "self_service_scope_attendance.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Attendance"
+ },
+ {
+  "name": "Self Service Scope - Employee Exit",
+  "file": "self_service_scope_employee_exit.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Employee Exit"
+ },
+ {
+  "name": "Leave Application - Gender and Region Check",
+  "file": "leave_application_gender_and_region_check.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Leave Application",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Assign Leave Policy for Employee",
+  "file": "assign_leave_policy_for_employee.py",
+  "type": "API",
+  "header_lines": 4,
+  "api_method": "assign_leave_policy_for_employee",
+  "allow_guest": 0
+ },
+ {
+  "name": "Probation Extension - Apply Decision",
+  "file": "probation_extension_apply_decision.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Probation Extension",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Probation Extension - Validate",
+  "file": "probation_extension_validate.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Probation Extension",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Probation Review - Raise Extension on Final Decision",
+  "file": "probation_review_raise_extension_on_final_decision.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Probation Review",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Probation Review - Extension Validation",
+  "file": "probation_review_extension_validation.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Probation Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Requisition - Roles Must Match Plan Employment Type",
+  "file": "job_requisition_roles_must_match_plan_employment_type.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Applicant - One Email Per Company",
+  "file": "job_applicant_one_email_per_company.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Applicant - Set Company and Type Before Naming",
+  "file": "job_applicant_set_company_and_type_before_naming.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Insert",
+  "method": "before_insert"
+ },
+ {
+  "name": "Fetch Existing Cost for Role",
+  "file": "fetch_existing_cost_for_role.py",
+  "type": "API",
+  "header_lines": 4,
+  "api_method": "fetch_existing_cost_for_role",
+  "allow_guest": 0
+ },
+ {
+  "name": "Job Requisition - Keep Budget Figures Consistent",
+  "file": "job_requisition_keep_budget_figures_consistent.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Workforce Plan - Hide Confidential",
+  "file": "workforce_plan_hide_confidential.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Workforce Plan"
+ },
+ {
+  "name": "Job Opening - Vendor Sees Pushed Only",
+  "file": "job_opening_vendor_sees_pushed_only.py",
+  "type": "Permission Query",
+  "header_lines": 4,
+  "doctype": "Job Opening"
+ },
+ {
+  "name": "Job Requisition - Validate Role Pay Terms",
+  "file": "job_requisition_validate_role_pay_terms.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Opening - Confidential Stays Internal",
+  "file": "job_opening_confidential_stays_internal.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Opening",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Requisition - Confidential Hiring Guard",
+  "file": "job_requisition_confidential_hiring_guard.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Workforce Plan - Confidential Hiring Guard",
+  "file": "workforce_plan_confidential_hiring_guard.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Workforce Plan",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Applicant - Require Joining Details",
+  "file": "job_applicant_require_joining_details.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Requisition - Default Role Title",
+  "file": "job_requisition_default_role_title.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Auto Create Probation Review",
+  "file": "auto_create_probation_review.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Process Employee Exit on Approval",
+  "file": "process_employee_exit_on_approval.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Employee Exit",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Annual Performance Review - Compute Scores and Band",
+  "file": "annual_performance_review_compute_scores_and_band.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Annual Performance Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Mid-Year Review - Compute Goal Progress",
+  "file": "mid_year_review_compute_goal_progress.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Mid-Year Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Leave Application - Ensure Approval Flow Is Set",
+  "file": "leave_application_ensure_approval_flow_is_set.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Leave Application",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Job Applicant - Require Reports To With Clear Message",
+  "file": "job_applicant_require_reports_to_with_clear_message.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Log Activity on Job Applicant Backed-Off",
+  "file": "log_activity_on_job_applicant_backed_off.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Check Job Requisition Position Headcount vs Workforce Plan",
+  "file": "check_job_requisition_position_headcount_vs_workforce_plan.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Restrict Job Requisition Roles to Workforce Plan Positions",
+  "file": "restrict_job_requisition_roles_to_workforce_plan_positions.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Requisition",
+  "event": "Before Validate",
+  "method": "before_validate"
+ },
+ {
+  "name": "Set Exceptional Salary Case Flag (Job Applicant)",
+  "file": "set_exceptional_salary_case_flag_job_applicant.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Job Applicant",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Sync Exit Task Completion to Activity",
+  "file": "sync_exit_task_completion_to_activity.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Task",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Refresh APR Rollup on Mid-Year Review Submit",
+  "file": "refresh_apr_rollup_on_mid_year_review_submit.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Mid-Year Review",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Rollup Probation and Mid-Year Reviews",
+  "file": "rollup_probation_and_mid_year_reviews.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Annual Performance Review",
+  "event": "Before Save",
+  "method": "validate"
+ },
+ {
+  "name": "Refresh APR Rollup on Probation Review Submit",
+  "file": "refresh_apr_rollup_on_probation_review_submit.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Probation Review",
+  "event": "After Submit",
+  "method": "on_submit"
+ },
+ {
+  "name": "Auto-Populate Probation Review Goals",
+  "file": "auto_populate_probation_review_goals.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Probation Review",
+  "event": "Before Insert",
+  "method": "before_insert"
+ },
+ {
+  "name": "Update Employee Confirmation Status (On Submit)",
+  "file": "update_employee_confirmation_status_on_submit.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Probation Review",
+  "event": "After Submit",
+  "method": "on_submit"
+ },
+ {
+  "name": "Update Employee Confirmation Status",
+  "file": "update_employee_confirmation_status.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Probation Review",
+  "event": "After Save",
+  "method": "on_update"
+ },
+ {
+  "name": "Leave Application Status Bypass for the workflow",
+  "file": "leave_application_status_bypass_for_the_workflow.py",
+  "type": "DocType Event",
+  "header_lines": 4,
+  "doctype": "Leave Application",
+  "event": "Before Save",
+  "method": "validate"
+ }
+]

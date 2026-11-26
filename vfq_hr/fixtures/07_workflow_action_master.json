@@ -1,0 +1,177 @@
+[
+ {
+  "name": "Approve",
+  "docstatus": 0,
+  "idx": 3,
+  "workflow_action_name": "Approve",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Reject",
+  "docstatus": 0,
+  "idx": 12,
+  "workflow_action_name": "Reject",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Submit to HOD",
+  "docstatus": 0,
+  "idx": 2,
+  "workflow_action_name": "Submit to HOD",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Schedule Interview",
+  "docstatus": 0,
+  "idx": 1,
+  "workflow_action_name": "Schedule Interview",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Shortlist",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_action_name": "Shortlist",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Onboard",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_action_name": "Onboard",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Submit",
+  "docstatus": 0,
+  "idx": 2,
+  "workflow_action_name": "Submit",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Approve & Forward to HR",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_action_name": "Approve & Forward to HR",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Send for Review",
+  "docstatus": 0,
+  "idx": 1,
+  "workflow_action_name": "Send for Review",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Submit Review",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_action_name": "Submit Review",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Acknowledge",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_action_name": "Acknowledge",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Send to Manager",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_action_name": "Send to Manager",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Discuss with Employee",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_action_name": "Discuss with Employee",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Send to HR",
+  "docstatus": 0,
+  "idx": 1,
+  "workflow_action_name": "Send to HR",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Finalize",
+  "docstatus": 0,
+  "idx": 1,
+  "workflow_action_name": "Finalize",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Send for Manager Review",
+  "docstatus": 0,
+  "idx": 1,
+  "workflow_action_name": "Send for Manager Review",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Send Back",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_action_name": "Send Back",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Revise and Resend",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_action_name": "Revise and Resend",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "CXO Approved - Ready to Onboard",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_action_name": "CXO Approved - Ready to Onboard",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Back Off",
+  "docstatus": 0,
+  "idx": 1,
+  "workflow_action_name": "Back Off",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Close Exit",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_action_name": "Close Exit",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Send Back for Review",
+  "docstatus": 0,
+  "idx": 1,
+  "workflow_action_name": "Send Back for Review",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Submit for Approval",
+  "docstatus": 0,
+  "idx": 2,
+  "workflow_action_name": "Submit for Approval",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Send for Approval",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_action_name": "Send for Approval",
+  "doctype": "Workflow Action Master"
+ },
+ {
+  "name": "Submit Resignation",
+  "docstatus": 0,
+  "idx": 0,
+  "workflow_action_name": "Submit Resignation",
+  "doctype": "Workflow Action Master"
+ }
+]

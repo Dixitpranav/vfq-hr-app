@@ -1,0 +1,32 @@
+{
+ "doctype": "Report",
+ "name": "HR - Job Opening - Register",
+ "report_name": "HR - Job Opening - Register",
+ "ref_doctype": "Job Opening",
+ "report_type": "Script Report",
+ "is_standard": "Yes",
+ "module": "VFQ HR",
+ "add_total_row": 1,
+ "disabled": 0,
+ "prepared_report": 0,
+ "timeout": 0,
+ "letter_head": null,
+ "modified": "2026-11-25 12:00:00.000000",
+ "docstatus": 0,
+ "roles": [
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "HR User"
+  }
+ ],
+ "columns": [],
+ "filters": [],
+ "javascript": null,
+ "query": null,
+ "report_script": null
+}

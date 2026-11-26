@@ -1,0 +1,90 @@
+[
+ {
+  "name": "Probation",
+  "docstatus": 0,
+  "idx": 0,
+  "employee_type_name": "Probation",
+  "custom_type_code": null,
+  "doctype": "Employment Type"
+ },
+ {
+  "name": "Commission",
+  "docstatus": 0,
+  "idx": 0,
+  "employee_type_name": "Commission",
+  "custom_type_code": null,
+  "doctype": "Employment Type"
+ },
+ {
+  "name": "Piecework",
+  "docstatus": 0,
+  "idx": 0,
+  "employee_type_name": "Piecework",
+  "custom_type_code": null,
+  "doctype": "Employment Type"
+ },
+ {
+  "name": "Apprentice",
+  "docstatus": 0,
+  "idx": 0,
+  "employee_type_name": "Apprentice",
+  "custom_type_code": null,
+  "doctype": "Employment Type"
+ },
+ {
+  "name": "Vendor - External",
+  "docstatus": 0,
+  "idx": 0,
+  "employee_type_name": "Vendor - External",
+  "custom_type_code": null,
+  "doctype": "Employment Type"
+ },
+ {
+  "name": "Full-time",
+  "docstatus": 0,
+  "idx": 60,
+  "employee_type_name": "Full-time",
+  "custom_type_code": "FT",
+  "doctype": "Employment Type"
+ },
+ {
+  "name": "Part-time",
+  "docstatus": 0,
+  "idx": 0,
+  "employee_type_name": "Part-time",
+  "custom_type_code": "PT",
+  "doctype": "Employment Type"
+ },
+ {
+  "name": "Contract",
+  "docstatus": 0,
+  "idx": 7,
+  "employee_type_name": "Contract",
+  "custom_type_code": "CT",
+  "doctype": "Employment Type"
+ },
+ {
+  "name": "Intern",
+  "docstatus": 0,
+  "idx": 0,
+  "employee_type_name": "Intern",
+  "custom_type_code": "IN",
+  "doctype": "Employment Type"
+ },
+ {
+  "name": "Temporary",
+  "docstatus": 0,
+  "idx": 0,
+  "employee_type_name": "Temporary",
+  "custom_type_code": "TP",
+  "doctype": "Employment Type"
+ },
+ {
+  "name": "Consultant",
+  "docstatus": 0,
+  "idx": 0,
+  "employee_type_name": "Consultant",
+  "custom_type_code": "CS",
+  "doctype": "Employment Type"
+ }
+]

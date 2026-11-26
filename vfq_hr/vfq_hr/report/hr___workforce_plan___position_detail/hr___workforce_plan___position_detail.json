@@ -1,0 +1,62 @@
+{
+ "doctype": "Report",
+ "name": "HR - Workforce Plan - Position Detail",
+ "report_name": "HR - Workforce Plan - Position Detail",
+ "ref_doctype": "Workforce Plan",
+ "report_type": "Script Report",
+ "is_standard": "Yes",
+ "module": "VFQ HR",
+ "add_total_row": 1,
+ "disabled": 0,
+ "prepared_report": 0,
+ "timeout": 0,
+ "letter_head": null,
+ "modified": "2026-11-25 12:00:00.000000",
+ "docstatus": 0,
+ "roles": [
+  {
+   "role": "Workforce Plan Creator"
+  },
+  {
+   "role": "HOD"
+  },
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "CAO"
+  },
+  {
+   "role": "CEO / Final Approver"
+  },
+  {
+   "role": "Head of OD & Total Rewards"
+  },
+  {
+   "role": "Functional Head"
+  },
+  {
+   "role": "CTO"
+  },
+  {
+   "role": "CSCO"
+  },
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "CFO"
+  },
+  {
+   "role": "CHRO"
+  },
+  {
+   "role": "HR User"
+  }
+ ],
+ "columns": [],
+ "filters": [],
+ "javascript": null,
+ "query": null,
+ "report_script": null
+}

@@ -1,0 +1,8886 @@
+{
+ "generated_from": {
+  "site": "testingappversion15.frappe.cloud",
+  "exported_on": "2026-11-25T11:12:30.370Z",
+  "versions": {
+   "erpnext": "15.124.1",
+   "frappe": "15.124.0",
+   "hr_ai_agents": "0.3.2",
+   "hr_analytics": "0.0.1",
+   "hrms": "15.64.6",
+   "insights": "3.15.1"
+  }
+ },
+ "doctypes": [
+  "Annual Performance Review",
+  "Annual Review KRA Child",
+  "CXO Exceptional Approval",
+  "CXO Hiring Approval",
+  "CXO Hiring Approval Applicant",
+  "CXO Hiring Approval Function",
+  "CXO Standard Approval",
+  "Employee Exit",
+  "Employee Exit Activity",
+  "Exit Reason",
+  "Function",
+  "Hiring Flow Employee",
+  "Job Opening Vendor History",
+  "Job Opening Vendor History Applicant",
+  "Job Requisition Hiring Manager",
+  "Job Requisition Role",
+  "KRA Category",
+  "Leave Policy Mapping",
+  "Linked Mid-Year Review",
+  "Linked Probation Review",
+  "Mid Year Review Goal",
+  "Mid-Year Review",
+  "Probation Extension",
+  "Probation Review",
+  "Probation Review Goal",
+  "Workforce Plan",
+  "Workforce Plan Position"
+ ],
+ "reports": [
+  "HR - CXO Approval - Approval TAT",
+  "HR - CXO Approval - Exceptional Salary Cases",
+  "HR - CXO Approval - Register",
+  "HR - Hiring - End-to-End Traceability",
+  "HR - Hiring - Time to Hire by Stage",
+  "HR - Job Applicant - Compensation Benchmark",
+  "HR - Job Applicant - Recruitment Funnel",
+  "HR - Job Applicant - Register",
+  "HR - Job Applicant - Source Effectiveness",
+  "HR - Job Applicant - Status Tracker",
+  "HR - Job Opening - Pipeline and Ageing",
+  "HR - Job Opening - Register",
+  "HR - Job Requisition - Fulfilment",
+  "HR - Job Requisition - Plan Reconciliation",
+  "HR - Job Requisition - Register",
+  "HR - Job Requisition - Role Detail",
+  "HR - Onboarding - Joining Pipeline",
+  "HR - Onboarding - Onboarded Employees",
+  "HR - Workforce Plan - Approval Ageing",
+  "HR - Workforce Plan - Headcount and Budget Utilisation",
+  "HR - Workforce Plan - Position Detail",
+  "HR - Workforce Plan - Register"
+ ],
+ "custom_fields": [
+  {
+   "dt": "Employee",
+   "fieldname": "custom_vendor_details",
+   "fieldtype": "Tab Break",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_vendor",
+   "fieldtype": "Link",
+   "options": "Supplier"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_vendorside_manager",
+   "fieldtype": "Link",
+   "options": "Contact"
+  },
+  {
+   "dt": "Attendance",
+   "fieldname": "custom_vendor_details",
+   "fieldtype": "Tab Break",
+   "options": null
+  },
+  {
+   "dt": "Attendance",
+   "fieldname": "custom_vendor",
+   "fieldtype": "Link",
+   "options": "Supplier"
+  },
+  {
+   "dt": "Leave Application",
+   "fieldname": "custom_vendor",
+   "fieldtype": "Link",
+   "options": "Supplier"
+  },
+  {
+   "dt": "Employee Checkin",
+   "fieldname": "custom_vendor",
+   "fieldtype": "Link",
+   "options": "Supplier"
+  },
+  {
+   "dt": "Supplier",
+   "fieldname": "custom_vendor_abbr",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Leave Type",
+   "fieldname": "custom_requires_second_approval",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Leave Application",
+   "fieldname": "custom_requires_second_approval",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Leave Application",
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "options": "Workflow State"
+  },
+  {
+   "dt": "Employee Grade",
+   "fieldname": "custom_role_classification",
+   "fieldtype": "Link",
+   "options": "Employee Grade"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_section_break_vhpzt",
+   "fieldtype": "Section Break",
+   "options": "\nNew Role\nExisting Role\nReplacement"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "options": "Workflow State"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_job_opening",
+   "fieldtype": "Link",
+   "options": "Job Opening"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_budget_plan",
+   "fieldtype": "Link",
+   "options": "Workforce Plan"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_tab_4",
+   "fieldtype": "Tab Break",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_budget_details",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_column_break_fpdba",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_consumed_headcount",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_cost_center",
+   "fieldtype": "Link",
+   "options": "Cost Center"
+  },
+  {
+   "dt": "Leave Type",
+   "fieldname": "custom_approval_flow",
+   "fieldtype": "Select",
+   "options": "\nSingle-Layer\nMulti-Layer"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_probation_months",
+   "fieldtype": "Int",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_probation_end_date",
+   "fieldtype": "Date",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_confirmation_status",
+   "fieldtype": "Select",
+   "options": "\nProbation\nConfirmed\nExtended\nTerminated"
+  },
+  {
+   "dt": "Mid-Year Review",
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "options": "Workflow State"
+  },
+  {
+   "dt": "Annual Performance Review",
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "options": "Workflow State"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_project",
+   "fieldtype": "Link",
+   "options": "Project"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_budget_consumed",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "options": "Workflow State"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_employee_exit",
+   "fieldtype": "Link",
+   "options": "Employee Exit"
+  },
+  {
+   "dt": "Task",
+   "fieldname": "custom_employee_exit",
+   "fieldtype": "Link",
+   "options": "Employee Exit"
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "exit_processed",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_project_name",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Employee Onboarding",
+   "fieldname": "custom_project_name",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_roles_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_roles",
+   "fieldtype": "Table",
+   "options": "Job Requisition Role"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_pushed_to_vendor",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_vendor_ageing_days",
+   "fieldtype": "Int",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_remaining_headcount",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_roles_section_end",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_requisition_title",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "HR Settings",
+   "fieldname": "custom_allow_budget_overconsumption",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_headcount_variance",
+   "fieldtype": "Int",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_currency_code_usd",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_currency_code_qar",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_annual_budget_impact",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_annual_budget_impact_qar",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_qar"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_budget_variance_usd",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Probation Review",
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "options": "Workflow State"
+  },
+  {
+   "dt": "Supplier",
+   "fieldname": "custom_probation_period_months",
+   "fieldtype": "Int",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "options": "Workflow State"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_vendor",
+   "fieldtype": "Link",
+   "options": "Supplier"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_project",
+   "fieldtype": "Link",
+   "options": "Project"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_budgeted",
+   "fieldtype": "Select",
+   "options": "\nBudgeted\nNon-Budgeted"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_current_cost_type",
+   "fieldtype": "Select",
+   "options": "\nEC\nNon-EC"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_column_break_qimtn",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_column_break_wl0p8",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_hiring_type",
+   "fieldtype": "Select",
+   "options": "\nInternal\nExternal"
+  },
+  {
+   "dt": "Supplier",
+   "fieldname": "custom_sla_days",
+   "fieldtype": "Int",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_vendor_sla_days",
+   "fieldtype": "Int",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_sla_breached",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Probation Review",
+   "fieldname": "custom_budget_plan",
+   "fieldtype": "Link",
+   "options": "Workforce Plan"
+  },
+  {
+   "dt": "Leave Application",
+   "fieldname": "custom_budget_plan",
+   "fieldtype": "Link",
+   "options": "Workforce Plan"
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_budget_plan",
+   "fieldtype": "Link",
+   "options": "Workforce Plan"
+  },
+  {
+   "dt": "Mid-Year Review",
+   "fieldname": "custom_budget_plan",
+   "fieldtype": "Link",
+   "options": "Workforce Plan"
+  },
+  {
+   "dt": "Annual Performance Review",
+   "fieldname": "custom_budget_plan",
+   "fieldtype": "Link",
+   "options": "Workforce Plan"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_onboarded_employees",
+   "fieldtype": "Table",
+   "options": "Hiring Flow Employee"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_onboarded_employees",
+   "fieldtype": "Table",
+   "options": "Hiring Flow Employee"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_joining_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_hiring_links_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_hiring_links_col",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_pay_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_personal_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_exit_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_joining_date",
+   "fieldtype": "Date",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_confidential_hiring",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition Role",
+   "fieldname": "custom_variable_pay_type",
+   "fieldtype": "Select",
+   "options": "None\nBonus\nCommission"
+  },
+  {
+   "dt": "Job Requisition Role",
+   "fieldname": "custom_variable_pay_basis",
+   "fieldtype": "Select",
+   "options": "\nFixed Amount\n% of Salary"
+  },
+  {
+   "dt": "Job Requisition Role",
+   "fieldname": "custom_variable_pay_value",
+   "fieldtype": "Float",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_variable_pay_basis",
+   "fieldtype": "Select",
+   "options": "\nFixed Amount\n% of Salary"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_variable_pay_value",
+   "fieldtype": "Float",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition Role",
+   "fieldname": "custom_mid_salary_range",
+   "fieldtype": "Currency",
+   "options": "currency_code_usd"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_variable_pay_type",
+   "fieldtype": "Select",
+   "options": "\nNone\nBonus\nCommission"
+  },
+  {
+   "dt": "Employment Type",
+   "fieldname": "custom_type_code",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan Position",
+   "fieldname": "custom_employment_type",
+   "fieldtype": "Link",
+   "options": "Employment Type"
+  },
+  {
+   "dt": "Probation Review",
+   "fieldname": "custom_extension_months",
+   "fieldtype": "Select",
+   "options": "\n1\n2\n3\n4\n5\n6"
+  },
+  {
+   "dt": "Probation Review",
+   "fieldname": "custom_extension_reason",
+   "fieldtype": "Small Text",
+   "options": null
+  },
+  {
+   "dt": "Probation Review",
+   "fieldname": "custom_revised_end_date",
+   "fieldtype": "Date",
+   "options": null
+  },
+  {
+   "dt": "Probation Review",
+   "fieldname": "custom_extension_number",
+   "fieldtype": "Int",
+   "options": null
+  },
+  {
+   "dt": "Probation Review",
+   "fieldname": "custom_probation_extension",
+   "fieldtype": "Link",
+   "options": "Probation Extension"
+  },
+  {
+   "dt": "Probation Review",
+   "fieldname": "custom_previous_review",
+   "fieldtype": "Link",
+   "options": "Probation Review"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_probation_extension_count",
+   "fieldtype": "Int",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_original_probation_end_date",
+   "fieldtype": "Date",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_exit_reason",
+   "fieldtype": "Link",
+   "options": "Exit Reason"
+  },
+  {
+   "dt": "Leave Type",
+   "fieldname": "custom_applicable_gender",
+   "fieldtype": "Select",
+   "options": "Any\nFemale\nMale"
+  },
+  {
+   "dt": "Leave Type",
+   "fieldname": "custom_region",
+   "fieldtype": "Select",
+   "options": "Global\nQatar\nIndia\nEurope"
+  },
+  {
+   "dt": "Leave Type",
+   "fieldname": "custom_statutory",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_work_country",
+   "fieldtype": "Link",
+   "options": "Country"
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_signed_resignation",
+   "fieldtype": "Attach",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_agreed_salary",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_budget_plan",
+   "fieldtype": "Link",
+   "options": "Workforce Plan"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_currency_code_usd",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_custom_passport_number",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_cxo_approval",
+   "fieldtype": "Link",
+   "options": "CXO Hiring Approval"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_job_opening",
+   "fieldtype": "Link",
+   "options": "Job Opening"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_job_requisition",
+   "fieldtype": "Link",
+   "options": "Job Requisition"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_variable_pay_basis",
+   "fieldtype": "Select",
+   "options": "\nFixed Amount\n% of Salary"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_variable_pay_type",
+   "fieldtype": "Select",
+   "options": "\nNone\nBonus\nCommission"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_variable_pay_value",
+   "fieldtype": "Float",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_signed_acceptance",
+   "fieldtype": "Attach",
+   "options": null
+  },
+  {
+   "dt": "Annual Performance Review",
+   "fieldname": "custom_currency_code_usd",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Department",
+   "fieldname": "custom_function",
+   "fieldtype": "Link",
+   "options": "Function"
+  },
+  {
+   "dt": "Department",
+   "fieldname": "custom_sub_function",
+   "fieldtype": "Link",
+   "options": "Function"
+  },
+  {
+   "dt": "Cost Center",
+   "fieldname": "custom_department",
+   "fieldtype": "Link",
+   "options": "Department"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_role_classification",
+   "fieldtype": "Link",
+   "options": "Designation"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_column_break_nslqd",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Leave Application",
+   "fieldname": "custom_approval_flow",
+   "fieldtype": "Select",
+   "options": "Single-Layer\nMulti-Layer"
+  },
+  {
+   "dt": "Department",
+   "fieldname": "custom_column_break_d0xsa",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition Role",
+   "fieldname": "custom_employment_type",
+   "fieldtype": "Link",
+   "options": "Employment Type"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_cost_center",
+   "fieldtype": "Link",
+   "options": "Cost Center"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_consumed_budget",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_remaining_budget",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_approved_headcount",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_confidential_hiring",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_approved_budget",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_existing_cost_amount",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_cost_conversion_usd",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_budget_line",
+   "fieldtype": "Link",
+   "options": "Budget"
+  },
+  {
+   "dt": "Budget",
+   "fieldname": "custom_budget_title",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_budget_line",
+   "fieldtype": "Link",
+   "options": "Budget"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_country",
+   "fieldtype": "Link",
+   "options": "Country"
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_approval_summary_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_project_name",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_approval_summary_html",
+   "fieldtype": "HTML",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_best_known_budget_line",
+   "fieldtype": "Small Text",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_budget_line_not_confirmed",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_company",
+   "fieldtype": "Link",
+   "options": "Company"
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_confidential_hiring",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_connections_tab",
+   "fieldtype": "Tab Break",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_onboarded_employees",
+   "fieldtype": "Table",
+   "options": "Hiring Flow Employee"
+  },
+  {
+   "dt": "Job Requisition Role",
+   "fieldname": "role_code",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_closing_sla_days",
+   "fieldtype": "Int",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_vendor_assigned_since",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_vendor_history_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_vendor_history",
+   "fieldtype": "Table",
+   "options": "Job Opening Vendor History"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_mid_range",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_cost_center",
+   "fieldtype": "Link",
+   "options": "Cost Center"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_budget_plan",
+   "fieldtype": "Link",
+   "options": "Workforce Plan"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_budget_line",
+   "fieldtype": "Link",
+   "options": "Budget"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_middle_name",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_last_name",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_marital_status",
+   "fieldtype": "Select",
+   "options": "\nSingle\nMarried\nDivorced\nWidowed"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_passport_number",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_opening_role_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_department",
+   "fieldtype": "Link",
+   "options": "Department"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_opening_role_cb",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_company",
+   "fieldtype": "Link",
+   "options": "Company"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_project",
+   "fieldtype": "Link",
+   "options": "Project"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_job_country",
+   "fieldtype": "Link",
+   "options": "Country"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_reports_to",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_budget_org_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_cost_center",
+   "fieldtype": "Link",
+   "options": "Cost Center"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_budget_plan",
+   "fieldtype": "Link",
+   "options": "Workforce Plan"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_budget_line",
+   "fieldtype": "Link",
+   "options": "Budget"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_vendor",
+   "fieldtype": "Link",
+   "options": "Supplier"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_employment_details",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_column_break_trum2",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_currency_code_usd",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_variable_pay_type",
+   "fieldtype": "Select",
+   "options": "\nNone\nBonus\nCommission"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_variable_pay_basis",
+   "fieldtype": "Select",
+   "options": "\nFixed Amount\n% of Salary"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_variable_pay_value",
+   "fieldtype": "Float",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_exceptional_salary_case",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_internal_tracking_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_branch",
+   "fieldtype": "Link",
+   "options": "Branch"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_connections_tab",
+   "fieldtype": "Tab Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_resume_cb",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_connections_tab",
+   "fieldtype": "Tab Break",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_approval_summary_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_approval_summary_html",
+   "fieldtype": "HTML",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_currency_code_usd",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_experience_required",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_gender",
+   "fieldtype": "Select",
+   "options": "\nMale\nFemale\nPrefer not to say"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_date_of_birth",
+   "fieldtype": "Date",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_employment_type",
+   "fieldtype": "Link",
+   "options": "Employment Type"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_hiring_type",
+   "fieldtype": "Select",
+   "options": "\nInternal\nExternal"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_current_company",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_current_notice_period",
+   "fieldtype": "Select",
+   "options": "\nImmediate\n15 Days\n30 Days\n45 Days\n60 Days\n90 Days\nMore than 90 Days"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_agreed_salary",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "CXO Hiring Approval Applicant",
+   "fieldname": "custom_employment_type",
+   "fieldtype": "Link",
+   "options": "Employment Type"
+  },
+  {
+   "dt": "CXO Hiring Approval Applicant",
+   "fieldname": "custom_variable_pay_type",
+   "fieldtype": "Select",
+   "options": "\nNone\nBonus\nCommission"
+  },
+  {
+   "dt": "Probation Review",
+   "fieldname": "custom_reports_to_name",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Probation Review",
+   "fieldname": "custom_reviewer_name",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_function",
+   "fieldtype": "Link",
+   "options": "Function"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_sub_function",
+   "fieldtype": "Link",
+   "options": "Function"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_function",
+   "fieldtype": "Link",
+   "options": "Function"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_sub_function",
+   "fieldtype": "Link",
+   "options": "Function"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_function",
+   "fieldtype": "Link",
+   "options": "Function"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_sub_function",
+   "fieldtype": "Link",
+   "options": "Function"
+  },
+  {
+   "dt": "CXO Hiring Approval Applicant",
+   "fieldname": "custom_sub_function",
+   "fieldtype": "Link",
+   "options": "Function"
+  },
+  {
+   "dt": "CXO Standard Approval",
+   "fieldname": "custom_sub_function",
+   "fieldtype": "Link",
+   "options": "Function"
+  },
+  {
+   "dt": "CXO Exceptional Approval",
+   "fieldname": "custom_sub_function",
+   "fieldtype": "Link",
+   "options": "Function"
+  },
+  {
+   "dt": "Supplier",
+   "fieldname": "custom_notice_period_days",
+   "fieldtype": "Int",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval Applicant",
+   "fieldname": "custom_variable_pay_basis",
+   "fieldtype": "Select",
+   "options": "\nFixed Amount\n% of Salary"
+  },
+  {
+   "dt": "CXO Hiring Approval Applicant",
+   "fieldname": "custom_variable_pay_value",
+   "fieldtype": "Float",
+   "options": null
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_commitment_released",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_position_released",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_send_back_requested",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_send_back_reason",
+   "fieldtype": "Small Text",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_send_back_requested_by",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_send_back_requested_on",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_compa_ratio",
+   "fieldtype": "Float",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_compa_ratio",
+   "fieldtype": "Float",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_position",
+   "fieldtype": "Link",
+   "options": "Job Requisition Role"
+  },
+  {
+   "dt": "CXO Standard Approval",
+   "fieldname": "custom_position_title",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "CXO Exceptional Approval",
+   "fieldname": "custom_position_title",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_cxo_approval_status",
+   "fieldtype": "Select",
+   "options": "\nAwaiting Approval"
+  },
+  {
+   "dt": "CXO Standard Approval",
+   "fieldname": "custom_cost_line_name",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "CXO Standard Approval",
+   "fieldname": "custom_project_name",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "CXO Exceptional Approval",
+   "fieldname": "custom_cost_line_name",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "CXO Exceptional Approval",
+   "fieldname": "custom_project_name",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_send_back_reason",
+   "fieldtype": "Small Text",
+   "options": null
+  },
+  {
+   "dt": "Leave Application",
+   "fieldname": "custom_notify_employee_email",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Leave Application",
+   "fieldname": "custom_notify_manager_email",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_notify_employee_email",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_notify_manager_email",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Probation Review",
+   "fieldname": "custom_notify_employee_email",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Probation Review",
+   "fieldname": "custom_notify_manager_email",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Probation Extension",
+   "fieldname": "custom_notify_employee_email",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Probation Extension",
+   "fieldname": "custom_notify_manager_email",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Mid-Year Review",
+   "fieldname": "custom_notify_employee_email",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Mid-Year Review",
+   "fieldname": "custom_notify_manager_email",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Annual Performance Review",
+   "fieldname": "custom_notify_employee_email",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Annual Performance Review",
+   "fieldname": "custom_notify_manager_email",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_reports_to_name",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_passport_image",
+   "fieldtype": "Attach",
+   "options": null
+  },
+  {
+   "dt": "Workforce Plan",
+   "fieldname": "custom_monthly_budget_per_headcount",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Requisition",
+   "fieldname": "custom_monthly_budget_per_headcount",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_recruitment_timeline_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_hiring_manager",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_role_sharing_date",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_recruitment_timeline_cb",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_vf_feedback",
+   "fieldtype": "Small Text",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_joining_month",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_recruitment_expense_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_recruitment_fee",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_notice_period_buyout",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_joining_bonus",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_recruitment_expense_cb",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_recruitment_agency_charges",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_background_verification_charges",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_total_recruitment_expense",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_recruitment_logs_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_recruitment_logs_cb",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_expected_salary",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_cv_received_date",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_joining_date",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_interview_date",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_vendor_push_date",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_employee",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_employee_created",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_onboarded",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_budget_consumed",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_recruitment_status",
+   "fieldtype": "Link",
+   "options": "Workflow State"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_interview_schedule_confirmed_date",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_shortlisting_confirmation_date",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_onboarded_date",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_ageing_days",
+   "fieldtype": "Int",
+   "options": null
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_role_classification",
+   "fieldtype": "Link",
+   "options": "Designation"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_role_code",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_role_classification",
+   "fieldtype": "Link",
+   "options": "Designation"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_role_code",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval Applicant",
+   "fieldname": "custom_position_title",
+   "fieldtype": "Link",
+   "options": "Designation"
+  },
+  {
+   "dt": "Job Opening",
+   "fieldname": "custom_reports_to",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "dt": "CXO Hiring Approval Applicant",
+   "fieldname": "custom_agreed_salary_monthly",
+   "fieldtype": "Currency",
+   "options": "currency_code_usd"
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_total_agreed_salary_monthly",
+   "fieldtype": "Currency",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_approval_timeline_html",
+   "fieldtype": "HTML",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_hod_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_hod_remarks",
+   "fieldtype": "Small Text",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_hod_cb",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_hod_approved_by",
+   "fieldtype": "Link",
+   "options": "User"
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_hod_approved_on",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_chro_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_chro_remarks",
+   "fieldtype": "Small Text",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_chro_cb",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_chro_approved_by",
+   "fieldtype": "Link",
+   "options": "User"
+  },
+  {
+   "dt": "CXO Hiring Approval",
+   "fieldname": "custom_chro_approved_on",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_expected_ctc_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_ctc_basic",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_ctc_allowance",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_ctc_gross",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_ctc_benefits",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_ctc_total",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_ctc_cb1",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_ctc_basic_monthly",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_ctc_allowance_monthly",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_ctc_gross_monthly",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_ctc_benefits_monthly",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_ctc_total_monthly",
+   "fieldtype": "Currency",
+   "options": "custom_currency_code_usd"
+  },
+  {
+   "dt": "Job Applicant",
+   "fieldname": "custom_ctc_cb2",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Supplier",
+   "fieldname": "custom_holiday_list",
+   "fieldtype": "Link",
+   "options": "Holiday List"
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_notice_period_days",
+   "fieldtype": "Int",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_documents_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_signed_acknowledgement",
+   "fieldtype": "Attach",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_documents_cb",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_signoff_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_employee_signed_by",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_employee_signed_on",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_signoff_cb1",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_manager_signed_by",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_manager_signed_on",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_signoff_cb2",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_hr_signed_by",
+   "fieldtype": "Data",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_hr_signed_on",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_resignation_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_resignation_cb",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_status_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Employee Exit",
+   "fieldname": "custom_status_cb",
+   "fieldtype": "Column Break",
+   "options": null
+  },
+  {
+   "dt": "User",
+   "fieldname": "custom_auto_reporting_manager",
+   "fieldtype": "Check",
+   "options": null
+  },
+  {
+   "dt": "Annual Performance Review",
+   "fieldname": "custom_employee_comments_section",
+   "fieldtype": "Section Break",
+   "options": null
+  },
+  {
+   "dt": "Annual Performance Review",
+   "fieldname": "custom_employee_comments",
+   "fieldtype": "Small Text",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_activated_on",
+   "fieldtype": "Datetime",
+   "options": null
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_activation_status",
+   "fieldtype": "Select",
+   "options": "\nTo be activated\nActivated"
+  },
+  {
+   "dt": "Employee",
+   "fieldname": "custom_activated_by",
+   "fieldtype": "Link",
+   "options": "User"
+  }
+ ],
+ "property_setters": [
+  {
+   "doc_type": "Attendance",
+   "field_name": null,
+   "property": "field_order",
+   "value": "[\"attendance_details\", \"naming_series\", \"employee\", \"employee_name\", \"working_hours\", \"status\", \"leave_type\", \"leave_application\", \"column_break0\", \"attendance_date\", \"company\", \"department\", \"attendance_request\", \"half_day_status\", \"details_section\", \"shift\", \"in_time\", \"out_time\", \"column_break_18\", \"late_entry\", \"early_exit\", \"amended_from\", \"modify_half_day_status\", \"custom_vendor_details\", \"custom_vendor\"]"
+  },
+  {
+   "doc_type": "Employee Checkin",
+   "field_name": null,
+   "property": "field_order",
+   "value": "[\"employee\", \"employee_name\", \"log_type\", \"shift\", \"vendor\", \"column_break_4\", \"time\", \"device_id\", \"skip_auto_attendance\", \"attendance\", \"location_section\", \"latitude\", \"column_break_yqpi\", \"longitude\", \"section_break_ksbo\", \"fetch_geolocation\", \"geolocation\", \"shift_timings_section\", \"shift_start\", \"shift_end\", \"offshift\", \"column_break_vyyt\", \"shift_actual_start\", \"shift_actual_end\"]"
+  },
+  {
+   "doc_type": "Supplier",
+   "field_name": null,
+   "property": "field_order",
+   "value": "[\"naming_series\", \"supplier_name\", \"country\", \"vendor_abbr\", \"column_break0\", \"supplier_group\", \"supplier_type\", \"is_transporter\", \"image\", \"defaults_section\", \"default_currency\", \"default_bank_account\", \"column_break_10\", \"default_price_list\", \"internal_supplier_section\", \"is_internal_supplier\", \"represents_company\", \"column_break_16\", \"companies\", \"column_break2\", \"supplier_details\", \"column_break_30\", \"website\", \"language\", \"dashboard_tab\", \"tax_tab\", \"tax_id\", \"column_break_27\", \"tax_category\", \"tax_withholding_category\", \"contact_and_address_tab\", \"address_contacts\", \"address_html\", \"column_break1\", \"contact_html\", \"primary_address_and_contact_detail_section\", \"column_break_44\", \"supplier_primary_address\", \"primary_address\", \"column_break_mglr\", \"supplier_primary_contact\", \"mobile_no\", \"email_id\", \"accounting_tab\", \"payment_terms\", \"default_accounts_section\", \"accounts\", \"settings_tab\", \"allow_purchase_invoice_creation_without_purchase_order\", \"allow_purchase_invoice_creation_without_purchase_receipt\", \"column_break_54\", \"is_frozen\", \"disabled\", \"warn_rfqs\", \"warn_pos\", \"prevent_rfqs\", \"prevent_pos\", \"block_supplier_section\", \"on_hold\", \"hold_type\", \"column_break_59\", \"release_date\", \"portal_users_tab\", \"portal_users\", \"column_break_1mqv\"]"
+  },
+  {
+   "doc_type": "Employee Grade",
+   "field_name": null,
+   "property": "field_order",
+   "value": "[\"default_salary_structure\", \"currency\", \"default_base_pay\", \"role_classification\"]"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "department",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "reason_for_requesting",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "department",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "employment_type",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "applicant_name",
+   "property": "label",
+   "value": "First Name"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "lower_range",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "upper_range",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "section_break_6",
+   "property": "label",
+   "value": "Resume & Other Documents"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "passport_number",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Leave Type",
+   "field_name": null,
+   "property": "field_order",
+   "value": "[\"leave_type_name\", \"max_leaves_allowed\", \"applicable_after\", \"max_continuous_days_allowed\", \"column_break_3\", \"custom_approval_flow\", \"is_carry_forward\", \"is_lwp\", \"is_ppl\", \"fraction_of_daily_salary_per_leave\", \"is_optional_leave\", \"allow_negative\", \"allow_over_allocation\", \"include_holiday\", \"is_compensatory\", \"custom_requires_second_approval\", \"carry_forward_section\", \"maximum_carry_forwarded_leaves\", \"expire_carry_forwarded_leaves_after_days\", \"encashment\", \"allow_encashment\", \"max_encashable_leaves\", \"non_encashable_leaves\", \"column_break_17\", \"earning_component\", \"earned_leave\", \"is_earned_leave\", \"earned_leave_frequency\", \"column_break_22\", \"allocate_on_day\", \"rounding\"]"
+  },
+  {
+   "doc_type": "Leave Application",
+   "field_name": null,
+   "property": "field_order",
+   "value": "[\"workflow_state\", \"naming_series\", \"employee\", \"employee_name\", \"custom_vendor\", \"column_break_4\", \"leave_type\", \"company\", \"department\", \"custom_requires_second_approval\", \"approval_flow\", \"section_break_5\", \"from_date\", \"to_date\", \"half_day\", \"half_day_date\", \"total_leave_days\", \"column_break1\", \"description\", \"leave_balance\", \"section_break_7\", \"leave_approver\", \"leave_approver_name\", \"follow_via_email\", \"column_break_18\", \"posting_date\", \"status\", \"sb_other_details\", \"salary_slip\", \"color\", \"column_break_17\", \"letter_head\", \"amended_from\"]"
+  },
+  {
+   "doc_type": "Leave Application",
+   "field_name": null,
+   "property": "states_order",
+   "value": "[\"cqsql2h4ss\", \"cqsqkl2g04\", \"eug4rjvv3r\", \"eug4vd2aar\", \"eug4078vau\"]"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "date_of_retirement",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "designation",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "designation",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "expected_compensation",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "expected_compensation",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "no_of_positions",
+   "property": "read_only",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "no_of_positions",
+   "property": "label",
+   "value": "Total Positions (All Roles)"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "no_of_positions",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "no_of_positions",
+   "property": "insert_after",
+   "value": "custom_remaining_headcount"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "expected_compensation",
+   "property": "read_only",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "requested_by",
+   "property": "label",
+   "value": "Requested By (HR)"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "description",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "description",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "cover_letter",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "salary_per",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "publish_salary_range",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "publish",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "route",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "job_application_route",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "job_opening_template",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "department",
+   "property": "ignore_user_permissions",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "department",
+   "property": "ignore_user_permissions",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "department",
+   "property": "ignore_user_permissions",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "requested_by_dept",
+   "property": "ignore_user_permissions",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "currency",
+   "property": "default",
+   "value": "USD"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "contract_end_date",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "company_email",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "prefered_contact_email",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "prefered_email",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "unsubscribed",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "current_address",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "current_accommodation_type",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "permanent_address",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "permanent_accommodation_type",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "person_to_be_contacted",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "emergency_phone_number",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "relation",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "attendance_device_id",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "family_background",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "health_details",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "valid_upto",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "date_of_issue",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "place_of_issue",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "bio",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "new_workplace",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "feedback",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "employee_referral",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "resume_link",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "notes",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "time_to_fill",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Leave Application",
+   "field_name": "color",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Leave Application",
+   "field_name": "letter_head",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "bank_details_section",
+   "property": "collapsible",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "contact_details",
+   "property": "label",
+   "value": "Personal & Profile"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "emergency_contact_details",
+   "property": "collapsible",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "passport_details_section",
+   "property": "collapsible",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "attendance_and_leave_details",
+   "property": "label",
+   "value": "Leaves & Exit"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "approvers_section",
+   "property": "collapsible",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "feedback_section",
+   "property": "collapsible",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "employment_details",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "salary_information",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "personal_details",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "profile_tab",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "exit",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "custom_vendor",
+   "property": "depends_on",
+   "value": "eval:!doc.custom_confidential_hiring"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "custom_pushed_to_vendor",
+   "property": "depends_on",
+   "value": "eval:!doc.custom_confidential_hiring"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "custom_vendor_push_date",
+   "property": "depends_on",
+   "value": "eval:!doc.custom_confidential_hiring"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "custom_vendor_ageing_days",
+   "property": "depends_on",
+   "value": "eval:!doc.custom_confidential_hiring"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "custom_vendor_sla_days",
+   "property": "depends_on",
+   "value": "eval:!doc.custom_confidential_hiring"
+  },
+  {
+   "doc_type": "Annual Performance Review",
+   "field_name": "recommended_salary",
+   "property": "label",
+   "value": "Recommended Salary (USD)"
+  },
+  {
+   "doc_type": "Annual Performance Review",
+   "field_name": "recommended_salary",
+   "property": "options",
+   "value": "custom_currency_code_usd"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "lower_range",
+   "property": "label",
+   "value": "Lower Range (USD)"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "upper_range",
+   "property": "label",
+   "value": "Upper Range (USD)"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "lower_range",
+   "property": "read_only",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "upper_range",
+   "property": "read_only",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "lower_range",
+   "property": "precision",
+   "value": "2"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "upper_range",
+   "property": "precision",
+   "value": "2"
+  },
+  {
+   "doc_type": "Workforce Plan Position",
+   "field_name": "fetch_existing_cost_btn",
+   "property": "depends_on",
+   "value": "eval:doc.docstatus==0&&doc.role_type=='Existing Role'"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": null,
+   "property": "title_field",
+   "value": ""
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": null,
+   "property": "show_title_field_in_link",
+   "value": "0"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "reports_to",
+   "property": "ignore_user_permissions",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "hr_approver",
+   "property": "ignore_user_permissions",
+   "value": "1"
+  },
+  {
+   "doc_type": "Probation Review",
+   "field_name": "reports_to",
+   "property": "ignore_user_permissions",
+   "value": "1"
+  },
+  {
+   "doc_type": "Probation Review",
+   "field_name": "reviewer",
+   "property": "ignore_user_permissions",
+   "value": "1"
+  },
+  {
+   "doc_type": "Probation Extension",
+   "field_name": "manager",
+   "property": "ignore_user_permissions",
+   "value": "1"
+  },
+  {
+   "doc_type": "Mid-Year Review",
+   "field_name": "reporting_manager",
+   "property": "ignore_user_permissions",
+   "value": "1"
+  },
+  {
+   "doc_type": "Annual Performance Review",
+   "field_name": "reporting_manager",
+   "property": "ignore_user_permissions",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "ctc",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "salary_currency",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "salary_mode",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "bank_name",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "bank_ac_no",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "iban",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "passport_number",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "valid_upto",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "place_of_issue",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "date_of_issue",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "hr_approver",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "hr_approver_email",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "rehire_eligible",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "exit_interview_done",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "exit_interview_notes",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "final_settlement_done",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "exit_processed",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Probation Extension",
+   "field_name": "hr_remarks",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Annual Performance Review",
+   "field_name": "promotion_recommendation",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Annual Performance Review",
+   "field_name": "proposed_designation",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Annual Performance Review",
+   "field_name": "increment_",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Annual Performance Review",
+   "field_name": "recommended_salary",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": null,
+   "property": "field_order",
+   "value": "[\"custom_section_break_vhpzt\", \"naming_series\", \"custom_requisition_title\", \"custom_currency_code_usd\", \"custom_currency_code_qar\", \"custom_budget_plan\", \"custom_hiring_type\", \"custom_function\", \"custom_sub_function\", \"posting_date\", \"company\", \"department\", \"custom_column_break_nslqd\", \"requested_by\", \"requested_by_name\", \"workflow_state\", \"status\", \"expected_by\", \"requested_by_dept\", \"requested_by_designation\", \"custom_roles_section\", \"custom_roles\", \"custom_onboarded_employees\", \"custom_roles_section_end\", \"designation\", \"expected_compensation\", \"column_break_qkna\", \"column_break_4\", \"section_break_7\", \"completed_on\", \"column_break_15\", \"time_to_fill\", \"custom_job_opening\", \"column_break_10\", \"timelines_tab\", \"description\", \"custom_tab_4\", \"custom_budget_details\", \"custom_budgeted\", \"custom_budget_line\", \"no_of_positions\", \"custom_cost_center\", \"custom_current_cost_type\", \"custom_existing_cost_amount\", \"custom_cost_conversion_usd\", \"custom_approved_headcount\", \"custom_approved_budget\", \"custom_consumed_budget\", \"custom_consumed_headcount\", \"custom_remaining_budget\", \"custom_remaining_headcount\", \"custom_column_break_fpdba\", \"custom_annual_budget_impact\", \"custom_annual_budget_impact_qar\", \"custom_budget_variance_usd\", \"custom_headcount_variance\", \"custom_budget_consumed\", \"job_description_tab\", \"reason_for_requesting\", \"connections_tab\"]"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "branch",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "grade",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": null,
+   "property": "links_order",
+   "value": "[\"dvghmuti3h\", \"dvghl3sl06\", \"dvghdmh6sb\", \"dvghfhqubm\", \"5vcu5989er\", \"c438eqpta3\", \"c438185o4m\", \"c4382p0pt0\"]"
+  },
+  {
+   "doc_type": "Department",
+   "field_name": "leave_block_list",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Department",
+   "field_name": null,
+   "property": "field_order",
+   "value": "[\"custom_function\", \"custom_sub_function\", \"payroll_cost_center\", \"disabled\", \"column_break_3\", \"company\", \"department_name\", \"parent_department\", \"is_group\", \"section_break_4\", \"column_break_mohi\", \"column_break_9\", \"leave_block_list\", \"approvers\", \"shift_request_approver\", \"leave_approvers\", \"expense_approvers\", \"lft\", \"rgt\", \"old_parent\"]"
+  },
+  {
+   "doc_type": "Department",
+   "field_name": "is_group",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Workforce Plan",
+   "field_name": "approved_headcount",
+   "property": "label",
+   "value": "Approved Roles"
+  },
+  {
+   "doc_type": "Workforce Plan",
+   "field_name": "approved_headcount",
+   "property": "description",
+   "value": "Total approved roles for this plan. Auto-calculated from role rows below."
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "company",
+   "property": "read_only",
+   "value": "1"
+  },
+  {
+   "doc_type": "Designation",
+   "field_name": null,
+   "property": "field_order",
+   "value": "[\"designation_name\", \"description\", \"appraisal_template\", \"required_skills_section\", \"skills\"]"
+  },
+  {
+   "doc_type": "Designation",
+   "field_name": "appraisal_template",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Budget",
+   "field_name": null,
+   "property": "title_field",
+   "value": "custom_budget_title"
+  },
+  {
+   "doc_type": "Budget",
+   "field_name": null,
+   "property": "show_title_field_in_link",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "location",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "closes_on",
+   "property": "fetch_from",
+   "value": "job_requisition.expected_by"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "status",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "lower_range",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "upper_range",
+   "property": "permlevel",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "status",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "status",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "resume_attachment",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "phone_number",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "job_title",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "details_section",
+   "property": "label",
+   "value": "Candidate Details"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "source_and_rating_section",
+   "property": "label",
+   "value": "Vendor & Source"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "section_break_16",
+   "property": "label",
+   "value": "Compensation"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "column_break_13",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "section_break_6",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "section_break_6",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "custom_column_break_wl0p8",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "column_break_20",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval",
+   "field_name": "workforce_plan_summary",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "cost_line",
+   "property": "options",
+   "value": "Budget"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "cost_line",
+   "property": "options",
+   "value": "Budget"
+  },
+  {
+   "doc_type": "Workforce Plan",
+   "field_name": "custom_last_posted_consumed_budget",
+   "property": "options",
+   "value": "custom_currency_code_usd"
+  },
+  {
+   "doc_type": "Workforce Plan",
+   "field_name": "approved_budget",
+   "property": "options",
+   "value": "custom_currency_code_usd"
+  },
+  {
+   "doc_type": "Workforce Plan",
+   "field_name": "total_budget_impact",
+   "property": "options",
+   "value": "custom_currency_code_usd"
+  },
+  {
+   "doc_type": "Workforce Plan",
+   "field_name": "committed_budget",
+   "property": "options",
+   "value": "custom_currency_code_usd"
+  },
+  {
+   "doc_type": "Workforce Plan",
+   "field_name": "consumed_budget",
+   "property": "options",
+   "value": "custom_currency_code_usd"
+  },
+  {
+   "doc_type": "Workforce Plan",
+   "field_name": "remaining_budget",
+   "property": "options",
+   "value": "custom_currency_code_usd"
+  },
+  {
+   "doc_type": "Job Requisition",
+   "field_name": "expected_by",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "experience_required",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "cost_impact_begins",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "hiring_remarks",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "currency",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "closes_on",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "applicant_name",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "department",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "project",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "job_requisition",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "currency_code_usd",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "agreed_salary_usd",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "currency_code_qar",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "agreed_salary_qar",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "position",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "project",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "hiring_type",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "recommended_salary_range",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "approx_monthly_cost_impact",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "currency",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "cost_line",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "shortlisted_count",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "approved_role_count",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "role",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "project",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "type",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "cost_line",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "monthly_cost_impact",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "currency",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "shortlisted_count",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "approved_role_count",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "role",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "recommended_salary_range",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Probation Review",
+   "field_name": "manager_feedback",
+   "property": "mandatory_depends_on",
+   "value": "eval:frappe.user_roles.includes(\"Reporting Manager\")"
+  },
+  {
+   "doc_type": "Probation Review",
+   "field_name": "hr_feedback",
+   "property": "mandatory_depends_on",
+   "value": "eval:frappe.user_roles.includes(\"HR Manager\")"
+  },
+  {
+   "doc_type": "Probation Review",
+   "field_name": "goals",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Workforce Plan",
+   "field_name": "custom_function",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Workforce Plan",
+   "field_name": "custom_sub_function",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Workforce Plan Position",
+   "field_name": "function",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Workforce Plan Position",
+   "field_name": "custom_sub_function",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "custom_function",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "custom_sub_function",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "function",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "function",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "function",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "notice_number_of_days",
+   "property": "fetch_from",
+   "value": "custom_vendor.custom_notice_period_days"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "hr_comments",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "hr_comments",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "recommendation_from_project_team",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "vendor",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "vendor",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "vendor",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "vendor",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Annual Review KRA Child",
+   "field_name": "manager_comments",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Mid Year Review Goal",
+   "field_name": "manager_comments",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Mid-Year Review",
+   "field_name": "action_plan",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Mid-Year Review",
+   "field_name": "training_recommendations",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Mid-Year Review",
+   "field_name": "areas_of_improvement",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Mid-Year Review",
+   "field_name": "strengths",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Mid-Year Review",
+   "field_name": "employee_feedback",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Mid-Year Review",
+   "field_name": "manager_feedback",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Function",
+   "field_name": "shortlisted_count",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "position",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "position",
+   "property": "in_list_view",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "position",
+   "property": "label",
+   "value": "Position Reference"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "role",
+   "property": "in_list_view",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "position",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "position",
+   "property": "in_list_view",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "position",
+   "property": "label",
+   "value": "Position Reference"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "role",
+   "property": "in_list_view",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "position",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "position",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "education",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "external_work_history",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "internal_work_history",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "encashment_date",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "iban",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "health_insurance_no",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "health_insurance_provider",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": null,
+   "property": "field_order",
+   "value": "[\"basic_details_tab\", \"basic_information\", \"naming_series\", \"salutation\", \"first_name\", \"middle_name\", \"column_break_9\", \"last_name\", \"employee_name\", \"gender\", \"date_of_birth\", \"column_break1\", \"date_of_joining\", \"status\", \"custom_project\", \"custom_project_name\", \"custom_employee_exit\", \"company_details_section\", \"company\", \"custom_work_country\", \"custom_function\", \"custom_sub_function\", \"column_break_25\", \"department\", \"designation\", \"custom_role_classification\", \"column_break_18\", \"reports_to\", \"employment_type\", \"custom_hiring_type\", \"custom_joining_section\", \"scheduled_confirmation_date\", \"custom_probation_months\", \"custom_probation_end_date\", \"column_break_32\", \"custom_probation_extension_count\", \"custom_original_probation_end_date\", \"custom_confirmation_status\", \"col_break_22\", \"final_confirmation_date\", \"notice_number_of_days\", \"custom_hiring_links_section\", \"job_applicant\", \"custom_job_opening\", \"custom_job_requisition\", \"custom_hiring_links_col\", \"custom_cxo_approval\", \"custom_budget_plan\", \"custom_budget_line\", \"salary_cb\", \"custom_cost_center\", \"custom_vendor\", \"custom_vendorside_manager\", \"custom_pay_section\", \"custom_agreed_salary\", \"ctc\", \"salary_currency\", \"column_break_heye\", \"salary_mode\", \"payroll_cost_center\", \"column_break_40\", \"custom_variable_pay_type\", \"custom_variable_pay_basis\", \"custom_variable_pay_value\", \"bank_details_section\", \"bank_name\", \"column_break4\", \"bank_ac_no\", \"erpnext_user\", \"user_id\", \"create_user\", \"column_break_46\", \"create_user_permission\", \"contact_details\", \"cell_number\", \"personal_email\", \"column_break_55\", \"marital_status\", \"blood_group\", \"column_break_19\", \"custom_custom_passport_number\", \"attendance_and_leave_details\", \"holiday_list\", \"default_shift\", \"column_break6\", \"leave_approver\", \"expense_approver\", \"column_break_73\", \"shift_request_approver\", \"custom_exit_section\", \"resignation_letter_date\", \"relieving_date\", \"column_break_44\", \"held_on\", \"leave_encashed\", \"column_break_45\", \"reason_for_leaving\", \"feedback_section\", \"employee\", \"image\", \"employee_number\", \"branch\", \"grade\", \"custom_joining_date\", \"date_of_retirement\", \"contract_end_date\", \"custom_compa_ratio\", \"custom_currency_code_usd\", \"iban\", \"company_email\", \"prefered_contact_email\", \"prefered_email\", \"unsubscribed\", \"address_section\", \"current_address\", \"current_accommodation_type\", \"permanent_address\", \"permanent_accommodation_type\", \"emergency_contact_details\", \"person_to_be_contacted\", \"emergency_phone_number\", \"relation\", \"custom_personal_section\", \"family_background\", \"health_details\", \"health_insurance_section\", \"health_insurance_provider\", \"health_insurance_no\", \"passport_details_section\", \"passport_number\", \"valid_upto\", \"custom_passport_image\", \"date_of_issue\", \"place_of_issue\", \"bio\", \"educational_qualification\", \"education\", \"previous_work_experience\", \"external_work_history\", \"history_in_company\", \"internal_work_history\", \"attendance_device_id\", \"approvers_section\", \"exit_interview_details\", \"new_workplace\", \"column_break_99\", \"encashment_date\", \"column_break_104\", \"feedback\", \"lft\", \"rgt\", \"old_parent\", \"connections_tab\", \"employment_details\", \"custom_vendor_details\", \"salary_information\", \"personal_details\", \"profile_tab\", \"exit\"]"
+  },
+  {
+   "doc_type": "Workforce Plan",
+   "field_name": "approved_budget",
+   "property": "description",
+   "value": "This is a Yearly budget per headcount."
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "vacancies",
+   "property": "fetch_from",
+   "value": ""
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "vacancies",
+   "property": "read_only",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "vacancies",
+   "property": "label",
+   "value": "No. of Positions (This Role)"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "planned_vacancies",
+   "property": "read_only",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "no_of_positions",
+   "property": "read_only_depends_on",
+   "value": "eval:parent.workflow_state=='Approved' || parent.docstatus==1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "status",
+   "property": "options",
+   "value": "Open\nOpen & To be shared with vendor\nClosed"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "experience_required",
+   "property": "read_only",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "experience_required",
+   "property": "read_only_depends_on",
+   "value": "eval:!(frappe.user.has_role('HR User') || frappe.user.has_role('HR Manager'))"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "scope",
+   "property": "read_only",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "scope",
+   "property": "read_only_depends_on",
+   "value": "eval:!(frappe.user.has_role('HR User') || frappe.user.has_role('HR Manager'))"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "expertise_skillset",
+   "property": "read_only",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "expertise_skillset",
+   "property": "read_only_depends_on",
+   "value": "eval:!(frappe.user.has_role('HR User') || frappe.user.has_role('HR Manager'))"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "role_description",
+   "property": "read_only",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "role_description",
+   "property": "read_only_depends_on",
+   "value": "eval:!(frappe.user.has_role('HR User') || frappe.user.has_role('HR Manager'))"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "business_critical_info",
+   "property": "read_only",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "business_critical_info",
+   "property": "read_only_depends_on",
+   "value": "eval:!(frappe.user.has_role('HR User') || frappe.user.has_role('HR Manager'))"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "notice_number_of_days",
+   "property": "fetch_if_empty",
+   "value": "1"
+  },
+  {
+   "doc_type": "Workforce Plan Position",
+   "field_name": "role_classification",
+   "property": "label",
+   "value": "Position Title"
+  },
+  {
+   "doc_type": "Workforce Plan Position",
+   "field_name": "role_code",
+   "property": "label",
+   "value": "Position Code"
+  },
+  {
+   "doc_type": "Workforce Plan Position",
+   "field_name": "position",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Workforce Plan Position",
+   "field_name": "position",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "role_classification",
+   "property": "label",
+   "value": "Position Title"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "role_code",
+   "property": "label",
+   "value": "Position Code"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "designation",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "designation",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Requisition Role",
+   "field_name": "role_title",
+   "property": "label",
+   "value": "Role Name (optional)"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "custom_role_classification",
+   "property": "label",
+   "value": "Position Title"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "custom_role_classification",
+   "property": "reqd",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "custom_role_code",
+   "property": "label",
+   "value": "Position Code"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "designation",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "designation",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "job_title",
+   "property": "read_only",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": "job_title",
+   "property": "description",
+   "value": "Set automatically from Position Title."
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "custom_role_classification",
+   "property": "label",
+   "value": "Position Title"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "custom_role_code",
+   "property": "label",
+   "value": "Position Code"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "designation",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "designation",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Standard Approval",
+   "field_name": "custom_position_title",
+   "property": "label",
+   "value": "Position Title"
+  },
+  {
+   "doc_type": "CXO Exceptional Approval",
+   "field_name": "custom_position_title",
+   "property": "label",
+   "value": "Position Title"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "designation",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "designation",
+   "property": "reqd",
+   "value": "0"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "custom_role_classification",
+   "property": "label",
+   "value": "Position Title"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "designation",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee",
+   "field_name": "department",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "designation",
+   "property": "label",
+   "value": "Position Title"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "designation",
+   "property": "fetch_from",
+   "value": "employee.custom_role_classification"
+  },
+  {
+   "doc_type": "Job Opening",
+   "field_name": null,
+   "property": "field_order",
+   "value": "[\"job_details_section\", \"job_opening_template\", \"job_title\", \"custom_role_classification\", \"custom_role_code\", \"designation\", \"custom_reports_to\", \"custom_experience_required\", \"custom_project\", \"lower_range\", \"upper_range\", \"custom_mid_range\", \"custom_variable_pay_type\", \"custom_variable_pay_basis\", \"custom_variable_pay_value\", \"column_break_5\", \"status\", \"posted_on\", \"closes_on\", \"closed_on\", \"custom_confidential_hiring\", \"custom_vendor\", \"custom_pushed_to_vendor\", \"custom_vendor_push_date\", \"custom_vendor_ageing_days\", \"custom_vendor_sla_days\", \"custom_closing_sla_days\", \"custom_sla_breached\", \"custom_vendor_assigned_since\", \"custom_vendor_history_section\", \"custom_vendor_history\", \"section_break_nngy\", \"company\", \"custom_function\", \"custom_sub_function\", \"department\", \"custom_cost_center\", \"column_break_dxpv\", \"employment_type\", \"location\", \"custom_country\", \"custom_budget_plan\", \"custom_onboarded_employees\", \"custom_budget_line\", \"references_section\", \"staffing_plan\", \"planned_vacancies\", \"job_requisition\", \"vacancies\", \"custom_column_break_qimtn\", \"currency\", \"section_break_6\", \"publish\", \"route\", \"publish_applications_received\", \"column_break_12\", \"job_application_route\", \"section_break_14\", \"description\", \"section_break_16\", \"custom_column_break_wl0p8\", \"column_break_20\", \"salary_per\", \"publish_salary_range\", \"custom_connections_tab\"]"
+  },
+  {
+   "doc_type": "CXO Hiring Approval",
+   "field_name": "exchange_rate_used",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval",
+   "field_name": "exchange_rate_date",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval",
+   "field_name": "total_agreed_salary_qar",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval",
+   "field_name": "total_agreed_salary_usd",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "agreed_salary_qar",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "agreed_salary_qar",
+   "property": "in_list_view",
+   "value": "0"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "agreed_salary_usd",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "CXO Hiring Approval Applicant",
+   "field_name": "agreed_salary_usd",
+   "property": "in_list_view",
+   "value": "0"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": null,
+   "property": "field_order",
+   "value": "[\"custom_notify_employee_email\", \"custom_notify_manager_email\", \"custom_position_released\", \"workflow_state\", \"section_break_exit1\", \"employee\", \"employee_name\", \"designation\", \"column_break_1\", \"department\", \"date_of_joining\", \"custom_budget_plan\", \"custom_resignation_section\", \"exit_type\", \"custom_exit_reason\", \"exit_reason\", \"custom_resignation_cb\", \"notice_date\", \"custom_notice_period_days\", \"last_working_day\", \"custom_status_section\", \"offboarding_status\", \"custom_status_cb\", \"rehire_eligible\", \"custom_documents_section\", \"custom_signed_acknowledgement\", \"custom_documents_cb\", \"custom_signed_resignation\", \"custom_signed_acceptance\", \"custom_signoff_section\", \"custom_employee_signed_by\", \"custom_employee_signed_on\", \"custom_signoff_cb1\", \"custom_manager_signed_by\", \"custom_manager_signed_on\", \"custom_signoff_cb2\", \"custom_hr_signed_by\", \"custom_hr_signed_on\", \"section_break_approvals\", \"reports_to\", \"reports_to_email\", \"reports_to_name\", \"column_break_2\", \"hr_approver\", \"hr_approver_email\", \"section_break_formalities\", \"activities\", \"exit_interview_done\", \"exit_processed\", \"assets_returned\", \"access_revoked\", \"final_settlement_done\", \"section_break_notes\", \"exit_interview_notes\", \"knowledge_transfer_notes\"]"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "section_break_exit1",
+   "property": "label",
+   "value": "Employee Details"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "custom_exit_reason",
+   "property": "label",
+   "value": "Reason for Leaving"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "custom_exit_reason",
+   "property": "description",
+   "value": "Choose the main reason. Your manager or HR can update it during approval."
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "exit_reason",
+   "property": "label",
+   "value": "Additional Comments (optional)"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "notice_date",
+   "property": "label",
+   "value": "Resignation Date"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "notice_date",
+   "property": "default",
+   "value": "Today"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "last_working_day",
+   "property": "read_only_depends_on",
+   "value": "eval:!(frappe.user.has_role('HR Manager') || frappe.user.has_role('HR User') || frappe.user.has_role('System Manager'))"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "last_working_day",
+   "property": "description",
+   "value": "Resignation Date + Notice Period. Set automatically; HR can adjust it."
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "custom_signed_resignation",
+   "property": "label",
+   "value": "Signed Resignation Letter (optional upload)"
+  },
+  {
+   "doc_type": "Employee Exit",
+   "field_name": "custom_signed_acceptance",
+   "property": "label",
+   "value": "Signed Acceptance by Manager / HR (optional upload)"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": null,
+   "property": "field_order",
+   "value": "[\"details_section\", \"applicant_name\", \"custom_middle_name\", \"custom_last_name\", \"email_id\", \"phone_number\", \"country\", \"column_break_3\", \"job_title\", \"designation\", \"custom_cxo_approval_status\", \"status\", \"custom_gender\", \"custom_date_of_birth\", \"custom_marital_status\", \"custom_passport_number\", \"resume_attachment\", \"custom_opening_role_section\", \"custom_role_classification\", \"custom_role_code\", \"custom_department\", \"custom_function\", \"custom_sub_function\", \"custom_opening_role_cb\", \"custom_company\", \"custom_project\", \"custom_job_country\", \"custom_reports_to\", \"custom_reports_to_name\", \"custom_recruitment_timeline_section\", \"custom_hiring_manager\", \"custom_role_sharing_date\", \"custom_cv_received_date\", \"custom_recruitment_timeline_cb\", \"custom_ageing_days\", \"custom_vf_feedback\", \"custom_budget_org_section\", \"custom_cost_center\", \"custom_budget_plan\", \"custom_budget_line\", \"source_and_rating_section\", \"custom_vendor\", \"source\", \"source_name\", \"employee_referral\", \"column_break_13\", \"applicant_rating\", \"section_break_6\", \"notes\", \"cover_letter\", \"custom_resume_cb\", \"resume_link\", \"custom_employment_details\", \"custom_employment_type\", \"custom_hiring_type\", \"custom_current_company\", \"custom_column_break_trum2\", \"custom_current_notice_period\", \"custom_joining_date\", \"custom_joining_month\", \"custom_position\", \"section_break_16\", \"currency\", \"custom_currency_code_usd\", \"custom_expected_salary\", \"custom_agreed_salary\", \"custom_compa_ratio\", \"column_break_18\", \"lower_range\", \"upper_range\", \"custom_variable_pay_type\", \"custom_variable_pay_basis\", \"custom_variable_pay_value\", \"custom_exceptional_salary_case\", \"custom_expected_ctc_section\", \"custom_ctc_basic\", \"custom_ctc_allowance\", \"custom_ctc_gross\", \"custom_ctc_benefits\", \"custom_ctc_total\", \"custom_ctc_cb1\", \"custom_ctc_basic_monthly\", \"custom_ctc_allowance_monthly\", \"custom_ctc_gross_monthly\", \"custom_ctc_benefits_monthly\", \"custom_ctc_total_monthly\", \"custom_ctc_cb2\", \"custom_recruitment_expense_section\", \"custom_recruitment_fee\", \"custom_notice_period_buyout\", \"custom_joining_bonus\", \"custom_recruitment_expense_cb\", \"custom_recruitment_agency_charges\", \"custom_background_verification_charges\", \"custom_total_recruitment_expense\", \"custom_recruitment_logs_section\", \"custom_interview_schedule_confirmed_date\", \"custom_interview_date\", \"custom_shortlisting_confirmation_date\", \"custom_recruitment_logs_cb\", \"custom_onboarded_date\", \"custom_internal_tracking_section\", \"custom_recruitment_status\", \"custom_employee\", \"custom_onboarded\", \"custom_employee_created\", \"custom_budget_consumed\", \"custom_branch\", \"custom_connections_tab\"]"
+  },
+  {
+   "doc_type": "Job Applicant",
+   "field_name": "applicant_rating",
+   "property": "hidden",
+   "value": "1"
+  },
+  {
+   "doc_type": "Mid-Year Review",
+   "field_name": "review_year",
+   "property": "options",
+   "value": "\n2025\n2026\n2027\n2028\n2029\n2030"
+  }
+ ],
+ "custom_docperm": [
+  {
+   "parent": "Location",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Location",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Location",
+   "role": "Stock Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Holiday List",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Holiday List",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Company",
+   "role": "Accounts Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Company",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Company",
+   "role": "Projects User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Company",
+   "role": "Sales User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Company",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Company",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Company",
+   "role": "Auditor",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Company",
+   "role": "Purchase User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Company",
+   "role": "Stock User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Company",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Salary Slip",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Salary Slip",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Salary Slip",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Salary Slip",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Expense Claim",
+   "role": "Expense Approver",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Expense Claim",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Expense Claim",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Expense Claim",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Expense Claim",
+   "role": "All",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Expense Claim",
+   "role": "Expense Approver",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Expense Claim",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Expense Claim",
+   "role": "HR User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Expense Claim",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Advance",
+   "role": "Expense Approver",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Employee Advance",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Advance",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Type",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Type",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Type",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Type",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Application",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Leave Application",
+   "role": "All",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Application",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Leave Application",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Application",
+   "role": "HR User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Application",
+   "role": "Leave Approver",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Application",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Application",
+   "role": "Leave Approver",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 1
+  },
+  {
+   "parent": "Leave Application",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Attendance Request",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Attendance Request",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Attendance Request",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Attendance Request",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Attendance Request",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Compensatory Leave Request",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Compensatory Leave Request",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Compensatory Leave Request",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Compensatory Leave Request",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Compensatory Leave Request",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Timesheet",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Timesheet",
+   "role": "Projects User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Timesheet",
+   "role": "Manufacturing User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Timesheet",
+   "role": "Accounts User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Timesheet",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Timesheet",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Timesheet",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Employee Checkin",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Checkin",
+   "role": "HR User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Checkin",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Checkin",
+   "role": "Employee",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Checkin",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Checkin",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Checkin",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Checkin",
+   "role": "System Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Checkin",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Shift Request",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Shift Request",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Shift Request",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Shift Request",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Employee Grievance",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Employee Grievance",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Grievance",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Employee Grievance",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Grievance",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Referral",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Referral",
+   "role": "Employee",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Referral",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Employee Referral",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Employee Referral",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Employee Referral",
+   "role": "HR User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Referral",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Referral",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Purchase Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Stock User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Purchase Master Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Accounts Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Purchase User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Stock Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Task",
+   "role": "Projects User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Task",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employment Type",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employment Type",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employment Type",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "User",
+   "role": "Desk User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "User",
+   "role": "System Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "User",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "User",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Role",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Role",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Grade",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Grade",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Grade",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Grade",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Country",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Country",
+   "role": "All",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Country",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Attendance",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Attendance",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Attendance",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Attendance",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Attendance",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Auditor",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Accounts Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Sales User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Purchase User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Currency",
+   "role": "Accounts Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Currency",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Currency",
+   "role": "Sales User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Currency",
+   "role": "Purchase User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Currency",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Currency",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Contact",
+   "role": "Sales User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Contact",
+   "role": "Purchase Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Contact",
+   "role": "Maintenance User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Contact",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Contact",
+   "role": "Purchase User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Contact",
+   "role": "Sales Master Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Contact",
+   "role": "All",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Contact",
+   "role": "Maintenance Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Contact",
+   "role": "Sales Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Contact",
+   "role": "Purchase Master Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Contact",
+   "role": "Accounts Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Contact",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Contact",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Branch",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Branch",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Branch",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Grievance Type",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Grievance Type",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Grievance Type",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Grievance Type",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Grievance Type",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Activity Type",
+   "role": "Projects User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Activity Type",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Activity Type",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Activity Type",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Gender",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Gender",
+   "role": "All",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Gender",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Projects Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Projects Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Projects User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Desk User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Letter Head",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Letter Head",
+   "role": "Desk User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Letter Head",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Purchase User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Auditor",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Sales User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Accounts Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Salutation",
+   "role": "All",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Salutation",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Salutation",
+   "role": "Administrator",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Salutation",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Designation",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Designation",
+   "role": "Sales User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Designation",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Allocation",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Leave Allocation",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Leave Allocation",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "File",
+   "role": "All",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "File",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "File",
+   "role": "Employee Self Service",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "Purchase User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Designation",
+   "role": "Purchase User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Appointment",
+   "role": "Sales Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Appointment",
+   "role": "Sales User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Appointment",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Appointment",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Page",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Page",
+   "role": "Administrator",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Page",
+   "role": "Sales Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Interview Feedback",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Interview Feedback",
+   "role": "Interviewer",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Interview Feedback",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Interview Feedback",
+   "role": "System Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Interview Feedback",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Page",
+   "role": "Vendor Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Vendor Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Attendance",
+   "role": "Vendor Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Application",
+   "role": "Vendor Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Opening",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Opening",
+   "role": "Job Opening Vendor",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Opening",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "CEO / Final Approver",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "CAO",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "HOD",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "Recruitment Specialist",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "CEO / Final Approver",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "CAO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "HR User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Opening",
+   "role": "HR User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "CTO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "CFO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "CHRO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "CSCO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "CTO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "CFO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "CHRO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "CSCO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "CTO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "CFO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "CHRO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "CSCO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "Job Opening Vendor",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Workforce Plan",
+   "role": "CAO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Workforce Plan",
+   "role": "HOD",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Workforce Plan",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Workforce Plan",
+   "role": "CEO / Final Approver",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 1
+  },
+  {
+   "parent": "Workforce Plan",
+   "role": "Functional Head",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Workforce Plan",
+   "role": "Head of OD & Total Rewards",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Workforce Plan",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Workforce Plan",
+   "role": "CTO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Workforce Plan",
+   "role": "CSCO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Workforce Plan",
+   "role": "CFO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Workforce Plan",
+   "role": "CHRO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Review",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Probation Review",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Probation Review",
+   "role": "Employee",
+   "permlevel": 2,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Review",
+   "role": "HR Manager",
+   "permlevel": 2,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Review",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Review",
+   "role": "Reporting Manager",
+   "permlevel": 2,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Review",
+   "role": "Reporting Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Review",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Review",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Probation Review",
+   "role": "Employee",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Review",
+   "role": "Reporting Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Review",
+   "role": "HR User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Review",
+   "role": "HR User",
+   "permlevel": 2,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Annual Performance Review",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 1
+  },
+  {
+   "parent": "Annual Performance Review",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Account",
+   "role": "Delivery Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Delivery User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Maintenance Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Maintenance User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Manufacturing Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Manufacturing User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Purchase Master Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Quality Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Sales Master Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "Stock Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Activity Type",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Activity Type",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Activity Type",
+   "role": "Manufacturing User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Company",
+   "role": "Desk User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Company",
+   "role": "Sales Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Delivery Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Delivery User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Maintenance Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Maintenance User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Manufacturing Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Manufacturing User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Projects Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Projects User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Purchase Master Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Quality Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Sales Master Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Cost Center",
+   "role": "Stock Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "Projects Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "Projects User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "Quality Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Accounts Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Delivery Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Fleet Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Manufacturing Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Manufacturing User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Projects User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Quality Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Sales Master Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Stock Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Holiday List",
+   "role": "Accounts Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Holiday List",
+   "role": "Manufacturing User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Holiday List",
+   "role": "Projects Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Holiday List",
+   "role": "Projects User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Holiday List",
+   "role": "Sales Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Location",
+   "role": "Quality Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Accounts Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Delivery Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Delivery User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Maintenance Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Maintenance User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Manufacturing Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Manufacturing User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Purchase Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Purchase Master Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Purchase User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Quality Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Sales Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Sales Master Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Sales User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Stock Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Stock User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Support Team",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Delivery Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Delivery User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Maintenance User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Quality Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Sales Master Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "Website Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Task",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Task",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Task",
+   "role": "Manufacturing User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Address",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Address",
+   "role": "Purchase User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Address",
+   "role": "All",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Address",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Address",
+   "role": "Sales User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Address",
+   "role": "Maintenance User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Address",
+   "role": "Accounts Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Mid-Year Review",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 1
+  },
+  {
+   "parent": "Mid-Year Review",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Employee Exit",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Exit",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Exit",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Exit",
+   "role": "HOD",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Opening",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Allocation",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Leave Application",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Workforce Plan",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Mid-Year Review",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Annual Performance Review",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Exit",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Page",
+   "role": "Job Opening Vendor",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Leave Allocation",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Mid-Year Review",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Annual Performance Review",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "HR User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "System Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Exit",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Exit",
+   "role": "HR User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Exit",
+   "role": "System Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Extension",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Extension",
+   "role": "HR User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Extension",
+   "role": "System Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Annual Performance Review",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Annual Performance Review",
+   "role": "HR User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Annual Performance Review",
+   "role": "System Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Account",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Designation",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Role",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Role",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Budget",
+   "role": "Accounts Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "Budget",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Supplier",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Page",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Employment Type",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Designation",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Function",
+   "role": "Accounts User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Function",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Function",
+   "role": "Projects User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Function",
+   "role": "Quality Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Function",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Function",
+   "role": "Projects Manager",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Opening",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Opening",
+   "role": "System Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "CFO",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "CHRO",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "CSCO",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "CTO",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "System Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Probation Extension",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Budget",
+   "role": "Functional Head",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Budget",
+   "role": "CAO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Budget",
+   "role": "CEO / Final Approver",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "CEO / Final Approver",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "CAO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Functional Head",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "Functional Head",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "CAO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "CEO / Final Approver",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "Head of OD & Total Rewards",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "Head of OD & Total Rewards",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Budget",
+   "role": "Head of OD & Total Rewards",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant Source",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant Source",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant Source",
+   "role": "Vendor Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant Source",
+   "role": "Job Opening Vendor",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "CAO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "CEO / Final Approver",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "CXO Hiring Approval",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "CXO Hiring Approval",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "CXO Hiring Approval",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "CXO Hiring Approval",
+   "role": "CAO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "CXO Hiring Approval",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "CXO Hiring Approval",
+   "role": "CEO / Final Approver",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "CXO Hiring Approval",
+   "role": "CHRO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "CXO Hiring Approval",
+   "role": "CFO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "CXO Hiring Approval",
+   "role": "CTO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "CXO Hiring Approval",
+   "role": "CSCO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Workflow State",
+   "role": "Desk User",
+   "permlevel": 0,
+   "read": 0,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Workflow State",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Workflow State",
+   "role": "CEO / Final Approver",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Workflow Action",
+   "role": "Desk User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Workflow Action",
+   "role": "CEO / Final Approver",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "KRA",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "KRA",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "KRA",
+   "role": "HOD",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "KRA",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "KRA Category",
+   "role": "System Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "KRA Category",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 1
+  },
+  {
+   "parent": "KRA Category",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Mid-Year Review",
+   "role": "HOD",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Annual Performance Review",
+   "role": "HOD",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 1
+  },
+  {
+   "parent": "Employment Type",
+   "role": "Job Opening Vendor",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Task",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Budget",
+   "role": "CHRO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Department",
+   "role": "CHRO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "CHRO",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "Head of OD & Total Rewards",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "CXO Hiring Approval",
+   "role": "Head of OD & Total Rewards",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Job Applicant",
+   "role": "Head of OD & Total Rewards",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Job Requisition",
+   "role": "Head of OD & Total Rewards",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Budget",
+   "role": "Workforce Plan Creator",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Workforce Plan",
+   "role": "Workforce Plan Creator",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Function",
+   "role": "Workforce Plan Creator",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Workforce Plan Creator",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Function",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Page",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Project",
+   "role": "Employee",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Mid-Year Review",
+   "role": "Reporting Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Annual Performance Review",
+   "role": "Reporting Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee Exit",
+   "role": "Reporting Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "User",
+   "role": "HR Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "User",
+   "role": "HR Manager",
+   "permlevel": 1,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "User",
+   "role": "HR User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "User",
+   "role": "HR User",
+   "permlevel": 1,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Workspace",
+   "role": "Desk User",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Workspace",
+   "role": "Workspace Manager",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "submit": 0
+  },
+  {
+   "parent": "Workspace",
+   "role": "CHRO",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Page",
+   "role": "All",
+   "permlevel": 0,
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "HR Ops",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  },
+  {
+   "parent": "Employee",
+   "role": "HR Ops - VFQ Email",
+   "permlevel": 0,
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "submit": 0
+  }
+ ],
+ "roles": [
+  "Employee Self Service",
+  "Vendor Manager",
+  "HOD",
+  "Recruitment Specialist",
+  "CEO / Final Approver",
+  "Line Manager",
+  "Job Opening Vendor",
+  "Reporting Manager",
+  "Functional Head",
+  "Head of OD & Total Rewards",
+  "CAO",
+  "CTO",
+  "CFO",
+  "CSCO",
+  "Workforce Plan Creator",
+  "CHRO",
+  "HR Ops",
+  "HR Ops - VFQ Email"
+ ],
+ "workflows": [
+  {
+   "name": "Leave Application - Single Approval",
+   "document_type": "Leave Application",
+   "is_active": 0,
+   "states": 4,
+   "transitions": 3
+  },
+  {
+   "name": "Leave Application - Single/Multi Layer Approval",
+   "document_type": "Leave Application",
+   "is_active": 1,
+   "states": 5,
+   "transitions": 6
+  },
+  {
+   "name": "Probation Extension Approval",
+   "document_type": "Probation Extension",
+   "is_active": 1,
+   "states": 3,
+   "transitions": 2
+  },
+  {
+   "name": "Job Requisition Approval",
+   "document_type": "Job Requisition",
+   "is_active": 1,
+   "states": 4,
+   "transitions": 4
+  },
+  {
+   "name": "Job Applicant Open to Onboarding Automation",
+   "document_type": "Job Applicant",
+   "is_active": 1,
+   "states": 7,
+   "transitions": 20
+  },
+  {
+   "name": "CXO Hiring Approval Workflow",
+   "document_type": "CXO Hiring Approval",
+   "is_active": 1,
+   "states": 7,
+   "transitions": 14
+  },
+  {
+   "name": "Workforce Plan Approval",
+   "document_type": "Workforce Plan",
+   "is_active": 1,
+   "states": 8,
+   "transitions": 19
+  },
+  {
+   "name": "Probation Review Workflow",
+   "document_type": "Probation Review",
+   "is_active": 1,
+   "states": 9,
+   "transitions": 8
+  },
+  {
+   "name": "Mid Year Review Workflow",
+   "document_type": "Mid-Year Review",
+   "is_active": 1,
+   "states": 10,
+   "transitions": 4
+  },
+  {
+   "name": "Annual Performance Review Workflow",
+   "document_type": "Annual Performance Review",
+   "is_active": 1,
+   "states": 15,
+   "transitions": 5
+  },
+  {
+   "name": "Employee Exit Approval",
+   "document_type": "Employee Exit",
+   "is_active": 1,
+   "states": 6,
+   "transitions": 8
+  }
+ ],
+ "notifications": [
+  {
+   "name": "CXO Approved - Notify HR Manager to Finalize Onboarding",
+   "enabled": 0
+  },
+  {
+   "name": "CHRO Approval Needed: {{ doc.title }} ({{ doc.total_applicants }} applicant(s))",
+   "enabled": 0
+  },
+  {
+   "name": "CEO Approval Needed: {{ doc.title }} ({{ doc.total_applicants }} applicant(s))",
+   "enabled": 0
+  },
+  {
+   "name": "CAO Approval Needed (Email+System): {{ doc.title }}",
+   "enabled": 0
+  },
+  {
+   "name": "Ready to Onboard: {{ doc.applicant_name }}",
+   "enabled": 0
+  },
+  {
+   "name": "CEO Approval Needed (Email+System): {{ doc.title }}",
+   "enabled": 0
+  },
+  {
+   "name": "Exit Request - Rejected",
+   "enabled": 0
+  },
+  {
+   "name": "Exit Request - Approved",
+   "enabled": 0
+  },
+  {
+   "name": "Exit Request - HR Approval Needed",
+   "enabled": 0
+  },
+  {
+   "name": "Exit Request - Manager Approval Needed",
+   "enabled": 0
+  },
+  {
+   "name": "Mid Year Review Notification - Email",
+   "enabled": 0
+  },
+  {
+   "name": "Leave - Pending HR Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Leave - Pending Manager Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Workforce Plan - Returned for Changes",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Workforce Plan - Returned for Changes",
+   "enabled": 0
+  },
+  {
+   "name": "Workforce Plan - Rejected",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Workforce Plan - Rejected",
+   "enabled": 0
+  },
+  {
+   "name": "Workforce Plan - Awaiting HOD Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Workforce Plan - Awaiting HOD Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Workforce Plan - Awaiting Head of OD and Total Rewards Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Workforce Plan - Awaiting Head of OD and Total Rewards Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Workforce Plan - Awaiting Functional Head Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Workforce Plan - Awaiting Functional Head Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Workforce Plan - Awaiting CEO Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Workforce Plan - Awaiting CEO Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Workforce Plan - Awaiting CAO Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Workforce Plan - Awaiting CAO Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Workforce Plan - Approved",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Workforce Plan - Approved",
+   "enabled": 0
+  },
+  {
+   "name": "Job Requisition - Returned for Changes",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Job Requisition - Returned for Changes",
+   "enabled": 0
+  },
+  {
+   "name": "Job Requisition - Awaiting HR Manager Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Job Requisition - Awaiting HR Manager Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Job Requisition - Approved",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Job Requisition - Approved",
+   "enabled": 0
+  },
+  {
+   "name": "Job Applicant - Shortlisted",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Job Applicant - Shortlisted",
+   "enabled": 0
+  },
+  {
+   "name": "Job Applicant - Rejected",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Job Applicant - Rejected",
+   "enabled": 0
+  },
+  {
+   "name": "Job Applicant - Onboarded",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Job Applicant - Onboarded",
+   "enabled": 0
+  },
+  {
+   "name": "Job Applicant - Interview Scheduled",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Job Applicant - Interview Scheduled",
+   "enabled": 0
+  },
+  {
+   "name": "Job Applicant - Backed Off",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Job Applicant - Backed Off",
+   "enabled": 0
+  },
+  {
+   "name": "Job Applicant - Approved to Onboard",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - Job Applicant - Approved to Onboard",
+   "enabled": 0
+  },
+  {
+   "name": "CXO Hiring Approval - Returned for Changes",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - CXO Hiring Approval - Returned for Changes",
+   "enabled": 0
+  },
+  {
+   "name": "CXO Hiring Approval - Rejected",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - CXO Hiring Approval - Rejected",
+   "enabled": 0
+  },
+  {
+   "name": "CXO Hiring Approval - Awaiting CEO Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - CXO Hiring Approval - Awaiting CEO Approval",
+   "enabled": 0
+  },
+  {
+   "name": "CXO Hiring Approval - Awaiting CAO Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - CXO Hiring Approval - Awaiting CAO Approval",
+   "enabled": 0
+  },
+  {
+   "name": "CXO Hiring Approval - Approved",
+   "enabled": 0
+  },
+  {
+   "name": "Bell - CXO Hiring Approval - Approved",
+   "enabled": 0
+  },
+  {
+   "name": "Probation Review - Follow-Up Review Created",
+   "enabled": 0
+  },
+  {
+   "name": "Probation Extension - Awaiting HR Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Annual Performance Review - Finalized",
+   "enabled": 0
+  },
+  {
+   "name": "Annual Performance Review - Awaiting HR Review",
+   "enabled": 0
+  },
+  {
+   "name": "Annual Performance Review - Awaiting Employee Discussion",
+   "enabled": 0
+  },
+  {
+   "name": "Annual Performance Review - Awaiting Manager Review",
+   "enabled": 0
+  },
+  {
+   "name": "Mid-Year Review - Completed",
+   "enabled": 0
+  },
+  {
+   "name": "Mid-Year Review - Awaiting Employee Acknowledgement",
+   "enabled": 0
+  },
+  {
+   "name": "Mid-Year Review - Awaiting Manager Review",
+   "enabled": 0
+  },
+  {
+   "name": "Probation Extension - Rejected",
+   "enabled": 0
+  },
+  {
+   "name": "Probation Extension - Approved",
+   "enabled": 0
+  },
+  {
+   "name": "Probation Review - Final Decision Recorded",
+   "enabled": 0
+  },
+  {
+   "name": "Probation Review - Awaiting HR Review",
+   "enabled": 0
+  },
+  {
+   "name": "Probation Review - Awaiting Manager Review",
+   "enabled": 0
+  },
+  {
+   "name": "Probation Review - Returned for Changes",
+   "enabled": 0
+  },
+  {
+   "name": "Employee Exit - Closed",
+   "enabled": 0
+  },
+  {
+   "name": "Employee Exit - Rejected",
+   "enabled": 0
+  },
+  {
+   "name": "Employee Exit - Approved",
+   "enabled": 0
+  },
+  {
+   "name": "Employee Exit - Awaiting HR Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Employee Exit - Awaiting Manager Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Leave Application - Rejected",
+   "enabled": 0
+  },
+  {
+   "name": "Leave Application - Approved",
+   "enabled": 0
+  },
+  {
+   "name": "Leave Application - Awaiting HR Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Leave Application - Awaiting Manager Approval",
+   "enabled": 0
+  },
+  {
+   "name": "Probation Review Email",
+   "enabled": 0
+  },
+  {
+   "name": "CXO Hiring Approval - Awaiting Head of OD Approval",
+   "enabled": 1
+  },
+  {
+   "name": "Bell - CXO Hiring Approval - Awaiting Head of OD Approval",
+   "enabled": 1
+  },
+  {
+   "name": "CXO Hiring Approval - Awaiting CHRO Approval",
+   "enabled": 1
+  },
+  {
+   "name": "Bell - CXO Hiring Approval - Awaiting CHRO Approval",
+   "enabled": 1
+  }
+ ],
+ "workspaces": [
+  {
+   "name": "HR",
+   "shortcuts": [
+    "Annual Performance Review",
+    "CXO Hiring Approval",
+    "Employee",
+    "Employee Exit",
+    "Employees To Be Activated",
+    "Frappe HR App",
+    "Interview",
+    "Job Applicant",
+    "Job Opening",
+    "Job Requisition",
+    "Leave Allocation",
+    "Leave Application",
+    "Mid-Year Review",
+    "Organizational Chart",
+    "Probation Extension",
+    "Probation Review",
+    "Workforce Plan"
+   ],
+   "cards": [
+    "CXO Approval & Onboarding",
+    "Candidates",
+    "End-to-End",
+    "Exit",
+    "Leaves",
+    "Probation & Performance",
+    "Requisition & Opening",
+    "Workforce Planning"
+   ]
+  },
+  {
+   "name": "Masters",
+   "shortcuts": [
+    "Department",
+    "Designation",
+    "Employment Type",
+    "Function",
+    "Job Applicant Source",
+    "Leave Type"
+   ],
+   "cards": [
+    "Budget & Cost",
+    "Leaves",
+    "Organization",
+    "Performance & Exit",
+    "Recruitment",
+    "Settings"
+   ]
+  },
+  {
+   "name": "Reports",
+   "shortcuts": [
+    "Employee Lifecycle Dashboard",
+    "HR Analytics Dashboard",
+    "HR Dashboard",
+    "Hiring Flow Dashboard",
+    "Recruitment Dashboard"
+   ],
+   "cards": [
+    "CXO Hiring Approval",
+    "End-to-End",
+    "Job Applicant",
+    "Job Opening",
+    "Job Requisition",
+    "Onboarding",
+    "Standard Reports",
+    "Workforce Plan"
+   ]
+  },
+  {
+   "name": "Self Service Portal",
+   "shortcuts": [
+    "Employee Self Service",
+    "Frappe HR App",
+    "HR Self Service Console",
+    "Manager Self Service"
+   ],
+   "cards": []
+  },
+  {
+   "name": "Employee Self Service",
+   "shortcuts": [
+    "Annual Performance Review",
+    "Apply for Leave",
+    "Attendance",
+    "Attendance Request",
+    "Frappe HR Mobile App",
+    "Leave Allocation",
+    "Mid-Year Review",
+    "My Leave Applications",
+    "My Resignations",
+    "Probation Review",
+    "Raise Resignation"
+   ],
+   "cards": []
+  },
+  {
+   "name": "Manager Self Service",
+   "shortcuts": [
+    "Annual Performance Reviews",
+    "Attendance Requests",
+    "Employees",
+    "Leave Applications",
+    "Mid-Year Reviews",
+    "Probation Extensions",
+    "Probation Reviews",
+    "Resignations and Exits",
+    "Team Attendance",
+    "Team Leave Allocation"
+   ],
+   "cards": []
+  },
+  {
+   "name": "HR Self Service Console",
+   "shortcuts": [
+    "All Exits",
+    "Exit Reason",
+    "Leave Applications",
+    "Leave Policy",
+    "Leave Policy Mapping",
+    "Leave Type",
+    "Probation Extension Requests"
+   ],
+   "cards": []
+  }
+ ],
+ "api_methods": [
+  "activate_employee",
+  "assign_leave_policy_for_employee",
+  "bulk_create_performance_reviews",
+  "fetch_existing_cost_for_role",
+  "get_cxo_function_shortlist",
+  "get_my_resignation_defaults",
+  "get_review_access",
+  "request_workforce_plan_send_back",
+  "save_cxo_send_back_reason",
+  "submit_portal_resignation",
+  "sync_self_service_user_permissions"
+ ],
+ "print_formats": [
+  "Appointment Letter",
+  "Job Opening - One Pager",
+  "Resignation Acknowledgement",
+  "Resignation Letter"
+ ],
+ "web_forms": [
+  "exit-interview-form",
+  "resignation-request"
+ ],
+ "dashboard_charts": [
+  "CXO Approval - Avg Days by Stage",
+  "Hiring by Source",
+  "Recruitment Funnel",
+  "Workforce Plan Approval - Avg Days by Stage",
+  "Workforce Plan Budget Utilisation"
+ ],
+ "number_cards": [
+  "Applicants In Process",
+  "Awaiting Joining",
+  "CXO Approvals Pending",
+  "Open Job Openings",
+  "Workforce Plans Pending Approval"
+ ],
+ "dashboards": [
+  "Hiring Flow Dashboard"
+ ],
+ "visibility": {
+  "hidden": [
+   "Accounting",
+   "Assets",
+   "Build",
+   "Buying",
+   "CRM",
+   "ERPNext Integrations",
+   "ERPNext Settings",
+   "Financial Reports",
+   "Home",
+   "Integrations",
+   "Manufacturing",
+   "POS & Invoicing",
+   "Payables",
+   "Projects",
+   "Quality",
+   "Receivables",
+   "Salon Operations",
+   "Selling",
+   "Stock",
+   "Support",
+   "Tools",
+   "Website",
+   "Welcome Workspace"
+  ],
+  "system_manager_only": [
+   "Payroll",
+   "Salary Payout",
+   "Tax & Benefits",
+   "Recruitment",
+   "Employee Lifecycle",
+   "Performance",
+   "Shift & Attendance",
+   "Leaves",
+   "Expense Claims",
+   "Users"
+  ]
+ }
+}

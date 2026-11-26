@@ -1,0 +1,39 @@
+{
+ "hidden": [
+  "Accounting",
+  "Assets",
+  "Build",
+  "Buying",
+  "CRM",
+  "ERPNext Integrations",
+  "ERPNext Settings",
+  "Financial Reports",
+  "Home",
+  "Integrations",
+  "Manufacturing",
+  "POS & Invoicing",
+  "Payables",
+  "Projects",
+  "Quality",
+  "Receivables",
+  "Salon Operations",
+  "Selling",
+  "Stock",
+  "Support",
+  "Tools",
+  "Website",
+  "Welcome Workspace"
+ ],
+ "system_manager_only": [
+  "Payroll",
+  "Salary Payout",
+  "Tax & Benefits",
+  "Recruitment",
+  "Employee Lifecycle",
+  "Performance",
+  "Shift & Attendance",
+  "Leaves",
+  "Expense Claims",
+  "Users"
+ ]
+}

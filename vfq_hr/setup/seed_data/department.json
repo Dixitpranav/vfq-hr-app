@@ -1,0 +1,534 @@
+[
+ {
+  "department_name": "Accounts",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Administration & Management",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Customer Service",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Dispatch",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Finance",
+  "parent": "All Departments",
+  "is_group": 1,
+  "custom_function": "",
+  "custom_sub_function": ""
+ },
+ {
+  "department_name": "Hair Styling",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Housekeeping",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Human Resources",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Legal",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Makeup & Bridal",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Management",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Marketing",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Nail Care",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Network- Core & VAS",
+  "parent": "All Departments",
+  "is_group": 1,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Network- IP & Fixed Access",
+  "parent": "All Departments",
+  "is_group": 1,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Network- RAN",
+  "parent": "All Departments",
+  "is_group": 1,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Operations",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Product Development",
+  "parent": "All Departments",
+  "is_group": 1,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Production",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Purchase",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Quality Management",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Reception & Front Desk",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Research & Development",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Rollout",
+  "parent": "All Departments",
+  "is_group": 1,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "SCM",
+  "parent": "All Departments",
+  "is_group": 1,
+  "custom_function": "",
+  "custom_sub_function": ""
+ },
+ {
+  "department_name": "Sales",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Service Management",
+  "parent": "All Departments",
+  "is_group": 1,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Skin Care & Facials",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Spa & Massage",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "TEC - iPay (Mobile Money)",
+  "parent": "All Departments",
+  "is_group": 1,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Technology",
+  "parent": "All Departments",
+  "is_group": 1,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Technology Head Office",
+  "parent": "All Departments",
+  "is_group": 1,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Technology Project",
+  "parent": "All Departments",
+  "is_group": 1,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Technology Security",
+  "parent": "All Departments",
+  "is_group": 1,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Technology-CRM",
+  "parent": "All Departments",
+  "is_group": 0,
+  "custom_function": "Technology Directorate - Infinity Solutions",
+  "custom_sub_function": "Product Development - Infinity Solutions"
+ },
+ {
+  "department_name": "Access & Field Operations",
+  "parent": "Service Management",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Accounts Payable",
+  "parent": "Finance",
+  "is_group": 0,
+  "custom_function": "",
+  "custom_sub_function": ""
+ },
+ {
+  "department_name": "CRM & Sales Domain",
+  "parent": "Product Development",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Core Network & VAS",
+  "parent": "Network- Core & VAS",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Core Operations",
+  "parent": "Service Management",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "DWH Domain",
+  "parent": "Product Development",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Data Core Network Design",
+  "parent": "Network- Core & VAS",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Design & Delivery",
+  "parent": "Product Development",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Design - Digital Services",
+  "parent": "Product Development",
+  "is_group": 0,
+  "custom_function": "Technology Directorate - Infinity Solutions",
+  "custom_sub_function": "Product Development - Infinity Solutions"
+ },
+ {
+  "department_name": "Digital Channels",
+  "parent": "Product Development",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Digital Engineering & Channels",
+  "parent": "Product Development",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Enterprise Service Support",
+  "parent": "Service Management",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Enterprise Solutions & Products",
+  "parent": "Network- IP & Fixed Access",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Fixed Design",
+  "parent": "Rollout",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Fixed Implementation",
+  "parent": "Rollout",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "HRMS Customization Team",
+  "parent": "Product Development",
+  "is_group": 0,
+  "custom_function": "",
+  "custom_sub_function": ""
+ },
+ {
+  "department_name": "IN & IoT Applications",
+  "parent": "Product Development",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "IP & Fixed Access",
+  "parent": "Network- IP & Fixed Access",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "IP & Security Operations",
+  "parent": "Service Management",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "IT Operations",
+  "parent": "Service Management",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "IT Quality & Architecture",
+  "parent": "Product Development",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "IT Transformation Program",
+  "parent": "Product Development",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Infrastructure Network & Security",
+  "parent": "Network- IP & Fixed Access",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Integration Domain",
+  "parent": "Product Development",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "NOC",
+  "parent": "Service Management",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Network Quality & Customer Experience",
+  "parent": "Network- RAN",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Network Quality & Optimisation and RAN",
+  "parent": "Network- RAN",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Office IT Support",
+  "parent": "Network- IP & Fixed Access",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Product Development - General",
+  "parent": "Product Development",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Project Management",
+  "parent": "Rollout",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "RAN Solution",
+  "parent": "Network- RAN",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Rollout - General",
+  "parent": "Rollout",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Service Desk & Governance",
+  "parent": "Service Management",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Service Management - General",
+  "parent": "Service Management",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Technology Business Development",
+  "parent": "Technology Head Office",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Technology Office",
+  "parent": "Technology Head Office",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Technology Planning, Fixed & PMO",
+  "parent": "Technology Head Office",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Technology Project - General",
+  "parent": "Technology Project",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Technology Security - General",
+  "parent": "Technology Security",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ },
+ {
+  "department_name": "Technology-Sales",
+  "parent": "Product Development",
+  "is_group": 0,
+  "custom_function": "Technology Directorate - Infinity Solutions",
+  "custom_sub_function": "Product Development - Infinity Solutions"
+ },
+ {
+  "department_name": "iPay (Mobile Money)-Technology",
+  "parent": "TEC - iPay (Mobile Money)",
+  "is_group": 0,
+  "custom_function": null,
+  "custom_sub_function": null
+ }
+]

@@ -1,0 +1,772 @@
+[
+ {
+  "name": "Accountant",
+  "docstatus": 0,
+  "idx": 5,
+  "designation_name": "Accountant",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Administrative Assistant",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Administrative Assistant",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Administrative Officer",
+  "docstatus": 0,
+  "idx": 1,
+  "designation_name": "Administrative Officer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Analyst",
+  "docstatus": 0,
+  "idx": 17,
+  "designation_name": "Analyst",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Associate",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Associate",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Business Analyst",
+  "docstatus": 0,
+  "idx": 24,
+  "designation_name": "Business Analyst",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Business Development Manager",
+  "docstatus": 0,
+  "idx": 3,
+  "designation_name": "Business Development Manager",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Consultant",
+  "docstatus": 0,
+  "idx": 2,
+  "designation_name": "Consultant",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Chief Executive Officer",
+  "docstatus": 0,
+  "idx": 1,
+  "designation_name": "Chief Executive Officer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Chief Financial Officer",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Chief Financial Officer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Chief Operating Officer",
+  "docstatus": 0,
+  "idx": 7,
+  "designation_name": "Chief Operating Officer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Chief Technology Officer",
+  "docstatus": 0,
+  "idx": 4,
+  "designation_name": "Chief Technology Officer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Customer Service Representative",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Customer Service Representative",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Designer",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Designer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Engineer",
+  "docstatus": 0,
+  "idx": 2,
+  "designation_name": "Engineer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Executive Assistant",
+  "docstatus": 0,
+  "idx": 1,
+  "designation_name": "Executive Assistant",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Finance Manager",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Finance Manager",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "HR Manager",
+  "docstatus": 0,
+  "idx": 2,
+  "designation_name": "HR Manager",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Head of Marketing and Sales",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Head of Marketing and Sales",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Manager",
+  "docstatus": 0,
+  "idx": 5,
+  "designation_name": "Manager",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Managing Director",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Managing Director",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Marketing Manager",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Marketing Manager",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Marketing Specialist",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Marketing Specialist",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "President",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "President",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Product Manager",
+  "docstatus": 0,
+  "idx": 6,
+  "designation_name": "Product Manager",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Project Manager",
+  "docstatus": 0,
+  "idx": 3,
+  "designation_name": "Project Manager",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Researcher",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Researcher",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Sales Representative",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Sales Representative",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Secretary",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Secretary",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Software Developer",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Software Developer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Vice President",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Vice President",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Salon Manager",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Salon Manager",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Assistant Salon Manager",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Assistant Salon Manager",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Senior Hair Stylist",
+  "docstatus": 0,
+  "idx": 4,
+  "designation_name": "Senior Hair Stylist",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Junior Hair Stylist",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Junior Hair Stylist",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Barber",
+  "docstatus": 0,
+  "idx": 3,
+  "designation_name": "Barber",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Senior Beautician",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Senior Beautician",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Junior Beautician",
+  "docstatus": 0,
+  "idx": 1,
+  "designation_name": "Junior Beautician",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Nail Technician",
+  "docstatus": 0,
+  "idx": 2,
+  "designation_name": "Nail Technician",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Spa Therapist",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Spa Therapist",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Makeup Artist",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Makeup Artist",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Receptionist",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Receptionist",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Cashier",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Cashier",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Housekeeping Staff",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Housekeeping Staff",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Java Engineering Manager",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Java Engineering Manager",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Backend Lead",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Backend Lead",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Front-end Lead",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Front-end Lead",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Dev-Ops Engineer",
+  "docstatus": 0,
+  "idx": 5,
+  "designation_name": "Dev-Ops Engineer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Dev-Ops Lead",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Dev-Ops Lead",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "ERPNext Expert",
+  "docstatus": 0,
+  "idx": 8,
+  "designation_name": "ERPNext Expert",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "ERPNext Developer",
+  "docstatus": 0,
+  "idx": 1,
+  "designation_name": "ERPNext Developer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Java Developer",
+  "docstatus": 0,
+  "idx": 35,
+  "designation_name": "Java Developer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": ".Net Developer",
+  "docstatus": 0,
+  "idx": 45,
+  "designation_name": ".Net Developer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "ERPNext Consultant",
+  "docstatus": 0,
+  "idx": 7,
+  "designation_name": "ERPNext Consultant",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Automation Tester",
+  "docstatus": 0,
+  "idx": 2,
+  "designation_name": "Automation Tester",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Dev Ops Engineer",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Dev Ops Engineer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Accounts Manager",
+  "docstatus": 0,
+  "idx": 1,
+  "designation_name": "Accounts Manager",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "COA Manager",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "COA Manager",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Assets Manager",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Assets Manager",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Senior DevOps Engineer",
+  "docstatus": 0,
+  "idx": 5,
+  "designation_name": "Senior DevOps Engineer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Cloud Infrastructure Engineer",
+  "docstatus": 0,
+  "idx": 7,
+  "designation_name": "Cloud Infrastructure Engineer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "QA Automation Engineer",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "QA Automation Engineer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Functional Consultant",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Functional Consultant",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "DevOps Engineer",
+  "docstatus": 0,
+  "idx": 7,
+  "designation_name": "DevOps Engineer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Developer",
+  "docstatus": 0,
+  "idx": 15,
+  "designation_name": "Developer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "QA/Tester",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "QA/Tester",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Other",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Other",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Accountant Payments",
+  "docstatus": 0,
+  "idx": 13,
+  "designation_name": "Accountant Payments",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "iOS Developer",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "iOS Developer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Android Developer",
+  "docstatus": 0,
+  "idx": 26,
+  "designation_name": "Android Developer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "DevOps",
+  "docstatus": 0,
+  "idx": 1,
+  "designation_name": "DevOps",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Chief Administrative Officer",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Chief Administrative Officer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Chief Human Resources Officer",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Chief Human Resources Officer",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Head of OD & Total Rewards",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Head of OD & Total Rewards",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Functional Head",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Functional Head",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "Head of Department",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "Head of Department",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ },
+ {
+  "name": "HR Executive",
+  "docstatus": 0,
+  "idx": 0,
+  "designation_name": "HR Executive",
+  "description": null,
+  "appraisal_template": null,
+  "doctype": "Designation",
+  "skills": []
+ }
+]

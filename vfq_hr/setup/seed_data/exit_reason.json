@@ -1,0 +1,192 @@
+[
+ {
+  "name": "Better Opportunity",
+  "docstatus": 0,
+  "idx": 3,
+  "reason_name": "Better Opportunity",
+  "exit_type": "Resignation",
+  "category": "Voluntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Higher Studies",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Higher Studies",
+  "exit_type": "Resignation",
+  "category": "Voluntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Relocation",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Relocation",
+  "exit_type": "Resignation",
+  "category": "Voluntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Personal or Family Reasons",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Personal or Family Reasons",
+  "exit_type": "Resignation",
+  "category": "Voluntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Health Reasons",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Health Reasons",
+  "exit_type": "Resignation",
+  "category": "Voluntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Career Change",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Career Change",
+  "exit_type": "Resignation",
+  "category": "Voluntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Compensation and Benefits",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Compensation and Benefits",
+  "exit_type": "Resignation",
+  "category": "Voluntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Work Environment or Management",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Work Environment or Management",
+  "exit_type": "Resignation",
+  "category": "Voluntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Work-Life Balance",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Work-Life Balance",
+  "exit_type": "Resignation",
+  "category": "Voluntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Performance Issues",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Performance Issues",
+  "exit_type": "Termination",
+  "category": "Involuntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Misconduct",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Misconduct",
+  "exit_type": "Termination",
+  "category": "Involuntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Redundancy or Restructuring",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Redundancy or Restructuring",
+  "exit_type": "Termination",
+  "category": "Involuntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Mutual Separation",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Mutual Separation",
+  "exit_type": "Termination",
+  "category": "Involuntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Contract Not Renewed",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Contract Not Renewed",
+  "exit_type": "End of Contract",
+  "category": "Involuntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Contract Completed",
+  "docstatus": 0,
+  "idx": 1,
+  "reason_name": "Contract Completed",
+  "exit_type": "End of Contract",
+  "category": "Natural",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Superannuation",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Superannuation",
+  "exit_type": "Retirement",
+  "category": "Natural",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Early Retirement",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Early Retirement",
+  "exit_type": "Retirement",
+  "category": "Voluntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Unauthorised Absence",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Unauthorised Absence",
+  "exit_type": "Absconding",
+  "category": "Involuntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ },
+ {
+  "name": "Other (see comments)",
+  "docstatus": 0,
+  "idx": 0,
+  "reason_name": "Other (see comments)",
+  "exit_type": "Resignation",
+  "category": "Voluntary",
+  "enabled": 1,
+  "doctype": "Exit Reason"
+ }
+]

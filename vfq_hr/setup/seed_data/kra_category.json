@@ -1,0 +1,22 @@
+[
+ {
+  "name": "b5agbqqjn2",
+  "docstatus": 1,
+  "idx": 3,
+  "amended_from": null,
+  "kra_name": "Optimized business process",
+  "description": "Optimized business process",
+  "active": 1,
+  "doctype": "KRA Category"
+ },
+ {
+  "name": "d53v32gbib",
+  "docstatus": 1,
+  "idx": 1,
+  "amended_from": null,
+  "kra_name": "Fast processing",
+  "description": "fast",
+  "active": 1,
+  "doctype": "KRA Category"
+ }
+]

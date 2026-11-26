@@ -1,0 +1,71 @@
+[
+ {
+  "name": "Round 2 - Tech",
+  "docstatus": 0,
+  "idx": 0,
+  "round_name": "Round 2 - Tech",
+  "interview_type": "Round 1 - Non Tech",
+  "expected_average_rating": 0,
+  "designation": null,
+  "doctype": "Interview Round",
+  "expected_skill_set": [
+   {
+    "name": "dp4k7r64fd",
+    "docstatus": 0,
+    "idx": 1,
+    "skill": "Technical",
+    "description": null,
+    "parent": "Round 2 - Tech",
+    "parentfield": "expected_skill_set",
+    "parenttype": "Interview Round",
+    "doctype": "Expected Skill Set"
+   }
+  ]
+ },
+ {
+  "name": "Round 1 - Screening & Non-Tech",
+  "docstatus": 0,
+  "idx": 0,
+  "round_name": "Round 1 - Screening & Non-Tech",
+  "interview_type": "Round 1 - Non Tech",
+  "expected_average_rating": 0,
+  "designation": null,
+  "doctype": "Interview Round",
+  "expected_skill_set": [
+   {
+    "name": "2q64vcq7dv",
+    "docstatus": 0,
+    "idx": 1,
+    "skill": "Technical",
+    "description": null,
+    "parent": "Round 1 - Screening & Non-Tech",
+    "parentfield": "expected_skill_set",
+    "parenttype": "Interview Round",
+    "doctype": "Expected Skill Set"
+   }
+  ]
+ },
+ {
+  "name": "HR & Negotiations",
+  "docstatus": 0,
+  "idx": 0,
+  "round_name": "HR & Negotiations",
+  "interview_type": "Round 3 - HR",
+  "expected_average_rating": 0,
+  "designation": null,
+  "doctype": "Interview Round",
+  "expected_skill_set": [
+   {
+    "name": "9qcjhgdnli",
+    "docstatus": 0,
+    "idx": 1,
+    "skill": "Technical",
+    "description": null,
+    "parent": "HR & Negotiations",
+    "parentfield": "expected_skill_set",
+    "parenttype": "Interview Round",
+    "doctype": "Expected Skill Set"
+   }
+  ]
+ }
+]

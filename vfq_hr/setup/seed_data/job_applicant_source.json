@@ -1,0 +1,34 @@
+[
+ {
+  "name": "Website Listing",
+  "docstatus": 0,
+  "idx": 3,
+  "source_name": "Website Listing",
+  "details": null,
+  "doctype": "Job Applicant Source"
+ },
+ {
+  "name": "Walk In",
+  "docstatus": 0,
+  "idx": 1,
+  "source_name": "Walk In",
+  "details": null,
+  "doctype": "Job Applicant Source"
+ },
+ {
+  "name": "Employee Referral",
+  "docstatus": 0,
+  "idx": 1,
+  "source_name": "Employee Referral",
+  "details": null,
+  "doctype": "Job Applicant Source"
+ },
+ {
+  "name": "Campaign",
+  "docstatus": 0,
+  "idx": 2,
+  "source_name": "Campaign",
+  "details": null,
+  "doctype": "Job Applicant Source"
+ }
+]

@@ -1,0 +1,35 @@
+[
+ {
+  "name": "Business Manager",
+  "docstatus": 0,
+  "idx": 0,
+  "template_title": "Business Manager",
+  "department": "Sales - NSD",
+  "employment_type": "Full-time",
+  "location": "Central Doha",
+  "description": null,
+  "doctype": "Job Opening Template"
+ },
+ {
+  "name": "Security Manager",
+  "docstatus": 0,
+  "idx": 0,
+  "template_title": "Security Manager",
+  "department": "Administration & Management - NSD",
+  "employment_type": "Full-time",
+  "location": null,
+  "description": "<div class=\"ql-editor read-mode\"><p>Infra &amp; security Manager</p></div>",
+  "doctype": "Job Opening Template"
+ },
+ {
+  "name": "Security Team",
+  "docstatus": 0,
+  "idx": 0,
+  "template_title": "Security Team",
+  "department": "Administration & Management - NSD",
+  "employment_type": "Full-time",
+  "location": null,
+  "description": "<div class=\"ql-editor read-mode\"><p>Infra &amp; Security Executive</p></div>",
+  "doctype": "Job Opening Template"
+ }
+]
