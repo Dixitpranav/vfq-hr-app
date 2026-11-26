@@ -1,244 +1,68 @@
 [
  {
-  "name": "CBU",
-  "docstatus": 0,
-  "idx": 0,
   "function_name": "CBU",
   "parent_function": null,
-  "company": "Naturals Salon",
   "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
+  "disabled": 0
  },
  {
-  "name": "CEO Directorate",
-  "docstatus": 0,
-  "idx": 0,
   "function_name": "CEO Directorate",
   "parent_function": null,
-  "company": "Naturals Salon",
   "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
+  "disabled": 0
  },
  {
-  "name": "COO Directorate",
-  "docstatus": 0,
-  "idx": 0,
   "function_name": "COO Directorate",
   "parent_function": null,
-  "company": "Naturals Salon",
   "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
+  "disabled": 0
  },
  {
-  "name": "COPS",
-  "docstatus": 0,
-  "idx": 0,
   "function_name": "COPS",
   "parent_function": null,
-  "company": "Naturals Salon",
   "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
+  "disabled": 0
  },
  {
-  "name": "EBU",
-  "docstatus": 0,
-  "idx": 0,
   "function_name": "EBU",
   "parent_function": null,
-  "company": "Naturals Salon",
   "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
+  "disabled": 0
  },
  {
-  "name": "Finance Directorate",
-  "docstatus": 0,
-  "idx": 0,
   "function_name": "Finance Directorate",
   "parent_function": null,
-  "company": "Naturals Salon",
   "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
+  "disabled": 0
  },
  {
-  "name": "Legal",
-  "docstatus": 0,
-  "idx": 0,
   "function_name": "Legal",
   "parent_function": null,
-  "company": "Naturals Salon",
   "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
+  "disabled": 0
  },
  {
-  "name": "Regulatory",
-  "docstatus": 0,
-  "idx": 1,
   "function_name": "Regulatory",
   "parent_function": null,
-  "company": "Naturals Salon",
   "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
+  "disabled": 0
  },
  {
-  "name": "Retail",
-  "docstatus": 0,
-  "idx": 0,
   "function_name": "Retail",
   "parent_function": null,
-  "company": "Naturals Salon",
   "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
+  "disabled": 0
  },
  {
-  "name": "Technology Directorate",
-  "docstatus": 0,
-  "idx": 2,
   "function_name": "Technology Directorate",
   "parent_function": null,
-  "company": "Naturals Salon",
   "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
+  "disabled": 0
  },
  {
-  "name": "Product Development",
-  "docstatus": 0,
-  "idx": 0,
   "function_name": "Product Development",
   "parent_function": "Technology Directorate",
-  "company": "Naturals Salon",
   "is_group": 0,
-  "disabled": 0,
-  "doctype": "Function"
- },
- {
-  "name": "CBU - Infinity Solutions",
-  "docstatus": 0,
-  "idx": 0,
-  "function_name": "CBU",
-  "parent_function": null,
-  "company": "Infinity Solutions",
-  "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
- },
- {
-  "name": "CEO Directorate - Infinity Solutions",
-  "docstatus": 0,
-  "idx": 0,
-  "function_name": "CEO Directorate",
-  "parent_function": null,
-  "company": "Infinity Solutions",
-  "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
- },
- {
-  "name": "COO Directorate - Infinity Solutions",
-  "docstatus": 0,
-  "idx": 0,
-  "function_name": "COO Directorate",
-  "parent_function": null,
-  "company": "Infinity Solutions",
-  "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
- },
- {
-  "name": "COPS - Infinity Solutions",
-  "docstatus": 0,
-  "idx": 0,
-  "function_name": "COPS",
-  "parent_function": null,
-  "company": "Infinity Solutions",
-  "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
- },
- {
-  "name": "EBU - Infinity Solutions",
-  "docstatus": 0,
-  "idx": 0,
-  "function_name": "EBU",
-  "parent_function": null,
-  "company": "Infinity Solutions",
-  "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
- },
- {
-  "name": "Finance Directorate - Infinity Solutions",
-  "docstatus": 0,
-  "idx": 0,
-  "function_name": "Finance Directorate",
-  "parent_function": null,
-  "company": "Infinity Solutions",
-  "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
- },
- {
-  "name": "Legal - Infinity Solutions",
-  "docstatus": 0,
-  "idx": 0,
-  "function_name": "Legal",
-  "parent_function": null,
-  "company": "Infinity Solutions",
-  "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
- },
- {
-  "name": "Regulatory - Infinity Solutions",
-  "docstatus": 0,
-  "idx": 0,
-  "function_name": "Regulatory",
-  "parent_function": null,
-  "company": "Infinity Solutions",
-  "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
- },
- {
-  "name": "Retail - Infinity Solutions",
-  "docstatus": 0,
-  "idx": 0,
-  "function_name": "Retail",
-  "parent_function": null,
-  "company": "Infinity Solutions",
-  "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
- },
- {
-  "name": "Technology Directorate - Infinity Solutions",
-  "docstatus": 0,
-  "idx": 43,
-  "function_name": "Technology Directorate",
-  "parent_function": null,
-  "company": "Infinity Solutions",
-  "is_group": 1,
-  "disabled": 0,
-  "doctype": "Function"
- },
- {
-  "name": "Product Development - Infinity Solutions",
-  "docstatus": 0,
-  "idx": 35,
-  "function_name": "Product Development",
-  "parent_function": "Technology Directorate - Infinity Solutions",
-  "company": "Infinity Solutions",
-  "is_group": 0,
-  "disabled": 0,
-  "doctype": "Function"
+  "disabled": 0
  }
 ]

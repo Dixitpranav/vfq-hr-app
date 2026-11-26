@@ -1,0 +1,71 @@
+{
+ "app": "vfq_hr",
+ "creation": "2026-11-26 12:00:00",
+ "docstatus": 0,
+ "doctype": "Dock",
+ "idx": 0,
+ "items": [
+  {
+   "added": 0,
+   "hidden": 0,
+   "icon": "users-soft",
+   "link_to": "HR",
+   "link_type": "Workspace",
+   "title": "HR"
+  },
+  {
+   "added": 0,
+   "hidden": 0,
+   "icon": "data-table-soft",
+   "link_to": "Masters",
+   "link_type": "Workspace",
+   "title": "Masters"
+  },
+  {
+   "added": 0,
+   "hidden": 0,
+   "icon": "podium-soft",
+   "link_to": "Reports",
+   "link_type": "Workspace",
+   "title": "Reports"
+  },
+  {
+   "added": 0,
+   "hidden": 0,
+   "icon": "contacts-cards-soft",
+   "link_to": "Self Service Portal",
+   "link_type": "Workspace",
+   "title": "Self Service Portal"
+  },
+  {
+   "added": 0,
+   "hidden": 0,
+   "icon": "user-clock-soft",
+   "link_to": "Employee Self Service",
+   "link_type": "Workspace",
+   "title": "Employee Self Service"
+  },
+  {
+   "added": 0,
+   "hidden": 0,
+   "icon": "briefcase-soft",
+   "link_to": "Manager Self Service",
+   "link_type": "Workspace",
+   "title": "Manager Self Service"
+  },
+  {
+   "added": 0,
+   "hidden": 0,
+   "icon": "system-monitor-soft",
+   "link_to": "HR Self Service Console",
+   "link_type": "Workspace",
+   "title": "HR Self Service Console"
+  }
+ ],
+ "modified": "2026-11-26 12:00:00.000000",
+ "modified_by": "Administrator",
+ "name": "vfq_hr",
+ "owner": "Administrator",
+ "standard": 1,
+ "user": ""
+}

@@ -44,6 +44,7 @@ def _load(fname):
 def after_install():
 	result = seed_masters()
 	apply_hr_settings()
+	ensure_default_app()
 	ensure_coi_setup()
 	apply_workspace_visibility()
 	frappe.db.commit()
@@ -51,6 +52,7 @@ def after_install():
 
 
 def after_migrate():
+	ensure_default_app()
 	ensure_coi_setup()
 	ensure_workspaces()
 	apply_workspace_visibility()
@@ -58,19 +60,46 @@ def after_migrate():
 
 
 # ----------------------------------------------------------------- masters
-def seed_masters():
-	summary = {}
+def default_company():
+	"""The company the flow's masters belong to on this site."""
+	company = frappe.defaults.get_global_default("company")
+	if not company or not frappe.db.exists("Company", company):
+		company = frappe.db.get_value("Company", {}, "name", order_by="creation asc")
+	return company
+
+
+def _rounds_merged_into_types():
+	"""Frappe HR v16 merged Interview Round into Interview Type (skills, rating, interviewers)."""
+	return frappe.get_meta("Interview Type").has_field("expected_skill_set")
+
+
+def seed_masters(company=None):
+	"""Insert the flow's masters. Insert-only: existing records are never changed."""
+	company = company or default_company()
+	summary = {"company": company}
 	for doctype, fname in SEED_ORDER:
+		records = _load(fname) or []
+		if doctype == "Function":
+			summary[doctype] = seed_functions(records, company)
+			continue
+		if doctype == "Interview Type" and _rounds_merged_into_types():
+			summary[doctype] = "merged with rounds (v16)"
+			continue
+		if doctype == "Interview Round" and _rounds_merged_into_types():
+			summary[doctype] = seed_rounds_as_types(records)
+			continue
 		if not frappe.db.exists("DocType", doctype):
 			summary[doctype] = "doctype missing"
 			continue
-		records = _load(fname) or []
 		ok = skipped = failed = 0
 		for rec in records:
+			rec = dict(rec)
 			name = rec.get("name")
 			if name and frappe.db.exists(doctype, name):
 				skipped += 1
 				continue
+			if company and frappe.get_meta(doctype).has_field("company") and not rec.get("company"):
+				rec["company"] = company
 			try:
 				doc = frappe.get_doc(rec)
 				docstatus = rec.get("docstatus") or 0
@@ -84,7 +113,77 @@ def seed_masters():
 				failed += 1
 				frappe.log_error(title=f"VFQ HR seed failed: {doctype} {name}")
 		summary[doctype] = {"inserted": ok, "existing": skipped, "failed": failed}
+	if company:
+		summary["Department"] = create_departments(company)
 	return summary
+
+
+def function_name_for(base, company):
+	"""Name of the Function `base` (e.g. "CBU") for a company, or None."""
+	if not base:
+		return None
+	return frappe.db.get_value("Function", {"function_name": base, "company": company}, "name") or (
+		base if frappe.db.exists("Function", base) else None
+	)
+
+
+def seed_functions(records, company):
+	ok = skipped = failed = 0
+	for rec in records:
+		base = rec.get("function_name")
+		if not base or not company or function_name_for(base, company):
+			skipped += 1
+			continue
+		try:
+			frappe.get_doc({
+				"doctype": "Function",
+				"function_name": base,
+				"company": company,
+				"parent_function": function_name_for(rec.get("parent_function"), company),
+				"is_group": rec.get("is_group") or 0,
+				"disabled": rec.get("disabled") or 0,
+			}).insert(ignore_permissions=True)
+			ok += 1
+		except Exception:
+			frappe.db.rollback()
+			failed += 1
+			frappe.log_error(title=f"VFQ HR seed failed: Function {base}")
+	return {"inserted": ok, "existing": skipped, "failed": failed}
+
+
+def seed_rounds_as_types(records):
+	"""v16: each interview round becomes an Interview Type carrying its expected skills."""
+	ok = skipped = failed = 0
+	for rec in records:
+		title = rec.get("round_name") or rec.get("name")
+		if not title or frappe.db.exists("Interview Type", title):
+			skipped += 1
+			continue
+		try:
+			skills = [{"skill": r.get("skill")} for r in (rec.get("expected_skill_set") or []) if r.get("skill")]
+			for row in skills:
+				if not frappe.db.exists("Skill", row["skill"]):
+					frappe.get_doc({"doctype": "Skill", "skill_name": row["skill"]}).insert(ignore_permissions=True)
+			frappe.get_doc({
+				"doctype": "Interview Type",
+				"interview_type_name": title,
+				"description": rec.get("interview_type"),
+				"designation": rec.get("designation") if frappe.db.exists("Designation", rec.get("designation") or "") else None,
+				"expected_average_rating": rec.get("expected_average_rating"),
+				"expected_skill_set": skills or [{"skill": _default_skill()}],
+			}).insert(ignore_permissions=True)
+			ok += 1
+		except Exception:
+			frappe.db.rollback()
+			failed += 1
+			frappe.log_error(title=f"VFQ HR seed failed: Interview Type {title}")
+	return {"inserted": ok, "existing": skipped, "failed": failed}
+
+
+def _default_skill():
+	if not frappe.db.exists("Skill", "General"):
+		frappe.get_doc({"doctype": "Skill", "skill_name": "General"}).insert(ignore_permissions=True)
+	return "General"
 
 
 def create_departments(company):
@@ -111,11 +210,11 @@ def create_departments(company):
 			"is_group": d.get("is_group") or 0,
 		})
 		for f in ("custom_function", "custom_sub_function"):
-			if d.get(f) and frappe.db.exists("Function", d[f]) and doc.meta.has_field(f):
-				doc.set(f, d[f])
+			fn = function_name_for(d.get(f), company)
+			if fn and doc.meta.has_field(f):
+				doc.set(f, fn)
 		doc.insert(ignore_permissions=True)
 		created += 1
-	frappe.db.commit()
 	return {"created": created}
 
 
@@ -194,6 +293,14 @@ def apply_hr_settings():
 # ------------------------------------------------------- sidebar visibility
 OWN_MODULE = "VFQ HR"
 WORKSPACE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "vfq_hr", "workspace")
+
+
+def ensure_default_app():
+	"""Land users on VFQ HR after login. Only fills an empty setting; never overrides a choice."""
+	if not frappe.get_meta("System Settings").has_field("default_app"):
+		return
+	if not frappe.db.get_single_value("System Settings", "default_app"):
+		frappe.db.set_single_value("System Settings", "default_app", "vfq_hr")
 
 
 def has_app_permission():

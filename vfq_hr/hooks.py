@@ -1,3 +1,5 @@
+import frappe
+
 app_name = "vfq_hr"
 app_title = "VFQ HR"
 app_publisher = "ERPion"
@@ -8,18 +10,24 @@ app_license = "mit"
 # Installed after ERPNext and Frappe HR; works on v15 and v16.
 required_apps = ["erpnext", "hrms"]
 
+# v16 serves the desk at /desk (v15 at /app).
+_DESK = "/desk" if int(frappe.__version__.split(".")[0]) >= 16 else "/app"
+
 add_to_apps_screen = [
 	{
 		"name": "vfq_hr",
 		"logo": "/assets/vfq_hr/images/vfq_hr_logo.svg",
 		"title": "VFQ HR",
-		"route": "/app/hr",
+		"route": _DESK + "/hr",
 		"has_permission": "vfq_hr.install.has_app_permission",
 	}
 ]
 
 after_install = "vfq_hr.install.after_install"
 after_migrate = "vfq_hr.install.after_migrate"
+
+# Users without System Manager see only the VFQ HR app (apps screen, dock and landing page).
+boot_session = "vfq_hr.boot.boot_session"
 
 # Business logic: the site's Server Scripts, run from the app (no server_script_enabled needed).
 doc_events = {

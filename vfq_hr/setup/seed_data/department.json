@@ -31,8 +31,8 @@
   "department_name": "Finance",
   "parent": "All Departments",
   "is_group": 1,
-  "custom_function": "",
-  "custom_sub_function": ""
+  "custom_function": null,
+  "custom_sub_function": null
  },
  {
   "department_name": "Hair Styling",
@@ -171,8 +171,8 @@
   "department_name": "SCM",
   "parent": "All Departments",
   "is_group": 1,
-  "custom_function": "",
-  "custom_sub_function": ""
+  "custom_function": null,
+  "custom_sub_function": null
  },
  {
   "department_name": "Sales",
@@ -241,8 +241,8 @@
   "department_name": "Technology-CRM",
   "parent": "All Departments",
   "is_group": 0,
-  "custom_function": "Technology Directorate - Infinity Solutions",
-  "custom_sub_function": "Product Development - Infinity Solutions"
+  "custom_function": "Technology Directorate",
+  "custom_sub_function": "Product Development"
  },
  {
   "department_name": "Access & Field Operations",
@@ -255,8 +255,8 @@
   "department_name": "Accounts Payable",
   "parent": "Finance",
   "is_group": 0,
-  "custom_function": "",
-  "custom_sub_function": ""
+  "custom_function": null,
+  "custom_sub_function": null
  },
  {
   "department_name": "CRM & Sales Domain",
@@ -304,8 +304,8 @@
   "department_name": "Design - Digital Services",
   "parent": "Product Development",
   "is_group": 0,
-  "custom_function": "Technology Directorate - Infinity Solutions",
-  "custom_sub_function": "Product Development - Infinity Solutions"
+  "custom_function": "Technology Directorate",
+  "custom_sub_function": "Product Development"
  },
  {
   "department_name": "Digital Channels",
@@ -353,8 +353,8 @@
   "department_name": "HRMS Customization Team",
   "parent": "Product Development",
   "is_group": 0,
-  "custom_function": "",
-  "custom_sub_function": ""
+  "custom_function": null,
+  "custom_sub_function": null
  },
  {
   "department_name": "IN & IoT Applications",
@@ -521,8 +521,8 @@
   "department_name": "Technology-Sales",
   "parent": "Product Development",
   "is_group": 0,
-  "custom_function": "Technology Directorate - Infinity Solutions",
-  "custom_sub_function": "Product Development - Infinity Solutions"
+  "custom_function": "Technology Directorate",
+  "custom_sub_function": "Product Development"
  },
  {
   "department_name": "iPay (Mobile Money)-Technology",
